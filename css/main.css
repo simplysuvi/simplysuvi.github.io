@@ -8,6 +8,10 @@ body { background: #0f0f0f; }
    height: 650px!important;
    width: 100%;
    background:url(../images/dawnshadow.jpg) no-repeat center center fixed;
+      -webkit-background: url(../images/dawnshadow.jpg) no-repeat center center fixed;
+   -moz-background: url(../images/dawnshadow.jpg) no-repeat center center fixed;
+   -o-background: url(../images/dawnshadow.jpg) no-repeat center center fixed;
+   -ms-background: url(../images/dawnshadow.jpg) no-repeat center center fixed;
    background-size: cover !important;
   -webkit-background-size: cover !important;
    text-align: center;
