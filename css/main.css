@@ -7,7 +7,7 @@ body { background: #0f0f0f; }
    position: relative;
    height: 650px!important;
    width: 100%;
-   background: #161415 url(../images/dawnshadow.jpg) no-repeat center center fixed;
+   background:url(../images/dawnshadow.jpg) no-repeat center center fixed;
    background-size: cover !important;
   -webkit-background-size: cover !important;
    text-align: center;
