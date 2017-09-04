@@ -242,9 +242,13 @@ hr.linebreak
   margin:20px auto;
   transition:0.4s ease;
 }
-.work a:hover,.work:hover
+.work:hover
 {
-  transform:scale(1.05);
+   transform:scale(1.01);
+  -webkit-transform:scale(1.01);
+  -moz-transform:scale(1.01);
+  -o-transform:scale(1.01);
+  -ms-transform:scale(1.01);
 }
 /* typed js style */
 #typed
