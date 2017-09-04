@@ -1,4 +1,4 @@
-[My personal Portfolio Page][1]
+[My Personal Website][1]
 ===========
  
  [simplysuvi.github.io][1]
