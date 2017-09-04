@@ -212,7 +212,7 @@ p
 }
 p.about-text
 {
-  text-align:justify;
+  text-align:left;
   color:#19152f;
 }
 img.about-pic
@@ -299,13 +299,12 @@ hr.linebreak
       -o-animation: blink 0.8s infinite;
       animation: blink 0.8s infinite;
 }
-
-/*.overlay {
+.overlay {
   position: absolute;
   top: 0;
   bottom: 0;
   left: 0;
-  width:93.5%;
+  width:93.6%;
   margin: 0 auto;
   right: 0;
   opacity: 0;
@@ -314,18 +313,57 @@ hr.linebreak
 }
 
 .work:hover .overlay {
-  opacity: 1;
+  opacity: 0.8;
 }
-.text {
-  color: white;
-  font-size: 20px;
-  position: absolute;
+.text 
+{
+  position: relative;
   top: 50%;
   left: 50%;
+  padding: 8%;
   transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
   -ms-transform: translate(-50%, -50%);
-}*/
+}
+.text p
+{
+  color: white;
+  font-size: 17px;
+  font-family: 'Rajdhani',sans-serif;
+  letter-spacing: 1px;
+  text-align: left;
+  
+}
 
+.read-more
+{
+    font-family:'Rajdhani' ,sans-serif;
+    font-size: 14px;
+    letter-spacing: 1px;
+    font-weight: 600;
+    text-transform: uppercase;
+    color: #000;
+    background: #fff;
+    display: inline-block;
+    padding: 2% 2em;
+    transition: all 0.25s ease;
+    -moz-transition: all 0.25s ease;
+    -webkit-transition: all 0.25s ease;
+    border:none;
+    box-shadow: 0 0px 3px 0 rgba(0, 0, 0, 0.5), 0 0 15px 0 rgba(0, 0, 0, 0.05);
+}
+.read-more:hover, .read-more:focus, .read-more:active{
+
+  outline: none!important;
+}
+
+.read-more:hover
+{
+  background:#e1422e;
+  color:#fff;
+}
 .skills
 {
   background:rgba(183, 173, 232, 0.45);
