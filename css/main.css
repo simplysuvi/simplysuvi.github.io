@@ -141,9 +141,8 @@ header .social li a i:hover
 ul#nav {
    min-height: 50px;
    width: auto;
-
-   /* center align the menu */
    text-align: center;
+   background-color: #799fa01f;
 }
 ul#nav li {
    position: relative;
@@ -226,7 +225,7 @@ img.about-pic
   max-width:100%;
   min-width: 65%;
   margin:6% auto;
-  opacity:0.8;
+  opacity:0.9;
 }
 hr.linebreak
 {
