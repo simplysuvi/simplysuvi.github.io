@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<!--[if lt IE 8 ]><html class="no-js ie ie7" lang="en"> <![endif]-->
+<!--[if IE 8 ]><html class="no-js ie ie8" lang="en"> <![endif]-->
+<!--[if (gte IE 8)|!(IE)]><!-->
+<html class="no-js" lang="en">
+<!--<![endif]-->
+<head>
+	<meta charset="utf-8">
+	<title>Chatbuddy</title>
+	<meta name="description" content="Simple chatbot">
+	<meta name="author" content="Suvrat Jain">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+   <!-- Favicon -->
+	<link rel="shortcut icon" href="images/favicon.ico" >
+
+	<!-- CSS -->
+	<style>
+		@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,600);
+		body {
+			  background: #4DA0B0;  /* fallback for old browsers */
+			  background: -webkit-linear-gradient(to bottom, #D39D38, #4DA0B0);  /* Chrome 10-25, Safari 5.1-6 */
+			  background: linear-gradient(to bottom, #D39D38, #4DA0B0); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+			  color: #fff;
+			  font-family: 'Open Sans', sans-serif;
+			  margin: 0;
+			  padding: 0;
+			}
+
+h1 {
+  font-size: 40px;
+  font-weight: 600;
+  border: 3px solid #fff;
+  padding: 10px 20px;
+  margin-bottom: 40px;
+}
+
+.flex {
+  display: flex;
+  justify-content: center;
+  flex-flow: column;
+  align-items: center;
+  height: 100vh;
+}
+
+#result {
+  font-size: 36px;
+  color: #fff;
+}
+
+#ans {
+  color: #fff;
+  padding: 20px;
+  font-size: 26px;
+  background: transparent;
+  border: 0;
+  text-align: center;
+}
+
+#ans:focus {
+  outline: 0;
+  outline-offset: 0;
+}
+</style>
+
+</head>
+
+<body>
+	<div class="flex">
+		<div>
+			<h1>Bot Next Door</h1>
+		</div>
+		<div id="result"></div>
+		<div class="input">
+			<input type="text" id="ans" placeholder="reply here" required/>
+		</div>
+	</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+<script type="text/javascript">
+		var questions = [
+    'Hey beautiful, What\'s your name?',
+    'Where are you from?',
+    'How young are you?',
+    'What profile you are working on?',
+    'It was nice talking to you :)'
+];
+var num = 0;
+
+var inputBox = document.querySelector("#ans");
+var output = document.querySelector("#result");
+output.innerHTML = questions[num];
+
+function showResponse() {
+  var input = inputBox.value;
+  if(inputBox.value == "") {
+    
+  }else {
+  if(num == 0) {
+    output.innerHTML = `Hii ${input}! That's such a lovely name ❤`;
+    inputBox.value = "";
+    // inputBox.setAttribute("placeholder", "Let me take a breath cause damn");
+    ++num;
+    setTimeout(changeQuestion, 2000);
+  } else if(num == 1) {
+    output.innerHTML = `I've heard ${input} is a good place!`;
+    inputBox.value = "";
+    // inputBox.setAttribute("placeholder", "Wait for 2 secs");
+    ++num;
+    setTimeout(changeQuestion, 2000);
+  } else if(num == 2) {
+    output.innerHTML = `So you are ${2019 - input} born`;
+    inputBox.value = "";
+    // inputBox.setAttribute("placeholder", "Wait for 2 secs");
+    ++num;
+    setTimeout(changeQuestion, 2000);
+  } else if(num == 3) {
+    output.innerHTML = `Awesome ${input}`;
+    inputBox.value = "";
+    // inputBox.setAttribute("placeholder", "Wait for 2 secs");
+    ++num;
+    setTimeout(changeQuestion, 2000);
+  }
+  }
+}
+
+function changeQuestion() {
+  // inputBox.setAttribute("placeholder", "Enter your response");
+  output.innerHTML = questions[num];
+  if(num == 4) {
+    inputBox.style.display = "none";
+  }
+}
+
+$(document).on('keypress', function(e) {
+  if(e.which == 13) {
+    showResponse();
+  }
+})
+
+$( "#ans" ).focus();
+
+	</script>
+</body>
