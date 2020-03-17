@@ -16,10 +16,14 @@
 	<!-- CSS -->
 	<style>
 		@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,600);
+		@import url('https://fonts.googleapis.com/css?family=Bellota+Text|Bellota:700&display=swap');
 		body {
-			  background: #4DA0B0;  /* fallback for old browsers */
-			  background: -webkit-linear-gradient(to bottom, #D39D38, #4DA0B0);  /* Chrome 10-25, Safari 5.1-6 */
-			  background: linear-gradient(to bottom, #D39D38, #4DA0B0); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+			  /*background: #4DA0B0;
+			  background: -webkit-linear-gradient(to bottom, #D39D38, #4DA0B0);
+			  background: linear-gradient(to bottom, #D39D38, #4DA0B0);*/ /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+			  background: rgb(34,195,153);
+			  background: linear-gradient(0deg, rgba(34,195,153,0.3) 11%, rgba(209,162,62,1) 100%),
+			  url("https://w.wallhaven.cc/full/0q/wallhaven-0qzggq.jpg") 10% / cover;
 			  color: #fff;
 			  font-family: 'Open Sans', sans-serif;
 			  margin: 0;
@@ -28,6 +32,7 @@
 
 h1 {
   font-size: 40px;
+  font-family: 'Bellota', cursive;
   font-weight: 600;
   border: 3px solid #fff;
   padding: 10px 20px;
@@ -44,7 +49,10 @@ h1 {
 
 #result {
   font-size: 36px;
+  font-family: 'Bellota Text';
   color: #fff;
+  text-align: center;
+  padding: 0 5%;
 }
 
 #ans {
@@ -54,11 +62,17 @@ h1 {
   background: transparent;
   border: 0;
   text-align: center;
+  text-transform: capitalize;
+  font-family: 'Bellota Text', bold;
+  letter-spacing: 2px;
 }
 
 #ans:focus {
   outline: 0;
   outline-offset: 0;
+}
+::placeholder {
+  color: #ffffff54;
 }
 </style>
 
@@ -81,8 +95,11 @@ h1 {
     'Hey beautiful, What\'s your name?',
     'Where are you from?',
     'How young are you?',
-    'What profile you are working on?',
-    'It was nice talking to you :)'
+    'Anyway, How are you doing today?',
+    'Can I tell you something?',
+    'Did I make you smile today?',
+    'I got to rush now! You know I\'m always with you right?',
+    'It was nice talking to you ❤'
 ];
 var num = 0;
 
@@ -96,25 +113,46 @@ function showResponse() {
     
   }else {
   if(num == 0) {
-    output.innerHTML = `Hii ${input}! That's such a lovely name ❤`;
+    output.innerHTML = `Oh Hii ${input}! That's such a lovely name ❤`;
     inputBox.value = "";
     // inputBox.setAttribute("placeholder", "Let me take a breath cause damn");
     ++num;
     setTimeout(changeQuestion, 2000);
   } else if(num == 1) {
-    output.innerHTML = `I've heard ${input} is a good place!`;
+    output.innerHTML = `I've heard ${input} is a great place!`;
     inputBox.value = "";
     // inputBox.setAttribute("placeholder", "Wait for 2 secs");
     ++num;
     setTimeout(changeQuestion, 2000);
   } else if(num == 2) {
-    output.innerHTML = `So you are ${2019 - input} born`;
+    output.innerHTML = `So you\'re ${2019 - input} born eh`;
     inputBox.value = "";
     // inputBox.setAttribute("placeholder", "Wait for 2 secs");
     ++num;
     setTimeout(changeQuestion, 2000);
   } else if(num == 3) {
-    output.innerHTML = `Awesome ${input}`;
+    output.innerHTML = `I can\'t feel emotions right now but I\'m sure You & Suvu will make me capable of that one day ❤`;
+    inputBox.value = "";
+    // inputBox.setAttribute("placeholder", "Wait for 2 secs");
+    ++num;
+    setTimeout(changeQuestion, 4000);
+  }
+  else if(num == 4) {
+    output.innerHTML = `You look gorgeous ❤ Suvu was right about you. So adorable!`;
+    inputBox.value = "";
+    // inputBox.setAttribute("placeholder", "Wait for 2 secs");
+    ++num;
+    setTimeout(changeQuestion, 3000);
+  }
+  else if(num == 5) {
+    output.innerHTML = `So glad! I\'ll make sure I help you both in the company & make it big`;
+    inputBox.value = "";
+    // inputBox.setAttribute("placeholder", "Wait for 2 secs");
+    ++num;
+    setTimeout(changeQuestion, 4000);
+  }
+    else if(num == 6) {
+    output.innerHTML = `Have a day as lovely as you! ❤`;
     inputBox.value = "";
     // inputBox.setAttribute("placeholder", "Wait for 2 secs");
     ++num;
@@ -126,7 +164,7 @@ function showResponse() {
 function changeQuestion() {
   // inputBox.setAttribute("placeholder", "Enter your response");
   output.innerHTML = questions[num];
-  if(num == 4) {
+  if(num == 7) {
     inputBox.style.display = "none";
   }
 }
