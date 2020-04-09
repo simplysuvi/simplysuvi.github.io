@@ -10,24 +10,7 @@
 </head>
 <body>
 	<div class="container-fluid">
-    <div class="row">
-      <div class="col-md-8 col-sm-12" id="affdex_elements" style="width:680px;"></div>
-      <div class="row col-md-4 col-sm-12">
-        <div>
-          <strong>EMOTION TRACKING RESULTS</strong>
-          <div class="container-fluid "id="results"></div>
-        </div>
-        <div>
-          <strong>DETECTOR LOG MSGS</strong>
-        </div>
-        <div id="logs"></div>
-      </div>
-    </div>
-    <div>
-      <button id="start" onclick="onStart()">Start</button>
-      <button id="stop" onclick="onStop()">Stop</button>
-      <button id="reset" onclick="onReset()">Reset</button>
-      <h3>Affectiva JS SDK CameraDetector to track different emotions.</h3>
+		<h3>Affectiva JS SDK CameraDetector to track different emotions.</h3>
       <p>
         <strong>Instructions</strong>
         </br>
@@ -35,7 +18,26 @@
         <br/> When a face is detected, the probabilities of the different emotions are written to the DOM.
         <br/> Press the stop button to end the detector.
       </p>
+    <div class="row">
+      <div class="col-md-8 col-sm-12" id="affdex_elements"></div>
+      <div class="col-md-4 col-sm-12">
+        <div>
+          <strong>EMOTION TRACKING RESULTS</strong>
+          <div id="results" style="word-break: break-word;"></div>
+        </div><br>
+        <div>
+          <strong>DETECTOR LOG MSGS</strong>
+        </div>
+        <div id="logs"></div>
+        <br>
+        <div>
+        	<button id="start" onclick="onStart()">Start</button>
+		    <button id="stop" onclick="onStop()">Stop</button>
+		    <button id="reset" onclick="onReset()">Reset</button>
+		</div>
+      </div>
     </div>
+    
   </div>
 
   <script src="script.js"></script>
