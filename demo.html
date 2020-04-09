@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Facial emotion recognition</title>
+
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.0/css/bootstrap.min.css" integrity="sha256-/ykJw/wDxMa0AQhHDYfuMEwVb4JHMx9h4jD4XvHqVzU=" crossorigin="anonymous" />
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.0/js/bootstrap.min.js" integrity="sha256-oKpAiD7qu3bXrWRVxnXLV1h7FlNV+p5YJBIr8LOCFYw=" crossorigin="anonymous"></script>
+	<script src="https://download.affectiva.com/js/3.2.1/affdex.js"></script>
+</head>
+<body>
+	<div class="container-fluid">
+    <div class="row">
+      <div class="col-md-8 col-sm-12" id="affdex_elements" style="width:680px;"></div>
+      <div class="row col-md-4 col-sm-12">
+        <div>
+          <strong>EMOTION TRACKING RESULTS</strong>
+          <div class="container-fluid "id="results"></div>
+        </div>
+        <div>
+          <strong>DETECTOR LOG MSGS</strong>
+        </div>
+        <div id="logs"></div>
+      </div>
+    </div>
+    <div>
+      <button id="start" onclick="onStart()">Start</button>
+      <button id="stop" onclick="onStop()">Stop</button>
+      <button id="reset" onclick="onReset()">Reset</button>
+      <h3>Affectiva JS SDK CameraDetector to track different emotions.</h3>
+      <p>
+        <strong>Instructions</strong>
+        </br>
+        Press the start button to start the detector.
+        <br/> When a face is detected, the probabilities of the different emotions are written to the DOM.
+        <br/> Press the stop button to end the detector.
+      </p>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
