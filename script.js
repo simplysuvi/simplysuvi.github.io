@@ -79,14 +79,14 @@
         log('#results', "Timestamp: " + timestamp.toFixed(2));
         log('#results', "Number of faces found: " + faces.length);
         if (faces.length > 0) {
-          log('#results', "Appearance: " + JSON.stringify(faces[0].appearance));
-          log('#results', "Emotions: " + JSON.stringify(faces[0].emotions, function(key, val) {
+          log('#results', "<strong>Appearance:</strong> " + JSON.stringify(faces[0].appearance));
+          log('#results', "<br><strong>Emotions:</strong> " + JSON.stringify(faces[0].emotions, function(key, val) {
             return val.toFixed ? Number(val.toFixed(0)) : val;
           }));
-          log('#results', "Expressions: " + JSON.stringify(faces[0].expressions, function(key, val) {
+          log('#results', "<br><strong>Expressions:</strong> " + JSON.stringify(faces[0].expressions, function(key, val) {
             return val.toFixed ? Number(val.toFixed(0)) : val;
           }));
-          log('#results', "Emoji: " + faces[0].emojis.dominantEmoji);
+          log('#results', "<strong>Emoji:</strong> " + faces[0].emojis.dominantEmoji);
           if($('#face_video_canvas')[0] != null)
           	drawFeaturePoints(image, faces[0].featurePoints);
         }
