@@ -9,7 +9,10 @@
 	<!-- CSS -->
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.0/css/bootstrap.min.css" integrity="sha256-/ykJw/wDxMa0AQhHDYfuMEwVb4JHMx9h4jD4XvHqVzU=" crossorigin="anonymous" />
 	<link href="https://fonts.googleapis.com/css2?family=Inconsolata&display=swap" rel="stylesheet">
-	<style> body{font-family: 'Inconsolata', monospace;} </style>
+	<style>
+	body{ font-family: 'Inconsolata', monospace; background-color: #dcedfb; }
+	footer { margin-top: 3%; font-size: 20px; }
+	</style>
 
 	<!-- SCRIPTS -->
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
@@ -18,23 +21,25 @@
 </head>
 <body>
 	<div class="container-fluid">
-		<h3>Emotion recognition through Facial features using Affectiva's SDK</h3>
+		<h2 class="text-center">Emotion recognition through Facial features using Affectiva's SDK</h2>
+		<hr>
       <p>
         <strong>Instructions</strong>
-        </br>
-        Press the start button to start the detector.
-        <br/> When a face is detected, the probabilities of the different emotions are written to the DOM.
-        <br/> Press the stop button to end the detector.
+        <ol style="padding: 0 25px;">
+        	<li>Press the start button to start the detector.</li>
+        	<li>When a face is detected, the probabilities of the different emotions are written to the DOM.</li>
+        	<li>Press the stop button to end the detector.</li>
+        </ol>
       </p>
     <div class="row">
       <div class="col-md-8 col-sm-12" id="affdex_elements"></div>
       <div class="col-md-4 col-sm-12">
         <div>
-          <strong>EMOTION TRACKING RESULTS</strong>
+          <h5><strong>EMOTION TRACKING RESULTS</strong></h5>
           <div id="results" style="word-break: break-word;"></div>
-        </div><br>
+        </div><br><hr>
         <div>
-          <strong>DETECTOR LOG MSGS</strong>
+          <h5><strong>DETECTOR LOG MESSAGES</strong></h5>
         </div>
         <div id="logs"></div>
         <br>
@@ -45,8 +50,9 @@
 		</div>
       </div>
     </div>
-    
   </div>
+  <hr>
+  <footer class="text-center"><p>MADE WITH <em style="color: #ff4b4b;">♥</em> BY SUVRAT JAIN.</p></footer>
 
   <script src="script.js"></script>
 </body>
