@@ -5,7 +5,6 @@ body { background: #0f0f0f; }
 
 #home {
    position: relative;
-   height: 650px!important;
    width: 100%;
    background:url(../images/dawnshadow.jpg) no-repeat center center fixed;
       -webkit-background: url(../images/dawnshadow.jpg) no-repeat center center fixed;
