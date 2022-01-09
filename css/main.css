@@ -223,8 +223,9 @@ img.about-pic
   border-radius:30px;
   max-width:100%;
   min-width: 65%;
-  margin:6% auto;
+  margin:3% auto;
   opacity:0.9;
+   height: 550px;
 }
 hr.linebreak
 {
