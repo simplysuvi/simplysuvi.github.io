@@ -200,13 +200,13 @@
     }
 
     $.fn.typed.defaults = {
-        strings: ["Suvrat", "simply...Suvi", "a web developer", "turn coffee into code"],
+        strings: ["Hello!","I am Suvrat", "or simply...Suvi", "Welcome to my digital home!"],
         // typing and backspacing speed
         typeSpeed: 50, // speed decreases as number increased
         // time before backspacing
-        backDelay: 100,
+        backDelay: 0,
         // loop
-        loop: true,
+        loop: false,
         // false = infinite
         loopCount: false,
         // ending callback function
@@ -220,10 +220,10 @@
 $(function(){
 
         $("#typed").typed({
-            strings: ["Suvrat", "simply...Suvi", "a web developer", "turn coffee into code"],//Strings to display when typing
+            strings: ["Hello!","I am Suvrat", "or simply...Suvi", "Welcome to my digital home!"],//Strings to display when typing
             typeSpeed: 50,
-            backDelay: 100,
-            loop: true,
+            backDelay: 0,
+            loop: false,
             // defaults to false for infinite loop
             loopCount: false,
             callback: function(){ foo(); }
