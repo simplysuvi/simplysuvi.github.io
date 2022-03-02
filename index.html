@@ -1,294 +1,380 @@
 <!DOCTYPE html>
-<!--[if lt IE 8 ]><html class="no-js ie ie7" lang="en"> <![endif]-->
-<!--[if IE 8 ]><html class="no-js ie ie8" lang="en"> <![endif]-->
-<!--[if (gte IE 8)|!(IE)]><!--><html class="no-js" lang="en"> <!--<![endif]-->
+<html lang="en">
+
 <head>
-	<title>Suvrat Jain &mdash; UI/UX Developer & Designer</title>
-    <meta charset="utf-8">
-    <meta name="description" content="Suvrat Jain | Web Developer & Designer | Creating delightful experiences for the Web.">
-    <meta name="keywords" content="Web developer, web designer, New York, UI developer, UX, Simplysuvi, Suvrat Jain, websites, India, United States" />
-    <meta name="author" content="Suvrat Jain">
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    <meta property="og:url" content="https://simplysuvi.github.io/" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="viewport" content="width=device-width,initial-scale=1, maximum-scale=5" />
+    <meta name="devicefriendly" content="true" />
+
+    <!-- Primary Meta Tags -->
+    <title>👨🏻‍💻Suvrat Jain — UI/UX Developer | Data Scientist</title>
+    <meta name="title" content="Suvrat Jain — UI/UX Developer" />
+    <meta name="description" content="Front-end developer specialized in building beautiful and responsive websites and web applications." />
+
+    <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website" />
-    <meta property="og:title" content="Suvrat Jain - UI/UX Developer & Designer" />
-    <meta property="og:image" content="https://raw.githubusercontent.com/simplysuvi/simplysuvi.github.io/master/images/profilepic.jpg" />
-    <meta property="og:description" content="I have a passion for front end web design and development. I develop responsive websites that grabs the user's attention." />	<!-- CSS -->
-   <link rel="stylesheet" href="css/media-queries.css">
-	<link rel="stylesheet" href="css/main.css">
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" />
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
-   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css" />
-   <link rel="stylesheet" href="https://cdn.rawgit.com/konpa/devicon/df6431e323547add1b4cf45992913f15286456d3/devicon.min.css">
+    <meta property="og:url" content="https://simplysuvi.github.io/" />
+    <meta property="og:title" content="Suvrat Jain — UI/UX Developer | Data Scientist" />
+    <meta property="og:description" content="I'm a frontend developer turned data scientist specialized in creating beautiful websites and solving problems using data." />
 
-   <!-- Favicons -->
-	<link rel="shortcut icon" href="images/favicon.ico" >
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content="https://twitter.com/Simplysuvi" />
+    <meta property="twitter:title" content="Suvrat Jain — UI/UX Developer | Data Scientist" />
+    <meta property="twitter:description" content="I'm a Frontend developer specialized in building a user-friendly, mobile-responsive, and accessible websites and web applications. My skills include HTML, CSS, JavaScript, Bootstrap, Python, and Java." />
+    <link rel="stylesheet" type="text/css" href="css/main.css" />
 
+    <link rel="stylesheet" rel="noopener" href="https://use.fontawesome.com/releases/v6.0.0/css/all.css" />
 </head>
 
 <body>
+    <!---- Header ---->
+    <nav class="navbar">
+        <div class="navbar-toggle" onclick="openNav()">
+            <div class="bar1"></div>
+            <div class="bar2"></div>
+            <div class="bar3"></div>
+        </div>
+        <div class="logo-position">
+            <a href="#" class="logo">simply suvi</a>
+        </div>
+        <ul class="main-nav">
+            <li><a href="#" class="nav-links">Home</a></li>
+            <li><a href="#about" class="nav-links">About</a></li>
+            <li><a href="#education" class="nav-links">Education</a></li>
+            <li><a href="#workex" class="nav-links">Experience</a></li>
+            <li><a href="#skills" class="nav-links">Skills</a></li>
+            <li><a href="#project-header" class="nav-links">Projects</a></li>
+        </ul>
+    </nav>
 
-<!-- Header-->
+    <div id="navbar" class="overlay">
+        <a href="javascript:void(0)" class="closeButton" onclick="closeNav()">&times;</a>
+        <div class="overlay-content">
+            <a href="#" class="menu-links">Home</a>
+            <a href="#about" class="aboutMenu">About</a>
+            <a href="#education" class="educationMenu">Education</a>
+            <a href="#workex" class="expMenu">Experience</a>
+            <a href="#skills" class="skillsMenu">Skills</a>
+            <a href="#project-header" class="projectMenu">Projects</a>
+        </div>
+    </div>
 
-   <header id="home">
-      <nav id="nav-wrap">
+    <div class="banner-text">
+        <h1>
+            <span id="typed">
+            </span>
+            <p>I like to solve problems using data, design delightful experiences for the web, and everything in between.<br><br>
+                <span style="font-size: 18px; font-style: normal;">Scroll down to know more about me <a href="#about" style="text-decoration:none; color: inherit;">↓</a></span>
+            </p>
+        </h1>
+    </div>
+    <div id="particles-js"></div>
 
-         <a class="mobile-btn" href="#nav-wrap" title="Show navigation">Show navigation</a>
-	      <a class="mobile-btn" href="#" title="Hide navigation">Hide navigation</a>
+    <div class="container">
+        <section id="about">
+            <h1 class="section-header">About me</h1>
+            <div class="about-container">
+                <img src="images/about-pic.jpeg" class="about-image" aria-label="portrait of mohammed asker" loading="lazy" />
+                <p class="about-text">
+                    Hi! I'm a <script>
+                        var dob = new Date("05/08/1997");
+                        //calculate month difference from current date in time
+                        var month_diff = Date.now() - dob.getTime();
 
-         <ul id="nav" class="nav">
-            <li><a class="smoothscroll" href="#home">Home</a></li>
-            <li><a class="smoothscroll" href="#about">About</a></li>
-            <li><a class="smoothscroll" href="#portfolio">Works</a></li>
-            <li><a class="smoothscroll" href="#skills">Skills</a></li>
-         </ul> <!-- end #nav -->
+                        //convert the calculated difference in date format
+                        var age_dt = new Date(month_diff);
 
-      </nav> <!-- end #nav-wrap -->
+                        //extract year from date
+                        var year = age_dt.getUTCFullYear();
 
-      <div class="row banner">
-         <div class="banner-text">
-            <h1>
-            <span id="typed"></span>
+                        //now calculate the age of the user
+                        var age = Math.abs(year - 1970);
+
+                        //display the calculated age
+                        document.write(age);
+
+                    </script> years old self-learned web developer turned data scientist, with a knack for creativity and solving problems using data. I'm currently working towards my Masters in Data Science from <a href="https://www.rit.edu/" target="_blank">Rochester Institute of Technology, NY</a>.<br><br>
+
+                    I started learning to design, develop, and code around the age of 17 and never stopped. The fact that I was able to make something out of a few lines of code fascinated me, and still does!<br><br>
+
+                    My passion for data science stems from the desire to solve real-world problems using technology, a flair for identifying patterns to derive interesting insights from data, and data science is one such field where I can combine my love for technology with my love for problem solving.<br><br>
+
+                    As a beginner, I am currently focused on some projects based on machine learning and neural networks that help me solidify my understanding of various concepts crucial to build products driven by data. I have worked on a few projects dealing with imbalanced datasets, data wrangling, data visualizations etc. that I have shared <a href="#project-header">below</a>.<br><br>
+
+                    My 5 year goal is, to successfully marry...my love for building delightful websites and the knack for solving problems using data, to birth a data-driven product that helps in the greater good of the community.<br><br>
+
+                    I am constantly looking to enhance my skill set and work on new & exciting projects, and prove to be a reliable asset to both - myself & the organization I work with.<br><br>
+
+                    🙋🏻‍♂️If you are a company/organization looking for an enthusiastic individual for an internship/co-op opportunity, to contribute to your rapid growth, feel free to reach out to me via <a href="https://www.linkedin.com/in/simplysuvi/" target="_blank">LinkedIn</a>.<br>
+                    👋🏻<span style="font-style: italic;">Or if you want to drop a hi or brainstorm something that interests you about music, universe, data, or anything in between, feel free to reach out to me <a href="#reachme">here</a>.</span>
+                </p>
             </div>
-         </h1>
-            <h3 class="desc-text">I am a UI/Web Developer cleverly disguised as a graduate student (Data Science) based in New York, United States. I spend most of my time playing around with HTML, CSS & JavaScript; I strive to build websites that delight & inform. Scroll down to learn more
-            <a href="#about" class="smoothscroll"> about me ↓</a></h3>
-            <hr />
-            <ul class="social">
-<!--                <li><a target="_blank" href="https://www.facebook.com/Simplysuvi"><i class="fa fa-facebook-square"></i></a></li> -->
-               <!-- <li><a target="_blank" href="https://www.twitter.com/Simplysuvi"><i class="fa fa-twitter-square"></i></a></li> -->
-               <li><a target="_blank" href="https://www.linkedin.com/in/simplysuvi"><i class="fa fa-linkedin-square"></i></a></li>
-<!--                <li><a target="_blank" href="https://www.instagram.com/Simplysuvi"><i class="fa fa-instagram"></i></a></li> -->
-               <li><a target="_blank" href="https://codepen.io/simplysuvi/"><i class="fa fa-codepen"></i></a></li>
-               <li><a target="_blank" href="https://soundcloud.com/suvijain"><i class="fa fa-soundcloud"></i></a></li>
-            </ul>
-         </div>
-      </div>
+        </section>
 
-      <p class="scrolldown">
-         <a class="smoothscroll" href="#about"><i class="icon-down-circle"></i></a>
-      </p>
+        <section id="education">
+            <h1 class="section-header">education</h1>
+            <div class="timeline">
+                <div class="timeline-block timeline-block-right">
+                    <div class="marker"></div>
+                    <div class="timeline-content">
+                        <h3>M.Sc. (Data Science)</h3>
+                        <span>Rochester Institute of Technology, NY<br>
+                            August 2021 - Present</span>
+                        <p>Courses: Applied Statistics, Java & Python for Data Science, Neural Networks, Software Engineering for Data Science</p>
+                    </div>
+                </div>
 
-   </header> <!-- Header End -->
+                <div class="timeline-block timeline-block-left">
+                    <div class="marker"></div>
+                    <div class="timeline-content">
+                        <h3>B.Tech (Electronics & Communication Engineering)</h3>
+                        <span>Manipal Academy of Higher Education - Dubai<br>
+                            September 2017 - July 2019</span>
+                        <p>Courses: Embedded Systems, Analog Communication, Digital Signal Processing using MATLAB, VLSI Network Design</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="workex">
+            <h1 class="section-header">work experience</h1>
+            <div class="timeline">
+                <div class="timeline-block timeline-block-right">
+                    <div class="marker"></div>
+                    <div class="timeline-content">
+                        <h3>Email Developer/Marketer</h3>
+                        <span>
+                            <h3>Merkle</h3>
+                            Pune, Maharashtra, India<br>
+                            September 2020 - August 2021
+                        </span>
+                        <p>
+                            <li>Created 100+ email campaigns for Estee Lauder and MAC Cosmetics using
+                                Salesforce Marketing Cloud, delivering an average click-through rate of 25%.</li>
+                            <li>Developed and delivered personalized email campaigns with a reach of more than
+                                400,000 customers in 100+ countries worldwide, using Braze.</li>
+                            <li>Debugged cross-browser compatibility issues between browsers, verifying 100%
+                                compliance with code standards.</li>
+                            <li>Tools used: SalesForce Marketing Cloud, Braze, JIRA, Adobe Dreamweaver</li>
+                        </p>
+                    </div>
+                </div>
 
-   <!-- ABOUT SECTION -->
-  <div class="container about" id="about">
-    <h2 class="heading-text1 text-center">&bull; ABOUT ME &bull;</h2>
-    <div class="col-md-6 col-sm-12 col-xs-12"><hr class="linebreak">
-      <p class="about-text">I'm a <script>
-    var dob = new Date("05/08/1997");
-    //calculate month difference from current date in time
-    var month_diff = Date.now() - dob.getTime();
-    
-    //convert the calculated difference in date format
-    var age_dt = new Date(month_diff); 
-    
-    //extract year from date    
-    var year = age_dt.getUTCFullYear();
-    
-    //now calculate the age of the user
-    var age = Math.abs(year - 1970);
-    
-    //display the calculated age
-    document.write(age);
-</script> years old self-learned Web Developer & Designer with a love for clean & minimal design. I am both driven & self-motivated. I constantly keep experimenting with new technologies & techniques related to the web. I am very passionate about Web Development & strive to better myself as a developer, & the development community as a whole. Would love to work with you to create the well-designed & modern web site you need!<br>
-        Have the motivation & willingness to learn new things & technologies quickly & independently. Looking for a professional working environment with good benefits & seek chances to develop career.</p><hr class="linebreak">
+                <div class="timeline-block timeline-block-left">
+                    <div class="marker"></div>
+                    <div class="timeline-content">
+                        <h3>QA Associate</h3>
+                        <span>
+                            <h3>Merkle</h3>
+                            Pune, Maharashtra, India<br>
+                            January 2020 - September 2020
+                        </span>
+                        <p>
+                            <li>Reduced overall test cycle time by 40% using Python scripting in automation testing.</li>
+                            <li>Identified & reported 500+ unique bugs across web & mobile applications for
+                                UltraTech Cement, in what was to be one of the most successful launches of the
+                                company's digital initiative.</li>
+                            <li>Performed manual testing of mobile applications, including smoke, functional,
+                                integration, regression, user acceptance, and UI testing for multiple releases each
+                                sprint.</li>
+                        </p>
+                    </div>
+                </div>
+                <div class="timeline-block timeline-block-right">
+                    <div class="marker"></div>
+                    <div class="timeline-content">
+                        <h3>Web Developer (Intern)</h3>
+                        <span>
+                            <h3>Arachnomesh Technologies Pvt. Ltd.</h3>
+                            Navi Mumbai, Maharashtra, India<br>
+                            July 2018 - September 2018
+                        </span>
+                        <p>
+                            <li>Accelerated page load times by ~22% through optimization of CSS, HTML, and JS.</li>
+                            <li>Designed web application components in Angular JS, including login interface and
+                                dashboard views.</li>
+                            <li>Developed 10+ responsive web pages for clients in a variety of industries, utilizing
+                                HTML5, CSS3, JavaScript and jQuery to design interactive user experience.</li>
+                        </p>
+                    </div>
+                </div>
+                <div class="timeline-block timeline-block-left">
+                    <div class="marker"></div>
+                    <div class="timeline-content">
+                        <h3>Software Developer (Intern)</h3>
+                        <span>
+                            <h3>G10 Consultancy Digital Pvt. Ltd</h3>
+                            Mumbai, Maharashtra, India<br>
+                            May 2017 - July 2017
+                        </span>
+                        <p>
+                            <li>Implemented 10+ web designs in a mobile-first, responsive approach for optimal viewing across browsers and devices.</li>
+                            <li>Worked on WordPress CMS, HTML, CSS, JavaScript, and Bootstrap framework to build websites and apps for 10+ clients.</li>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="skills">
+            <h1 class="section-header">SKILLS</h1>
+            <div class="skill-box">
+                <div class="box">
+                    <i class="fab fa-python fa-5x"></i>
+                    <p>Python</p>
+                </div>
+                <div class="box">
+                    <i class="fab fa-java fa-5x"></i>
+                    <p>Java</p>
+                </div>
+                <div class="box">
+                    <i class="fab fa-html5 fa-5x"></i>
+                    <p>HTML5</p>
+                </div>
+                <div class="box">
+                    <i class="fab fa-css3-alt fa-5x"></i>
+                    <p>CSS3</p>
+                </div>
+                <div class="box">
+                    <i class="fab fa-js fa-5x"></i>
+                    <p>JavaScript</p>
+                </div>
+                <div class="box">
+                    <i class="fab fa-bootstrap fa-5x"></i>
+                    <p>Bootstrap</p>
+                </div>
+                <div class="box">
+                    <i class="fab fa-angular fa-5x"></i>
+                    <p>Angular JS</p>
+                </div>
+                <div class="box">
+                    <i class="fab fa-wordpress fa-5x"></i>
+                    <p>WordPress</p>
+                </div>
+            </div>
+        </section>
+        <h1 id="project-header">PORTFOLIO</h1>
+        <section class="projects">
+            <div class="project-box">
+                <h3>Predicting Patient Readmissions using Machine Learning</h3>
+                <p class="project-text">
+                    Binary classification using machine learning models to predict if hospital patients are readmitted within 30 days. Models: Logistic Regression, Decision Tree Classifier, Random Forest Classifier.
+                </p>
+                <img src="images/patient_readmission.png" />
+                <a href="https://simplysuvi.github.io/Patients-readmission-classification-Project/" target="_blank" rel="noopener"><button class="project-button">View Notebook</button></a>
+                <a href="https://github.com/simplysuvi/Patients-readmission-classification-Project" target="_blank" rel="noopener"><button class="project-button">View Project</button></a>
+            </div>
+            <div class="project-box">
+                <h3>IPL Exploratory Data Analysis using Python and Jupyter notebook</h3>
+                <p class="project-text">
+                    Exploratory data analysis carried out on the IPL dataset for seasons 2008 - 2020. Data visualizations used to extract insights and factors contributing to victories and defeats.
+                </p>
+                <img src="images/ipl_eda.png" />
+                <a href="https://simplysuvi.github.io/IPL-EDA/" target="_blank" rel="noopener"><button class="project-button">View Notebook</button></a>
+                <a href="https://github.com/simplysuvi/IPL-EDA" target="_blank" rel="noopener"><button class="project-button">View Project</button></a>
+            </div>
+            <div class="project-box">
+                <h3>Moodytector</h3>
+                <p class="project-text">
+                    Moodytector is a simple web application that detects facial features and emotions. Faci-api JS was used to build the majority of this app. There are three main features: emotion detection, age prediction, and gender prediction. The site dynamically updates on user input through webcam.
+                </p>
+                <img src="images/moodytector.png" />
+                <a href="https://moodytector.netlify.com/" target="_blank" rel="noopener"><button class="project-button">View Demo</button></a>
+                <a href="https://github.com/simplysuvi/face-emo" target="_blank" rel="noopener"><button class="project-button">View Project</button></a>
+            </div>
+            <div class="project-box">
+                <h3>HUE Vision</h3>
+                <p class="project-text">
+                    A web application built using TensorFlow.js to detect and track eye movement through webcam. Application: Analyze users' gaze movement on your website in real time using a webcam. It can be useful for UX researchers when doing usability studies to understand how users respond to the aesthetics of your website.
+                </p>
+                <img src="images/hue-vision.png" />
+                <a href="https://simplysuvi.github.io/hue-vision/" target="_blank" rel="noopener"><button class="project-button">View Demo</button></a>
+                <a href="https://github.com/simplysuvi/hue-vision" target="_blank" rel="noopener"><button class="project-button">View Project</button></a>
+            </div>
+            <div class="project-box">
+                <h3>EmotionWise</h3>
+                <p class="project-text">
+                    EmotionWise is a web application built with Affdex SDK by <a href="https://www.affectiva.com/" style="text-decoration: underline; color: black;">Affectiva</a> that does real-time emotion recognition to learn the language of faces by visualizing its emotions in real time. Key features include: expression, appearance, glasses, gender & age.
+                </p>
+                <img src="images/emotionwise.png" />
+                <a href="https://emotionwise.netlify.com/" target="_blank" rel="noopener"><button class="project-button">View Demo</button></a>
+                <a href="https://github.com/simplysuvi/emotionplay" target="_blank" rel="noopener"><button class="project-button">View Project</button></a>
+            </div>
+            <div class="project-box">
+                <h3>FaceID</h3>
+                <p class="project-text">
+                    Facial authentication web app that detects faces and compares them with your previously stored facial data, if a match is found it logs you into your account. Built using face-api.js.<br> Try out the demo below!
+                </p>
+                <img src="images/faceid.png" />
+                <a href="https://simplysuvi.github.io/faceID/" target="_blank" rel="noopener"><button class="project-button">View Demo</button></a>
+                <a href="https://github.com/simplysuvi/faceID" target="_blank" rel="noopener"><button class="project-button">View Project</button></a>
+            </div>
+            <div class="project-box">
+                <h3>SSU MUN Website</h3>
+                <p class="project-text">
+                    The Model United Nations is one of Sri Sri University's annual events which provides a platform for students to engage in meaningful discussions to solve real world problems and also learn about underrepresented nations and cultures. This is a responsive website created to showcase and provide information about the event. Built using HTML, CSS, JS.
+                </p>
+                <img src="images/ssumun.png" />
+                <a href="https://simplysuvi.github.io/ssumun/" target="_blank" rel="noopener"><button class="project-button">View Website</button></a>
+                <a href="https://github.com/simplysuvi/ssumun" target="_blank" rel="noopener"><button class="project-button">View Project</button></a>
+            </div>
+            <div class="project-box">
+                <h3>You Are Special</h3>
+                <p class="project-text">
+                    Is there something which is keeping you upset or low? Worry not, am here to stay & cheer you up for as long as you wish.<br>
+                    This is a simple JS based compliment generator that gives you genuine compliments to cheer you up and hopefully, to make your day.<br>
+                    Made with &hearts; using JS, HTML, CSS.
+                </p>
+                <img src="images/youarespecial.png" />
+                <a href="https://simplysuvi.github.io/youarespecial/" target="_blank" rel="noopener"><button class="project-button">View Demo</button></a>
+                <a href="https://github.com/simplysuvi/youarespecial" target="_blank" rel="noopener"><button class="project-button">View Project</button></a>
+            </div>
+            <div class="project-box">
+                <h3>Face Detection Demo</h3>
+                <p class="project-text">
+                    This demo project shows how to use pico.js to create a simple application for face detection using JavaScript.
+                </p>
+                <img src="images/face-pico.png" />
+                <a href="https://simplysuvi.github.io/face-detect/" target="_blank" rel="noopener"><button class="project-button">View Demo</button></a>
+                <a href="https://github.com/simplysuvi/face-detect" target="_blank" rel="noopener"><button class="project-button">View Project</button></a>
+            </div>
+
+        </section>
     </div>
-    <div class="col-md-6 col-sm-12 col-xs-12">
-      <img src="images/about-pic.jpeg" class="img-responsive about-pic"/>
-    </div>
-  </div>
-  
-<!-- PORTFOLIO SECTION -->
- <div class="container portfolio" id="portfolio">
-    <h2 class="heading-text2 text-center">&bull; PORTFOLIO &bull;</h2><hr class="linebreak">
-     <div class="col-md-4 col-sm-6 col-xs-12 work">
-       <img src="images/work1.jpg" class="img-responsive">
-       <div class="overlay">
-        <div class="text">
-        <p>This is a simple one page responsive template for a portfolio website.<br> Built using: HTML,CSS,JS & Bootstrap.</p>
-        <a href="https://codepen.io/simplysuvi/full/yogpGW/" target="_blank" class="more-btn">
-        <button class="read-more">View Project</button>
-        </a>
-        </div>
-       </div>
-     </div>
-     <div class="col-md-4 col-sm-6 col-xs-12 work">
-       <img src="images/work2.jpg" class="img-responsive">
-       <div class="overlay">
-        <div class="text">
-        <p>A minimal template with a responsive design & layout for a website home page.<br> Built using: HTML,CSS,jQuery.</p>
-        <a href="https://codepen.io/simplysuvi/full/yogrYE/" target="_blank" class="more-btn">
-        <button class="read-more">View Project</button>
-        </a>
-        </div>
-       </div>
-     </div>
-     <div class="col-md-4 col-sm-6 col-xs-12 work">
-      <img src="images/work3.jpg" class="img-responsive">
-      <div class="overlay">
-        <div class="text">
-        <p>A responsive webpage design for a Holiday travels website.<br> Built using: HTML & CSS.</p>
-        <a href="https://codepen.io/simplysuvi/full/ZJLbax/" target="_blank" class="more-btn">
-        <button class="read-more">View Project</button>
-        </a>
-        </div>
-       </div>
-     </div>
-     <div class="col-md-4 col-sm-6 col-xs-12 work">
-      <img src="images/work4.jpg" class="img-responsive">
-      <div class="overlay">
-        <div class="text">
-        <p>Responsive webpage template for a photography website.<br> Built using: HTML,CSS,JS.</p>
-        <a href="https://codepen.io/simplysuvi/full/aypxqb/" target="_blank" class="more-btn">
-        <button class="read-more">View Project</button>
-        </a>
-        </div>
-       </div>
-     </div>
-     <div class="col-md-4 col-sm-6 col-xs-12 work">
-      <img src="images/work5.jpg" class="img-responsive">
-      <div class="overlay">
-        <div class="text">
-        <p>A responsive One Page website design for portfolios.<br> Built using: HTML,CSS,jQuery & Bootstrap.</p>
-        <a href="https://codepen.io/simplysuvi/full/jLYoVW/" target="_blank" class="more-btn">
-        <button class="read-more">View Project</button>
-        </a>
-        </div>
-       </div>
-     </div>
-     <div class="col-md-4 col-sm-6 col-xs-12 work">
-      <img src="images/work6.jpg" class="img-responsive">
-      <div class="overlay">
-        <div class="text">
-        <p>A tribute page made as a part of FCC's Front End Development Project Challenge with a responsive layout.<br> Built using: HTML,CSS & Bootstrap.</p>
-        <a href="https://codepen.io/simplysuvi/full/KvvOKp/" target="_blank" class="more-btn">
-        <button class="read-more">View Project</button>
-        </a>
-        </div>
-       </div>
-     </div>
-  </div>
+    <footer id="reachme">
+        <ul class="footer-social-list">
+            <li><a href="https://linkedin.com/in/simplysuvi" target="_blank"><i class="fa-brands fa-linkedin fa-2x"></i></a></li>
+            <li><a href="https://github.com/simplysuvi" target="_blank"><i class="fa-brands fa-github fa-2x"></i></a></li>
+            <li><a href="https://twitter.com/simplysuvi" target="_blank"><i class="fa-brands fa-twitter fa-2x"></i></a></li>
+            <li><a href="https://codepen.io/simplysuvi" target="_blank"><i class="fa-brands fa-codepen fa-2x"></i></a></li>
+            <li><a href="https://www.instagram.com/simplysuvi/" target="_blank"><i class="fa-brands fa-instagram fa-2x"></i></a></li>
+            <li><a href="https://open.spotify.com/artist/0Qc2FzRFU7IeFUEYDijkCU?si=YEAgsg8zTDmfyhWrA5CgRw" target="_blank"><i class="fa-brands fa-spotify fa-2x"></i></a></li>
+            <li>
+                <p>👋🏻</p>
+            </li>
+        </ul>
+        <p class="copyright-text">Made with <i class="fa-solid fa-heart"></i> by Suvrat Jain. &copy;
+            <script type="text/javascript">
+                document.write(new Date().getFullYear());
 
+            </script>
+        </p>
+    </footer>
 
-  <!-- SKILLS SECTION -->
-  <div class="container skills" id="skills">
-  <h2 class="heading-text3 text-center">&bull; SKILLS &bull;</h2>
-   <div class="wrap">
-   <div class="row-skills">
-     <ul>
-       <li class="html">
-         <h4>HTML / HTML5</h4>
-         <div>
-           <span class="animated fadeInLeft"></span>
-         </div>
-       </li>
-       <li class="css">
-         <h4>CSS / CSS3</h4>
-         <div>
-           <span class="animated fadeInLeft"></span>
-         </div>
-       </li>
-       <li class="js">
-         <h4>JavaScript / jQuery</h4>
-         <div>
-           <span class="animated fadeInLeft"></span>
-         </div>
-       </li>
-       <li class="php">
-         <h4>PHP</h4>
-         <div>
-           <span class="animated fadeInLeft"></span>
-         </div>
-       </li>
-       <li class="bootstrap">
-         <h4>Bootstrap</h4>
-         <div>
-           <span class="animated fadeInLeft"></span>
-         </div>
-       </li>
-       <li class="wordpress">
-         <h4>WordPress</h4>
-         <div>
-           <span class="animated fadeInLeft"></span>
-         </div>
-       </li>
-     </ul>
-   </div>
- </div>
-  </div>
-
-  <!-- FOOTER SECTION -->
-<footer>
-  <div class="social-links">
-   <ul>
-<!--   <li><a class="fb" target="_blank" href="https://www.facebook.com/Simplysuvi" title="Facebook"><i class="fa fa-facebook"></i></a></li> -->
-<!--   <li><a class="twitter" target="_blank" href="https://www.twitter.com/Simplysuvi" title="Twitter"><i class="fa fa-twitter"></i></a></li> -->
-  <li><a class="linkedin" target="_blank" href="https://www.linkedin.com/in/simplysuvi" title="LinkedIn"><i class="fa fa-linkedin"></i></a></li>
-<!--   <li><a class="insta" target="_blank" href="https://www.instagram.com/Simplysuvi" title="Instagram"><i class="fa fa-instagram"></i></a></li> -->
-<!--   <li><a class="mssg" target="_blank" href="mailto:suvijain@gmail.com" title="Email" type="email"><i class="fa fa-envelope"></i></a></li> -->
-   </ul>
-	  <p class="visits-text">Visits: </p><a href="https://smallseotools.com/visitor-hit-counter/" target="_blank" title="Visitor Hit Counter">
-<img src="https://smallseotools.com/counterDisplay?code=868ee6fc3e0c3fafab7a05b0b93c281e&style=0001&pad=5&type=page&initCount=400" style="max-width: 50px;
-    opacity: 0.8;"  title="Visitor Hit Counter" Alt="Visitor Hit Counter" border="0">
-</a>
-
-  </div>
-  <div class="container footer">
-  <h3 class="footer-text text-center">Made with <i class="fa fa-heart"></i>, <i class="fa fa-music"></i> & some <i class="fa fa-coffee"></i> by Suvrat Jain. &copy; <script type="text/javascript">document.write(new Date().getFullYear());</script>
-</h3>
-  </div>
-</footer>
-
-
-   <!--Scripts-->
-   <script src="js/jquery-1.10.2.min.js"></script>
-   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-   <script type="text/javascript" src="js/jquery-migrate-1.2.1.min.js"></script>
-   <script src="js/jquery.flexslider.js"></script>
-   <script src="js/waypoints.js"></script>
-   <script src="js/jquery.fittext.js"></script>
-   <script src="js/magnific-popup.js"></script>
-   <script src="js/init.js"></script>
-   <script src="js/modernizr.js"></script>
-   <script src="js/typed.js"></script>
-   <script src="typed.min.js"></script>
-	<!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-123328453-2"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'UA-123328453-2');
-</script>
-	<script type="application/ld+json">
-{
-  "@context": "https://schema.org/",
-  "@type": "Person",
-  "name": "Suvrat Jain",
-  "url": "https://simplysuvi.github.io/",
-  "image": "https://raw.githubusercontent.com/simplysuvi/simplysuvi.github.io/master/images/profilepic.jpg",
-  "sameAs": [
-    "http://twitter.com/simplysuvi",
-    "http://instagram.com/simplysuvi",
-    "https://www.linkedin.com/in/simplysuvi/",
-    "https://github.com/simplysuvi/",
-    "https://simplysuvi.github.io/"
-  ],
-  "jobTitle": "Software Developer",
-  "worksFor": {
-    "@type": "Organization",
-    "name": "Merkle Sokrati"
-  }  
-}
-</script>
-	<script>
-(function(h,e,a,t,m,p) {
-m=e.createElement(a);m.async=!0;m.src=t;
-p=e.getElementsByTagName(a)[0];p.parentNode.insertBefore(m,p);
-})(window,document,'script','https://u.heatmap.it/log.js');
-</script>
+    <!--Scripts-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/particles.js/2.0.0/particles.min.js"></script>
+    <script src="js/particles.js"></script>
+    <script type="text/javascript" src="js/jquery-migrate-1.2.1.min.js"></script>
+    <!--
+    <script src="js/waypoints.js"></script>
+    <script src="js/jquery.fittext.js"></script>
+    <script src="js/init.js"></script>
+    <script src="js/modernizr.js"></script>
+-->
+    <script src="js/typed.js"></script>
+    <script src="https://raw.githubusercontent.com/mattboldt/typed.js/master/dist/typed.min.js"></script>
+    <script src="js/main.js"></script>
 </body>
 
 </html>
