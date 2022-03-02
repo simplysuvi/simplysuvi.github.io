@@ -161,15 +161,16 @@ nav.navbar {
 }
 
 .banner-text h1 {
-    font-size: 40px;
+    font-size: 50px;
 }
 
 .banner-text p {
     font-size: 20px;
-    width: 50vw;
+    width: 35vw;
     text-align: center;
     margin: 0 auto;
     line-height: 1.5;
+    font-style: italic;
 }
 
 .about-text {
