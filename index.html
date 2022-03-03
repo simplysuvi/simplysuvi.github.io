@@ -37,27 +37,27 @@
             <div class="bar3"></div>
         </div>
         <div class="logo-position">
-            <a href="#" class="logo">simply suvi</a>
+            <a data-scroll href="#" class="logo">simply suvi</a>
         </div>
         <ul class="main-nav">
-            <li><a href="#" class="nav-links">Home</a></li>
-            <li><a href="#about" class="nav-links">About</a></li>
-            <li><a href="#education" class="nav-links">Education</a></li>
-            <li><a href="#workex" class="nav-links">Experience</a></li>
-            <li><a href="#skills" class="nav-links">Skills</a></li>
-            <li><a href="#project-header" class="nav-links">Projects</a></li>
+            <li><a data-scroll href="#" class="nav-links">Home</a></li>
+            <li><a data-scroll href="#about" class="nav-links">About</a></li>
+            <li><a data-scroll href="#education" class="nav-links">Education</a></li>
+            <li><a data-scroll href="#workex" class="nav-links">Experience</a></li>
+            <li><a data-scroll href="#skills" class="nav-links">Skills</a></li>
+            <li><a data-scroll href="#project-header" class="nav-links">Projects</a></li>
         </ul>
     </nav>
 
     <div id="navbar" class="overlay">
         <a href="javascript:void(0)" class="closeButton" onclick="closeNav()">&times;</a>
         <div class="overlay-content">
-            <a href="#" class="menu-links">Home</a>
-            <a href="#about" class="aboutMenu">About</a>
-            <a href="#education" class="educationMenu">Education</a>
-            <a href="#workex" class="expMenu">Experience</a>
-            <a href="#skills" class="skillsMenu">Skills</a>
-            <a href="#project-header" class="projectMenu">Projects</a>
+            <a data-scroll href="#" class="menu-links">Home</a>
+            <a data-scroll href="#about" class="aboutMenu">About</a>
+            <a data-scroll href="#education" class="educationMenu">Education</a>
+            <a data-scroll href="#workex" class="expMenu">Experience</a>
+            <a data-scroll href="#skills" class="skillsMenu">Skills</a>
+            <a data-scroll href="#project-header" class="projectMenu">Projects</a>
         </div>
     </div>
 
@@ -66,7 +66,7 @@
             <span id="typed">
             </span>
             <p>I like to solve problems using data, design delightful experiences for the web, and everything in between.<br><br>
-                <span style="font-size: 18px; font-style: normal;">Scroll down to know more about me <a href="#about" style="text-decoration:none; color: inherit;">↓</a></span>
+                <span style="font-size: 18px; font-style: normal;">Scroll down to know more about me <a data-scroll href="#about" style="text-decoration:none; color: inherit;">↓</a></span>
             </p>
         </h1>
     </div>
@@ -101,14 +101,14 @@
 
                     My passion for data science stems from the desire to solve real-world problems using technology, a flair for identifying patterns to derive interesting insights from data, and data science is one such field where I can combine my love for technology with my love for problem solving.<br><br>
 
-                    As a beginner, I am currently focused on some projects based on machine learning and neural networks that help me solidify my understanding of various concepts crucial to build products driven by data. I have worked on a few projects dealing with imbalanced datasets, data wrangling, data visualizations etc. that I have shared <a href="#project-header">below</a>.<br><br>
+                    As a beginner, I am currently focused on some projects based on machine learning and neural networks that help me solidify my understanding of various concepts crucial to build products driven by data. I have worked on a few projects dealing with imbalanced datasets, data wrangling, data visualizations etc. that I have shared <a data-scroll href="#project-header">below</a>.<br><br>
 
                     My 5 year goal is, to successfully marry...my love for building delightful websites and the knack for solving problems using data, to birth a data-driven product that helps in the greater good of the community.<br><br>
 
                     I am constantly looking to enhance my skill set and work on new & exciting projects, and prove to be a reliable asset to both - myself & the organization I work with.<br><br>
 
                     🙋🏻‍♂️If you are a company/organization looking for an enthusiastic individual for an internship/co-op opportunity, to contribute to your rapid growth, feel free to reach out to me via <a href="https://www.linkedin.com/in/simplysuvi/" target="_blank">LinkedIn</a>.<br>
-                    👋🏻<span style="font-style: italic;">Or if you want to drop a hi or brainstorm something that interests you about music, universe, data, or anything in between, feel free to reach out to me <a href="#reachme">here</a>.</span>
+                    👋🏻<span style="font-style: italic;">Or if you want to drop a hi or brainstorm something that interests you about music, universe, data, or anything in between, feel free to reach out to me <a data-scroll href="#reachme">here</a>.</span>
                 </p>
             </div>
         </section>
@@ -364,6 +364,7 @@
 
     <!--Scripts-->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.0/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/cferdinandi/smooth-scroll@16.1.3/dist/smooth-scroll.polyfills.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/particles.js/2.0.0/particles.min.js"></script>
     <script src="js/particles.js"></script>
     <script type="text/javascript" src="js/jquery-migrate-1.2.1.min.js"></script>
@@ -376,7 +377,7 @@
     <script src="js/typed.js"></script>
     <script src="https://raw.githubusercontent.com/mattboldt/typed.js/master/dist/typed.min.js"></script>
     <script src="js/main.js"></script>
-    <script defer src="https://unpkg.com/smoothscroll-polyfill@0.4.4/dist/smoothscroll.min.js"></script>
+    <script> var scroll = new SmoothScroll('a[href*="#"]');</script>
 
 </body>
 
