@@ -155,6 +155,7 @@ nav.navbar {
     height: 400px;
     padding: 0 1%;
     top: 40vh;
+    z-index: -1;
 }
 
 #typed {
