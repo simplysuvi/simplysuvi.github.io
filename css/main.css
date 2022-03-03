@@ -317,7 +317,7 @@ button:hover {
     margin: 20px auto;
     position: relative;
     overflow: hidden;
-    z-index: -1;
+/*     z-index: -1; */
 }
 
 .timeline:before {
@@ -377,7 +377,10 @@ button:hover {
 
 .timeline-content {
     width: 95%;
+    border: 1px solid #00000024;
+    border-radius: 10px;
     padding: 0 15px;
+    box-shadow: 3px 0px 6px 2px #00000061;
 }
 
 .timeline-content h3 {
