@@ -220,6 +220,7 @@ nav.navbar {
 
 .project-box {
     box-shadow: 0 10px 10px 2px rgb(0 0 0 / 25%);
+    background-color: #d9e2f447;
     border-radius: 5px;
     margin-bottom: 50px;
     padding: 15px;
