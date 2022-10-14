@@ -433,6 +433,10 @@ button:hover {
     margin-bottom: 15px;
 }
 
+i.devi {
+    font-size: 5em;
+}
+
 #contact h1 {
     margin-bottom: 15px;
 }
