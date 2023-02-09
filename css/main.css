@@ -548,8 +548,13 @@ p.copyright-text {
 
     .skill-box {
         display: flex;
-        justify-content: space-around;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
     }
+    
+    .box {
+    padding: 1% 2%;
+}
 
     .navbar {
         display: flex;
