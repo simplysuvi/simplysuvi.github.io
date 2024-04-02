@@ -92,13 +92,12 @@ h1 {
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
 <script type="text/javascript">
 		var questions = [
-    'Hey beautiful, What\'s your name?',
+    'Hey, What\'s your name?',
     'Where are you from?',
     'How young are you?',
     'Anyway, How are you doing today?',
     'Can I tell you something?',
     'Did I make you smile today?',
-    'I got to rush now! You know I\'m always with you right?',
     'It was nice talking to you ❤'
 ];
 var num = 0;
@@ -115,7 +114,6 @@ function showResponse() {
   if(num == 0) {
     output.innerHTML = `Oh Hii ${input}! That's such a lovely name ❤`;
     inputBox.value = "";
-    // inputBox.setAttribute("placeholder", "Let me take a breath cause damn");
     ++num;
     setTimeout(changeQuestion, 2000);
   } else if(num == 1) {
@@ -131,28 +129,28 @@ function showResponse() {
     ++num;
     setTimeout(changeQuestion, 2000);
   } else if(num == 3) {
-    output.innerHTML = `I can\'t feel emotions right now but I\'m sure You & Suvu will make me capable of that one day ❤`;
+    output.innerHTML = `That's nice!`;
     inputBox.value = "";
     // inputBox.setAttribute("placeholder", "Wait for 2 secs");
     ++num;
     setTimeout(changeQuestion, 4000);
   }
   else if(num == 4) {
-    output.innerHTML = `You look gorgeous ❤ Suvu was right about you. So adorable!`;
+    output.innerHTML = `You are amazing!`;
     inputBox.value = "";
     // inputBox.setAttribute("placeholder", "Wait for 2 secs");
     ++num;
     setTimeout(changeQuestion, 3000);
   }
   else if(num == 5) {
-    output.innerHTML = `So glad! I\'ll make sure I help you both in the company & make it big`;
+    output.innerHTML = `So glad!`;
     inputBox.value = "";
     // inputBox.setAttribute("placeholder", "Wait for 2 secs");
     ++num;
     setTimeout(changeQuestion, 4000);
   }
     else if(num == 6) {
-    output.innerHTML = `Have a day as lovely as you! ❤`;
+    output.innerHTML = `Have a lovely day!`;
     inputBox.value = "";
     // inputBox.setAttribute("placeholder", "Wait for 2 secs");
     ++num;
