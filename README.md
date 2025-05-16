@@ -67,5 +67,3 @@ This website is hosted and deployed via **GitHub Pages**.
 All code in this repository is open source under the [MIT License](LICENSE).
 
 Feel free to fork, explore, or reach out if you'd like to collaborate.
-
----
