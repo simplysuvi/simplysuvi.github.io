@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <script>
+        try {
+            if (localStorage.getItem('darkMode') === 'true') {
+                document.documentElement.classList.add('dark-mode');
+                document.body && document.body.classList.add('dark-mode');
+            }
+        } catch (e) { }
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Testimonials about Suvrat Jain - Feedback from colleagues and professionals who have worked with Suvrat">
+    <title>Testimonials | Suvrat Jain</title>
+
+    <!-- Favicon and App Icons -->
+    <link rel="apple-touch-icon" sizes="180x180" href="../assets/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../assets/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../assets/favicon/favicon-16x16.png">
+    <link rel="icon" type="image/x-icon" href="../assets/favicon/favicon.ico">
+    <link rel="manifest" href="../assets/favicon/site.webmanifest">
+    <meta name="theme-color" content="#ffffff">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-config" content="../assets/favicon/browserconfig.xml">
+    <!-- Android Chrome -->
+    <link rel="icon" type="image/png" sizes="192x192" href="../assets/favicon/android-chrome-192x192.png">
+    <link rel="icon" type="image/png" sizes="512x512" href="../assets/favicon/android-chrome-512x512.png">
+
+    <!-- Preload critical assets -->
+    <link rel="preload" href="../css/styles.css" as="style">
+    <link rel="preload" href="../js/script.js" as="script">
+
+    <!-- Optimized font loading -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=SF+Pro+Display:wght@400;500;600;700&display=swap" media="print"
+        onload="this.media='all'">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=SF+Pro+Text:wght@400;500&display=swap"
+        media="print" onload="this.media='all'">
+
+    <!-- Font Awesome CDN for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- Critical CSS -->
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/resume-modal.css">
+
+    <!-- Component Loader -->
+    <script src="../js/component-loader.js"></script>
+
+
+    <!-- Main JavaScript -->
+    <script src="../js/script.js" defer></script>
+    <script src="../js/resume-modal.js" defer></script>
+</head>
+
+<body>
+    <div class="container">
+        <!-- Navigation will be loaded here -->
+        <div id="navigation-container"></div>
+
+        <!-- Testimonials Section -->
+        <section class="testimonials-section">
+            <h2 class="section-title">The work spoke. So did they.</h2>
+            <p class="section-tagline">A glimpse into the kind of impact I try to leave — on projects and people alike.
+            </p>
+            <!-- Testimonials will be dynamically loaded from testimonials.json -->
+            <div class="testimonials-container"></div>
+        </section>
+    </div>
+    <!-- Footer will be loaded here -->
+    <div id="footer-container"></div>
+</body>
+
+</html>

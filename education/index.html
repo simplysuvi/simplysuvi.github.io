@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <script>
+        try {
+            if (localStorage.getItem('darkMode') === 'true') {
+                document.documentElement.classList.add('dark-mode');
+                document.body && document.body.classList.add('dark-mode');
+            }
+        } catch (e) { }
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Suvrat Jain's Education - Academic background in Data Science and Electronics & Communication Engineering">
+    <title>Education | Suvrat Jain</title>
+
+    <!-- Favicon and App Icons -->
+    <link rel="apple-touch-icon" sizes="180x180" href="../assets/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../assets/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../assets/favicon/favicon-16x16.png">
+    <link rel="icon" type="image/x-icon" href="../assets/favicon/favicon.ico">
+    <link rel="manifest" href="../assets/favicon/site.webmanifest">
+    <meta name="theme-color" content="#ffffff">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-config" content="../assets/favicon/browserconfig.xml">
+    <!-- Android Chrome -->
+    <link rel="icon" type="image/png" sizes="192x192" href="../assets/favicon/android-chrome-192x192.png">
+    <link rel="icon" type="image/png" sizes="512x512" href="../assets/favicon/android-chrome-512x512.png">
+
+    <!-- Preload critical assets -->
+    <link rel="preload" href="../css/styles.css" as="style">
+    <link rel="preload" href="../js/script.js" as="script">
+
+    <!-- Optimized font loading -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=SF+Pro+Display:wght@400;500;600;700&display=swap" media="print"
+        onload="this.media='all'">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=SF+Pro+Text:wght@400;500&display=swap"
+        media="print" onload="this.media='all'">
+
+    <!-- Font Awesome CDN for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- Critical CSS -->
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/resume-modal.css">
+
+    <!-- Component Loader -->
+    <script src="../js/component-loader.js"></script>
+
+
+    <!-- Main JavaScript -->
+    <script src="../js/script.js" defer></script>
+    <script src="../js/resume-modal.js" defer></script>
+</head>
+
+<body>
+    <div class="container">
+        <!-- Navigation will be loaded here -->
+        <div id="navigation-container"></div>
+
+        <!-- Education Section -->
+        <section class="education-section">
+            <h2 class="section-title">Degrees of Curiosity.</h2>
+            <p class="section-tagline">A look at the formal education that taught me the rules — so I could break them
+                thoughtfully.</p>
+            <div class="site-cards">
+                <div class="site-card">
+                    <div class="card-content">
+                        <div class="card-header">
+                            <h3>M.Sc. (Data Science)</h3>
+                            <p class="company">Rochester Institute of Technology, NY, United States</p>
+                            <p class="date">2021 - 2023</p>
+                        </div>
+                        <div class="card-body">
+                            <p>Courses: Applied Statistics, Java & Python for Data Science, Neural Networks, Time Series
+                                Analysis & Forecasting, Visual Analytics</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="site-card">
+                    <div class="card-content">
+                        <div class="card-header">
+                            <h3>B.Tech (Electronics & Communication Engineering)</h3>
+                            <p class="company">Manipal Academy of Higher Education, Dubai, U.A.E.</p>
+                            <p class="date">2017 - 2019</p>
+                        </div>
+                        <div class="card-body">
+                            <p>Courses: Embedded Systems, Analog Communication, Digital Signal Processing using MATLAB,
+                                VLSI Network Design</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Publications Section -->
+        <section class="publication-section">
+            <h2 class="section-title">Published Work</h2>
+            <p class="section-tagline">Not a long list yet. But a meaningful one.</p>
+            <div class="site-cards">
+                <div class="site-card">
+                    <div class="card-content">
+                        <div class="card-header">
+                            <h3>
+                                Image-Based Machine Learning in Automotive Used Parts Identification for
+                                Remanufacturing
+                            </h3>
+                            <p class="company">Islam, A., Jain, S., Nenadic, N.G., Thurston, M.G., Greenberg, J., Moss,
+                                B.</p>
+                            <p class="date">Published: 26 January 2024</p>
+                        </div>
+                        <div class="card-body">
+                            <p class="publication-doi">DOI: <a href="https://doi.org/10.1002/9781394214297.ch39"
+                                    target="_blank">10.1002/9781394214297.ch39</a></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+    <!-- Footer will be loaded here -->
+    <div id="footer-container"></div>
+</body>
+
+</html>

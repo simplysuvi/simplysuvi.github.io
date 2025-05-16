@@ -1,0 +1,49 @@
+[
+    {
+        "id": "dieselcore",
+        "title": "Data Science and AI Engineer",
+        "company": "DieselCore LLC",
+        "startDate": "May 2024",
+        "endDate": "Present",
+        "responsibilities": [
+            "Developing and integrating advanced AI solutions to enhance internal communication tools and improve operational efficiency",
+            "Leading the implementation of cutting-edge machine learning models for strategic business applications",
+            "Spearheading technology evaluation and solution design for quality assurance and process optimization",
+            "Collaborating with cross-functional teams to ensure seamless project execution and technology adaptation"
+        ]
+    },
+    {
+        "id": "rit-engineer",
+        "title": "Data Science Engineer",
+        "company": "Golisano Institute for Sustainability, RIT",
+        "startDate": "May 2022",
+        "endDate": "May 2024",
+        "responsibilities": [
+            "Led the development of a vision system integrating YOLOv8 and UNet segmentation models to achieve precise clothing dismantling",
+            "Leveraged AWS SageMaker to build scalable image classification pipelines using TensorFlow",
+            "Implemented advanced data augmentation techniques, resulting in a 10% improvement in IoU score",
+            "Developed ETL and data augmentation pipelines, expanding dataset by 30% and achieving a 12% lift in model accuracy",
+            "Implemented efficient CUDA kernels for GPU acceleration, demonstrating proficiency in deep learning frameworks",
+            "Developed performant CNN models for automobile part categorization (98.2% on 10k+ images, using OpenCV)",
+            "Boosted automobile part classification accuracy by 73% by fine-tuning an Inception v3 model",
+            "Implemented a Siamese Network for similarity learning, achieving 98% accuracy on out-of-training data",
+            "Developed a multi-stage ETL pipeline for object detection/classification, reducing manual inspection time by 30%"
+        ]
+    },
+    {
+        "id": "merkle-developer",
+        "title": "Software Developer and Tester",
+        "company": "Merkle",
+        "startDate": "Sep 2020",
+        "endDate": "Aug 2021",
+        "responsibilities": [
+            "Deployed 100+ email campaigns for brands like Estée Lauder and MAC Cosmetics using Salesforce Marketing Cloud",
+            "Developed personalized email campaigns with a reach of more than 400,000 customers in 100+ countries",
+            "Developed automated test suites (Python, Selenium) for web applications, reducing manual testing effort by 24%",
+            "Built API test automation scripts to validate functionality and data integrity",
+            "Reduced overall test cycle time by 40% using Python scripting in automation testing",
+            "Identified & reported 500+ unique bugs across web & mobile applications for UltraTech Cement",
+            "Performed manual testing of mobile applications, including smoke, functional, integration, regression, and UI testing"
+        ]
+    }
+]

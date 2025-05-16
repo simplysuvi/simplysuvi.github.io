@@ -1,14 +1,44 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset
-      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
-      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-      xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
-            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
-<url>
-  <loc>https://simplysuvi.github.io/</loc>
-  <lastmod>2020-07-22T07:14:49+00:00</lastmod>
-</url>
+  <url>
+    <loc>https://simplysuvi.com/</loc>
+    <lastmod>2025-05-16</lastmod>
+  </url>
 
+  <url>
+    <loc>https://simplysuvi.com/about/</loc>
+    <lastmod>2025-05-16</lastmod>
+  </url>
+
+  <url>
+    <loc>https://simplysuvi.com/projects/</loc>
+    <lastmod>2025-05-16</lastmod>
+  </url>
+
+  <url>
+    <loc>https://simplysuvi.com/experience/</loc>
+    <lastmod>2025-05-16</lastmod>
+  </url>
+
+  <url>
+    <loc>https://simplysuvi.com/education/</loc>
+    <lastmod>2025-05-16</lastmod>
+  </url>
+
+  <url>
+    <loc>https://simplysuvi.com/skills/</loc>
+    <lastmod>2025-05-16</lastmod>
+  </url>
+
+  <url>
+    <loc>https://simplysuvi.com/testimonials/</loc>
+    <lastmod>2025-05-16</lastmod>
+  </url>
+
+  <url>
+    <loc>https://simplysuvi.com/hobbies/</loc>
+    <lastmod>2025-05-16</lastmod>
+  </url>
 
 </urlset>

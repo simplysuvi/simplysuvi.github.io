@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <script>
+        try {
+            if (localStorage.getItem('darkMode') === 'true') {
+                document.documentElement.classList.add('dark-mode');
+                document.body && document.body.classList.add('dark-mode');
+            }
+        } catch (e) { }
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Suvrat Jain's Skills - Data Scientist with expertise in Python, Machine Learning, Data Analysis, TensorFlow, PyTorch, and SQL">
+    <title>Skills | Suvrat Jain</title>
+
+    <!-- Favicon and App Icons -->
+    <link rel="apple-touch-icon" sizes="180x180" href="../assets/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../assets/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../assets/favicon/favicon-16x16.png">
+    <link rel="icon" type="image/x-icon" href="../assets/favicon/favicon.ico">
+    <link rel="manifest" href="../assets/favicon/site.webmanifest">
+    <meta name="theme-color" content="#ffffff">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-config" content="../assets/favicon/browserconfig.xml">
+    <!-- Android Chrome -->
+    <link rel="icon" type="image/png" sizes="192x192" href="../assets/favicon/android-chrome-192x192.png">
+    <link rel="icon" type="image/png" sizes="512x512" href="../assets/favicon/android-chrome-512x512.png">
+
+    <!-- Preload critical assets -->
+    <link rel="preload" href="../css/styles.css" as="style">
+    <link rel="preload" href="../js/script.js" as="script">
+
+    <!-- Optimized font loading -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=SF+Pro+Display:wght@400;500;600;700&display=swap" media="print"
+        onload="this.media='all'">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=SF+Pro+Text:wght@400;500&display=swap"
+        media="print" onload="this.media='all'">
+
+    <!-- Font Awesome CDN for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- Critical CSS -->
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/resume-modal.css">
+
+    <!-- Component Loader -->
+    <script src="../js/component-loader.js"></script>
+
+    <!-- Page Transitions -->
+
+    <!-- Main JavaScript -->
+    <script src="../js/script.js" defer></script>
+    <script src="../js/resume-modal.js" defer></script>
+</head>
+
+<body>
+    <div class="container">
+        <!-- Navigation will be loaded here -->
+        <div id="navigation-container"></div>
+
+        <!-- Skills Section -->
+        <section class="skills-section">
+            <h2 class="section-title">What I bring to the table (besides snacks).</h2>
+            <p class="section-tagline">The current stack. Subject to upgrades. Rapidly.</p>
+            <div class="skills-container">
+                <div class="skills-grid">
+                    <div class="skills-item">
+                        <div class="skills-icon-container">
+                            <div class="skills-icon python">
+                                <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M12 0C5.372 0 6.61 2.864 6.61 2.864l.005 2.97h5.47v.77H4.133S0 5.973 0 12.088c0 6.115 3.607 5.897 3.607 5.897h2.153v-2.834s-.116-3.607 3.55-3.607h6.114s3.43.058 3.43-3.313V3.814S19.342 0 12 0zM8.883 1.679c.54 0 .98.44.98.98 0 .54-.44.98-.98.98-.54 0-.98-.44-.98-.98 0-.54.44-.98.98-.98z"
+                                        fill="#366A96" />
+                                    <path
+                                        d="M12 24c6.628 0 5.39-2.864 5.39-2.864l-.005-2.97h-5.47v-.77h7.952S24 18.027 24 11.912c0-6.115-3.607-5.897-3.607-5.897h-2.153v2.834s.116 3.607-3.55 3.607H8.576s-3.43-.058-3.43 3.313v4.417S4.658 24 12 24zm3.117-1.679c-.54 0-.98-.44-.98-.98 0-.54.44-.98.98-.98.54 0 .98.44.98.98 0 .54-.44.98-.98.98z"
+                                        fill="#FFC331" />
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="skills-name">Python</div>
+                    </div>
+                    <div class="skills-item">
+                        <div class="skills-icon-container">
+                            <div class="skills-icon ml">
+                                <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm-5-9h10v2H7z"
+                                        fill="#FF2D55" />
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="skills-name">Machine Learning</div>
+                    </div>
+                    <div class="skills-item">
+                        <div class="skills-icon-container">
+                            <div class="skills-icon data">
+                                <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M5 9.2h3V19H5V9.2zM10.6 5h2.8v14h-2.8V5zm5.6 8H19v6h-2.8v-6z"
+                                        fill="#5AC8FA" />
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="skills-name">Data Analysis</div>
+                    </div>
+                    <div class="skills-item">
+                        <div class="skills-icon-container">
+                            <div class="skills-icon tensorflow">
+                                <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M1.292 5.856L11.54 0v24l-4.095-2.378V7.603l-6.168 3.564.015-5.31zm21.43 5.311l-.014-5.31L12.46 0v24l10.262-5.856-4.055-2.347V7.603l4.055-2.378z"
+                                        fill="#FF9500" />
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="skills-name">TensorFlow</div>
+                    </div>
+                    <div class="skills-item">
+                        <div class="skills-icon-container">
+                            <div class="skills-icon pytorch">
+                                <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M12.005 0L4.952 7.053l3.097 3.097 7.149-7.149v11.96h4.389V0h-7.582zm-1.24 10.691l-3.116 3.116 3.116 3.116 3.116-3.116-3.116-3.116z"
+                                        fill="#EE4C2C" />
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="skills-name">PyTorch</div>
+                    </div>
+                    <div class="skills-item">
+                        <div class="skills-icon-container">
+                            <div class="skills-icon sql">
+                                <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M12 2C6.477 2 2 6.477 2 12s4.477 10 10 10 10-4.477 10-10S17.523 2 12 2zm0 2c4.418 0 8 3.582 8 8s-3.582 8-8 8-8-3.582-8-8 3.582-8 8-8zm-3 4v8h2v-6h2v6h2V8h-6z"
+                                        fill="#007AFF" />
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="skills-name">SQL</div>
+                    </div>
+                </div>
+
+                <div class="skills-resume-container">
+                    <a href="#" class="skills-resume-button menu-resume-button">
+                        View Resume
+                    </a>
+                </div>
+            </div>
+        </section>
+    </div>
+    <!-- Footer will be loaded here -->
+    <div id="footer-container"></div>
+</body>
+
+</html>

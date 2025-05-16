@@ -1,0 +1,3182 @@
+/**
+ * CSS for Portfolio Website
+ * Organized by page/component for better maintainability
+ */
+
+/*--------------------------------------------------------------
+# Variables
+--------------------------------------------------------------*/
+:root {
+    /* Primary colors */
+    --website-blue: #007AFF;
+    --website-indigo: #2e77dc;
+
+    /* Neutral colors */
+    --website-gray: #8E8E93;
+    --website-gray3: #C7C7CC;
+    --website-gray6: #F2F2F7;
+
+    /* Light mode colors */
+    --website-background: #f5f5f7;
+    --website-text: #1d1d1f;
+    --website-secondary-text: #6e6e73;
+    --website-tertiary-text: #8E8E93;
+    --website-separator: rgba(0, 0, 0, 0.1);
+    --website-card-background: #FFFFFF;
+    --website-window-background: rgba(255, 255, 255, 0.8);
+    --website-light-card-background: #f5f5f7;
+    /* Used for project cards */
+    --website-white: #FFFFFF;
+    --website-black: #1d1d1f;
+
+    /* Typography colors - light mode */
+    --website-heading-color: var(--website-text);
+    --website-paragraph-color: var(--website-secondary-text);
+
+    /* Dark mode colors */
+    --website-dark-background: #1d1d1f;
+    --website-dark-text: #F5F5F7;
+    --website-dark-secondary-text: #AEAEB2;
+    --website-dark-tertiary-text: #8E8E93;
+    --website-dark-separator: rgba(255, 255, 255, 0.1);
+    --website-dark-card-background: #1E1E1E;
+    --website-dark-card-background-alt: #2A2A2A;
+    /* Alt card bg */
+    --website-dark-window-background: rgba(30, 30, 30, 0.8);
+    /* Dark equivalent of light gray bg */
+    --website-dark-elevated-background: #2C2C2E;
+    /* Slightly elevated dark bg */
+
+    /* Typography colors - dark mode */
+    --website-dark-heading-color: var(--website-dark-text);
+    --website-dark-paragraph-color: var(--website-dark-secondary-text);
+
+    /* Social media colors */
+    --website-linkedin: #0077B5;
+    --website-github: #24292E;
+    --website-twitter: #1DA1F2;
+    --website-spotify: #1DB954;
+
+    /* Shadows */
+    --shadow-sm: 0 4px 8px rgba(0, 0, 0, 0.05);
+    --shadow-md: 0 10px 20px rgba(0, 0, 0, 0.05), 0 6px 6px rgba(0, 0, 0, 0.02);
+    --shadow-lg: 0 20px 40px rgba(0, 0, 0, 0.06), 0 10px 20px rgba(0, 0, 0, 0.02);
+    --shadow-dark-sm: 0 4px 8px rgba(0, 0, 0, 0.1);
+    --shadow-dark-md: 0 10px 20px rgba(0, 0, 0, 0.1), 0 6px 6px rgba(0, 0, 0, 0.05);
+    --shadow-dark-lg: 0 20px 40px rgba(0, 0, 0, 0.1), 0 10px 20px rgba(0, 0, 0, 0.05);
+
+    /* Transitions */
+    --transition-fast: all 0.2s ease;
+    --transition-base: all 0.3s ease;
+    --transition-smooth: all 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
+    --transition-bounce: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+
+    /* Overlay colors */
+    --website-overlay-medium: rgba(0, 0, 0, 0.2);
+    --website-overlay-dark: rgba(0, 0, 0, 0.5);
+    --website-overlay-darker: rgba(0, 0, 0, 0.8);
+    --website-overlay-darkest: rgba(0, 0, 0, 0.9);
+    --website-overlay-white-light: rgba(255, 255, 255, 0.7);
+}
+
+/*--------------------------------------------------------------
+# Base Styles
+--------------------------------------------------------------*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    height: 100%;
+}
+
+body {
+    font-family: 'SF Pro Text', -ui-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    background-color: var(--website-background);
+    color: var(--website-text);
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    overflow-x: hidden;
+    transition: background-color 0.3s ease, color 0.3s ease, opacity 0.7s cubic-bezier(0.4,0,0.2,1);
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Smooth page load effect */
+body.preload {
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.7s cubic-bezier(0.4,0,0.2,1);
+}
+
+body:not(.preload) {
+    opacity: 1;
+    pointer-events: auto;
+    transition: opacity 0.7s cubic-bezier(0.4,0,0.2,1);
+}
+
+body.dark-mode.preload {
+    opacity: 0;
+    pointer-events: none;
+}
+
+h1,
+h2,
+h3,
+h4 {
+    font-family: 'SF Pro Display', -ui-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    font-weight: 600;
+    color: var(--website-heading-color);
+    transition: color 0.3s ease;
+}
+
+p {
+    color: var(--website-paragraph-color);
+    transition: color 0.3s ease;
+}
+
+.container {
+    width: 100%;
+    margin: 0 auto;
+    position: relative;
+    flex: 1 0 auto;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Generic Section Styling */
+section {
+    padding: 10ch 0;
+    background-color: transparent;
+    position: relative;
+    overflow: hidden;
+    /* Animation handled by JS */
+}
+
+section::before {
+    /* Optional subtle background effect for sections */
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    z-index: -1;
+    border-radius: 30px;
+    /* Consistent rounded feel */
+}
+
+.section-title {
+    font-size: 72px;
+    font-weight: 800;
+    line-height: 1.1;
+    margin-bottom: 24px;
+    padding: 0 20px;
+    letter-spacing: -0.03em;
+    text-align: center;
+    max-width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+    color: var(--website-heading-color);
+    /* Use variable */
+}
+
+.section-tagline {
+    font-size: 24px;
+    line-height: 1.5;
+    color: var(--website-secondary-text);
+    max-width: 800px;
+    margin: 0 auto 40px;
+    padding: 0 20px;
+    text-align: center;
+    font-weight: 600;
+}
+
+/* Responsive styles for section title and tagline */
+@media (max-width: 992px) {
+    .section-title {
+        font-size: 60px;
+    }
+
+    .section-tagline {
+        font-size: 22px;
+    }
+}
+
+@media (max-width: 768px) {
+    section {
+        padding: 8ch 0;
+    }
+
+    .section-title {
+        font-size: 48px;
+    }
+
+    .section-tagline {
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .section-title {
+        font-size: 36px;
+    }
+
+    .section-tagline {
+        font-size: 18px;
+    }
+}
+
+/*--------------------------------------------------------------
+# Components
+--------------------------------------------------------------*/
+
+/* ## Menu Bar / Navigation ## */
+.menu-bar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 50px;
+    background-color: var(--website-overlay-white-light);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    z-index: 1000;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.03);
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+.menu-bar::after {
+    /* Subtle highlight line */
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: rgba(255, 255, 255, 0.3);
+    opacity: 0.5;
+    transition: background 0.3s ease;
+}
+
+.menu-bar-left,
+.menu-bar-right {
+    display: flex;
+    align-items: center;
+    height: 100%;
+}
+
+.menu-items {
+    display: flex;
+    gap: 24px;
+    height: 100%;
+}
+
+.menu-items span {
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: color 0.3s ease;
+    position: relative;
+    display: flex;
+    align-items: center;
+    height: 100%;
+    letter-spacing: -0.01em;
+    color: var(--website-secondary-text);
+}
+
+.menu-items span a {
+    color: inherit;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    height: 100%;
+}
+
+.menu-items span:hover {
+    color: var(--website-text);
+}
+
+.menu-items span:hover::after {
+    transform: scaleX(0.8);
+}
+
+.menu-items span.active {
+    font-weight: 700;
+    color: var(--website-text);
+}
+
+.menu-items span.active::after {
+    transform: scaleX(1);
+}
+
+.menu-icons {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+/* Resume Button in Menu Bar */
+.menu-resume-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--website-blue);
+    color: var(--website-white);
+    padding: 5px 16px;
+    border-radius: 20px;
+    font-weight: 600;
+    font-size: 12px;
+    letter-spacing: -0.01em;
+    text-decoration: none;
+    transition: background-color 0.2s, box-shadow 0.2s, color 0.2s;
+    box-shadow: 0 2px 8px rgba(0, 122, 255, 0.07);
+    border: none;
+    outline: none;
+    cursor: pointer;
+    white-space: nowrap;
+}
+
+/* Spotify Listen Button */
+.spotify-listen-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    border-radius: 30px;
+    font-weight: 600;
+    font-size: 15px;
+    letter-spacing: -0.01em;
+    text-decoration: none;
+    box-shadow: 0 2px 8px rgba(30, 185, 84, 0.10);
+    border: none;
+    outline: none;
+    cursor: pointer;
+    white-space: nowrap;
+    gap: 10px;
+}
+
+.spotify-listen-button i {
+    font-size: 22px;
+    transition: 0.3s;
+}
+
+.spotify-listen-button i:hover {
+    color: var(--website-spotify);
+    transform: translateY(-2px);
+}
+
+
+.menu-resume-button:hover,
+.menu-resume-button:focus {
+    background-color: var(--website-indigo);
+    color: var(--website-white);
+    box-shadow: 0 4px 12px rgba(0, 122, 255, 0.13);
+    text-decoration: none;
+}
+
+body.dark-mode .menu-resume-button {
+    background-color: var(--website-blue);
+    color: var(--website-white);
+    box-shadow: 0 2px 8px rgba(0, 122, 255, 0.13);
+}
+
+body.dark-mode .menu-resume-button:hover,
+body.dark-mode .menu-resume-button:focus {
+    background-color: var(--website-indigo);
+    color: var(--website-white);
+    box-shadow: 0 4px 12px rgba(0, 122, 255, 0.23);
+}
+
+/* Responsive: shrink padding/font on small screens */
+@media (max-width: 992px) {
+    .menu-resume-button {
+        font-size: 14px;
+        padding: 6px 16px;
+        border-radius: 16px;
+    }
+}
+
+.icon {
+    width: 20px;
+    height: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--website-secondary-text);
+    transition: color 0.3s ease, transform 0.3s ease;
+    position: relative;
+    cursor: pointer;
+}
+
+.icon:hover {
+    color: var(--website-text);
+    transform: scale(1.1);
+}
+
+.icon:hover::before {
+    transform: scale(1);
+    opacity: 1;
+}
+
+/* Static icons (no hover effects) */
+.icon.battery,
+.icon.wifi {
+    cursor: default;
+    transition: none;
+}
+
+.icon.battery:hover,
+.icon.wifi:hover {
+    color: var(--website-secondary-text);
+    transform: none;
+}
+
+.icon.battery::before,
+.icon.wifi::before {
+    display: none;
+}
+
+.time {
+    font-size: 14px;
+    font-weight: 500;
+    text-align: right;
+    color: var(--website-secondary-text);
+    transition: color 0.3s ease;
+    margin-left: 10px;
+}
+
+.time:hover {
+    color: var(--website-text);
+}
+
+/* Dark mode styles for menu bar */
+body.dark-mode .menu-bar {
+    background-color: rgba(28, 28, 30, 0.8);
+    border-bottom-color: var(--website-dark-separator);
+}
+
+body.dark-mode .menu-bar::after {
+    background: rgba(0, 0, 0, 0.3);
+    /* Darker highlight */
+}
+
+body.dark-mode .menu-items span {
+    color: var(--website-dark-secondary-text);
+}
+
+body.dark-mode .menu-items span:hover {
+    color: var(--website-dark-text);
+}
+
+body.dark-mode .menu-items span.active {
+    color: var(--website-dark-text);
+}
+
+body.dark-mode .icon {
+    color: var(--website-dark-secondary-text);
+}
+
+body.dark-mode .icon:hover {
+    color: var(--website-dark-text);
+}
+
+body.dark-mode .icon::before {
+    background-color: rgba(0, 122, 255, 0.2);
+    /* Slightly brighter blue for dark mode */
+}
+
+body.dark-mode .icon.battery:hover,
+body.dark-mode .icon.wifi:hover {
+    color: var(--website-dark-secondary-text);
+}
+
+body.dark-mode .time {
+    color: var(--website-dark-secondary-text);
+}
+
+body.dark-mode .time:hover {
+    color: var(--website-dark-text);
+}
+
+
+/* ## Footer ## */
+.minimal-footer {
+    padding-top: 30px;
+    padding-bottom: 10px;
+    position: relative;
+    overflow: hidden;
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+    flex-shrink: 0;
+}
+
+/* Grouped container styles for maintainability */
+.about-container,
+.skills-container,
+.site-cards,
+.timeline-container,
+.hobbies-container,
+.testimonials-container {
+    max-width: 900px;
+    margin: 0 auto;
+    background-color: var(--website-window-background);
+    border-radius: 28px;
+    box-shadow: var(--shadow-lg);
+    position: relative;
+    overflow: hidden;
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+/* Unique container paddings */
+.footer-container {
+    padding: 0 40px;
+    margin: 0 auto;
+    position: relative;
+    overflow: hidden;
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+.footer-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.footer-logo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.footer-logo-text {
+    font-size: 24px;
+    font-weight: 700;
+    color: var(--website-text);
+    letter-spacing: -0.01em;
+    transition: color 0.3s ease;
+}
+
+
+.footer-link {
+    color: var(--website-blue);
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.footer-link:hover {
+    color: var(--website-text);
+    text-decoration: underline;
+}
+
+.footer-social {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 30px;
+}
+
+.social-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: var(--transition-smooth);
+    font-size: 35px;
+    text-decoration: none;
+}
+
+
+.social-icon {
+    color: var(--website-secondary-text);
+}
+
+body.dark-mode .social-icon {
+    color: var(--website-dark-secondary-text);
+}
+
+.social-icon.linkedin:hover {
+    color: var(--website-linkedin);
+}
+
+.social-icon.spotify:hover {
+    color: var(--website-spotify);
+}
+
+
+.footer-copyright {
+    text-align: center;
+    color: var(--website-secondary-text);
+    font-size: 14px;
+    transition: color 0.3s ease;
+}
+
+.footer-copyright p {
+    margin-bottom: 10px;
+    color: inherit;
+}
+
+/* Dark Mode Styles for Footer */
+body.dark-mode .minimal-footer {
+    border-color: var(--website-dark-separator);
+}
+
+body.dark-mode .footer-logo-text {
+    color: var(--website-dark-text);
+}
+
+body.dark-mode .footer-link {
+    color: var(--website-blue);
+    /* Keep blue for contrast */
+}
+
+body.dark-mode .footer-link:hover {
+    color: var(--website-dark-text);
+}
+
+
+body.dark-mode .footer-copyright {
+    color: var(--website-dark-secondary-text);
+}
+
+/* Responsive styles for Footer */
+@media (max-width: 768px) {
+
+    /* Grouped container responsive styles */
+    .footer-container,
+    .about-container,
+    .skills-container,
+    .site-cards,
+    .timeline-container,
+    .hobbies-container,
+    .testimonials-container {
+        padding: 30px 20px;
+        max-width: calc(100vw - 40px);
+    }
+
+    .footer-logo-text {
+        font-size: 20px;
+    }
+
+    .footer-link {
+        font-size: 16px;
+    }
+}
+
+
+/* ## Project Modal (Used on Projects Page) ## */
+.project-modal-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--website-overlay-dark);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 2000;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.project-modal-container.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+.project-modal {
+    width: 90%;
+    max-width: 650px;
+    /* Adjusted max-width */
+    max-height: 90vh;
+    background-color: rgba(255, 255, 255, 0.98);
+    /* Slightly less transparent */
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 25px 50px var(--website-overlay-medium), 0 15px 25px var(--website-separator);
+    transform: scale(0.9);
+    opacity: 0;
+    transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275), opacity 0.3s ease, background-color 0.3s ease;
+}
+
+.project-modal.active {
+    transform: scale(1);
+    opacity: 1;
+}
+
+.project-modal-content {
+    position: relative;
+    padding: 40px;
+    overflow-y: auto;
+    max-height: calc(90vh - 80px);
+    /* Account for padding */
+}
+
+.project-modal-close {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background-color: rgba(0, 0, 0, 0.05);
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    z-index: 10;
+    transition: all 0.2s ease;
+}
+
+.project-modal-close:hover {
+    background-color: var(--website-separator);
+    transform: scale(1.05);
+}
+
+.project-modal-close svg {
+    width: 20px;
+    height: 20px;
+    color: rgba(0, 0, 0, 0.6);
+    transition: color 0.3s ease;
+}
+
+.project-modal-body {
+    padding: 10px 0;
+    /* Adjusted padding */
+}
+
+.project-modal-icon {
+    /* Optional icon */
+    width: 80px;
+    height: 80px;
+    margin-bottom: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(0, 122, 255, 0.05);
+    border-radius: 16px;
+    padding: 15px;
+}
+
+.project-modal-title {
+    font-size: 32px;
+    font-weight: 700;
+    margin-bottom: 20px;
+    color: var(--website-text);
+    letter-spacing: -0.02em;
+    line-height: 1.2;
+    transition: color 0.3s ease;
+}
+
+.project-modal-description {
+    font-size: 17px;
+    line-height: 1.6;
+    margin-bottom: 30px;
+    color: var(--website-secondary-text);
+    transition: color 0.3s ease;
+}
+
+.project-modal-description p {
+    margin-bottom: 15px;
+    color: inherit;
+}
+
+.project-tech-container {
+    /* Container for tech tags */
+    margin: 25px 0;
+}
+
+.project-modal-body .project-tech {
+    /* Tech tags inside modal */
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 30px;
+}
+
+.project-modal-body .project-tech span {
+    font-size: 14px;
+    /* Slightly smaller */
+    background-color: rgba(0, 122, 255, 0.08);
+    color: var(--website-blue);
+    padding: 6px 14px;
+    /* Adjusted padding */
+    border-radius: 20px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    letter-spacing: -0.01em;
+}
+
+/* Project features styling */
+.project-features-container {
+    margin: 30px 0;
+}
+
+.project-features-container h4 {
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 15px;
+    color: var(--website-text);
+    transition: color 0.3s ease;
+}
+
+.project-features ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.project-features li {
+    position: relative;
+    padding-left: 25px;
+    margin-bottom: 12px;
+    font-size: 16px;
+    line-height: 1.6;
+    color: var(--website-secondary-text);
+    /* Use variable */
+    transition: color 0.3s ease;
+}
+
+.project-features li::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 10px;
+    /* Adjust vertical alignment */
+    width: 8px;
+    height: 8px;
+    background-color: var(--website-blue);
+    border-radius: 50%;
+    box-shadow: 0 0 5px rgba(0, 122, 255, 0.3);
+}
+
+/* Project links styling */
+.project-links-container {
+    display: flex;
+    flex-wrap: wrap;
+    /* Allow wrapping on small screens */
+    gap: 15px;
+    justify-content: center;
+    margin-top: 30px;
+    /* Increased margin */
+}
+
+.project-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 12px 24px;
+    border-radius: 20px;
+    font-size: 16px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
+    position: relative;
+    overflow: hidden;
+}
+
+.project-link.demo {
+    background-color: var(--website-blue);
+    color: var(--website-white);
+}
+
+.project-link.github {
+    background-color: var(--website-github);
+    color: var(--website-white);
+}
+
+.project-link:hover {
+    transform: translateY(-3px);
+    /* Subtle lift */
+    box-shadow: 0 5px 15px var(--website-separator);
+}
+
+.project-modal-setup {
+    border-top: 1px solid var(--website-separator);
+    margin-top: 30px;
+    transition: border-color 0.3s ease;
+}
+
+.project-modal-setup h4 {
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 20px;
+    color: var(--website-text);
+    letter-spacing: -0.01em;
+    transition: color 0.3s ease;
+}
+
+/* Dark mode styles for modal */
+body.dark-mode .project-modal {
+    background-color: rgba(30, 30, 30, 0.95);
+    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.3), 0 15px 25px rgba(0, 0, 0, 0.2);
+}
+
+body.dark-mode .project-modal-close {
+    background-color: var(--website-dark-separator);
+}
+
+body.dark-mode .project-modal-close:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+body.dark-mode .project-modal-close svg {
+    color: rgba(255, 255, 255, 0.6);
+}
+
+body.dark-mode .project-modal-title {
+    color: var(--website-dark-text);
+}
+
+body.dark-mode .project-modal-description {
+    color: var(--website-dark-secondary-text);
+}
+
+body.dark-mode .project-modal-body .project-tech span {
+    background-color: rgba(0, 122, 255, 0.15);
+    /* Slightly brighter blue */
+    color: var(--website-blue);
+    /* Keep blue for contrast */
+}
+
+body.dark-mode .project-features-container h4 {
+    color: var(--website-dark-text);
+}
+
+body.dark-mode .project-features li {
+    color: var(--website-dark-secondary-text);
+}
+
+body.dark-mode .project-link.github {
+    background-color: #333;
+    /* Darker GitHub color */
+}
+
+body.dark-mode .project-modal-setup {
+    border-color: var(--website-dark-separator);
+}
+
+body.dark-mode .project-modal-setup h4 {
+    color: var(--website-dark-text);
+}
+
+/* Responsive styles for modal */
+@media (max-width: 768px) {
+    .project-modal-content {
+        padding: 30px 20px;
+        max-height: calc(90vh - 60px);
+    }
+
+    .project-modal-title {
+        font-size: 24px;
+    }
+
+    .project-modal-description {
+        font-size: 16px;
+    }
+
+    .project-link {
+        padding: 10px 20px;
+        font-size: 14px;
+    }
+}
+
+
+/* ## Site Card (Used on Education & Experience Pages) ## */
+.site-card {
+    border-radius: 28px;
+    overflow: hidden;
+    transition: var(--transition-smooth);
+    position: relative;
+    transform-origin: center bottom;
+    box-shadow: var(--shadow-md);
+    border: 1px solid transparent;
+    /* For dark mode transition */
+}
+
+.card-content {
+    /* General content padding */
+    padding: 35px;
+    position: relative;
+    z-index: 1;
+}
+
+.card-header {
+    position: relative;
+    margin-bottom: 15px;
+    /* Space below header */
+}
+
+.card-header h3 {
+    /* Title (e.g., Degree, Job Title) */
+    font-size: 32px;
+    margin-bottom: 10px;
+    letter-spacing: -0.02em;
+    line-height: 1.2;
+    font-weight: 700;
+    color: var(--website-heading-color);
+    /* Use variable */
+}
+
+.company {
+    /* Subtitle (e.g., University, Company Name) */
+    font-size: 18px;
+    color: var(--website-blue);
+    margin-bottom: 8px;
+    font-weight: 600;
+    letter-spacing: -0.01em;
+}
+
+.date {
+    /* Date range */
+    font-size: 16px;
+    color: var(--website-gray);
+    font-weight: 500;
+    display: inline-block;
+    padding: 6px 12px;
+    background-color: rgba(0, 122, 255, 0.08);
+    border-radius: 12px;
+    margin-top: 5px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.card-body ul {
+    /* List of points/responsibilities */
+    list-style-type: none;
+    margin-top: 10px;
+    padding-left: 0;
+    /* Remove default padding */
+}
+
+.card-body li {
+    position: relative;
+    padding-left: 28px;
+    margin-bottom: 12px;
+    font-size: 16px;
+    line-height: 1.6;
+    color: var(--website-paragraph-color);
+    /* Use variable */
+}
+
+.card-body li::before {
+    /* Bullet point style */
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 10px;
+    /* Adjust vertical alignment */
+    width: 8px;
+    height: 8px;
+    background-color: var(--website-blue);
+    border-radius: 50%;
+    box-shadow: 0 0 5px rgba(0, 122, 255, 0.3);
+}
+
+.card-body p {
+    /* General paragraph text within card */
+    font-size: 17px;
+    line-height: 1.8;
+    color: var(--website-secondary-text);
+    letter-spacing: -0.01em;
+    position: relative;
+    margin-bottom: 15px;
+    /* Space between paragraphs */
+}
+
+/* Publication styles (if used within an site card) */
+.publication-link {
+    color: var(--website-blue);
+    text-decoration: none;
+    transition: color 0.3s ease;
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+    /* Make link stand out */
+}
+
+.publication-link:hover {
+    color: var(--website-indigo);
+    text-decoration: underline;
+}
+
+.publication-doi {
+    font-size: 14px;
+    margin: 5px 0;
+    color: var(--website-secondary-text);
+    /* Use secondary text color */
+}
+
+.publication-doi a {
+    color: var(--website-blue);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.publication-doi a:hover {
+    color: var(--website-indigo);
+    text-decoration: underline;
+}
+
+/* Dark mode styles for site Card */
+body.dark-mode .site-card {
+    background-color: var(--website-dark-card-background-alt);
+    /* Use alt dark bg */
+    box-shadow: var(--shadow-dark-md);
+    /* Darker shadow */
+}
+
+body.dark-mode .card-header h3 {
+    color: var(--website-dark-heading-color);
+}
+
+body.dark-mode .company {
+    color: var(--website-blue);
+    /* Keep blue for contrast */
+}
+
+body.dark-mode .date {
+    color: var(--website-dark-tertiary-text);
+    background-color: rgba(0, 122, 255, 0.15);
+}
+
+body.dark-mode .card-body li {
+    color: var(--website-dark-paragraph-color);
+}
+
+body.dark-mode .card-body p {
+    color: var(--website-dark-secondary-text);
+}
+
+body.dark-mode .publication-link {
+    color: var(--website-blue);
+}
+
+body.dark-mode .publication-doi {
+    color: var(--website-dark-secondary-text);
+}
+
+body.dark-mode .publication-doi a {
+    color: var(--website-blue);
+}
+
+/* Responsive styles for site Card */
+@media (max-width: 768px) {
+    .site-card {
+        border-radius: 16px;
+    }
+
+    .card-content {
+        padding: 20px;
+    }
+
+    .card-header h3 {
+        font-size: 22px;
+        /* Adjust title size */
+    }
+
+    .company {
+        font-size: 16px;
+    }
+
+    .date {
+        font-size: 14px;
+        padding: 5px 10px;
+    }
+
+    .card-body li {
+        font-size: 15px;
+        padding-left: 24px;
+        /* Adjust padding */
+        margin-bottom: 10px;
+    }
+
+    .card-body li::before {
+        top: 9px;
+        /* Adjust bullet alignment */
+        width: 6px;
+        height: 6px;
+    }
+
+    .card-body p {
+        font-size: 16px;
+        line-height: 1.7;
+    }
+}
+
+@media (max-width: 480px) {
+    .card-header h3 {
+        font-size: 20px;
+    }
+
+    .company {
+        font-size: 15px;
+    }
+
+    .card-body li {
+        font-size: 14px;
+    }
+
+    .card-body p {
+        font-size: 15px;
+    }
+}
+
+
+/*--------------------------------------------------------------
+# Page Specific Styles
+--------------------------------------------------------------*/
+
+/* ## index.html (Hero Section) ## */
+.hero {
+    min-height: 100vh;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 120px 0 80px;
+    overflow: hidden;
+    /* Light background */
+    transition: background-color 0.3s ease;
+    flex: 1 0 auto;
+}
+
+.hero-content {
+    max-width: 1000px;
+    width: 100%;
+    padding: 0 40px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 2;
+}
+
+.hero-text-container {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.hero-title {
+    font-size: 80px;
+    font-weight: 700;
+    margin-bottom: 20px;
+    letter-spacing: -0.03em;
+    line-height: 1.05;
+    /* Gradient text effect */
+    background: linear-gradient(135deg, var(--website-text) 0%, var(--website-secondary-text) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    /* No transition needed for gradient text */
+}
+
+.hero-subtitle {
+    font-size: 32px;
+    color: var(--website-secondary-text);
+    margin-bottom: 30px;
+    font-weight: 600;
+    letter-spacing: -0.02em;
+    line-height: 1.3;
+    transition: color 0.3s ease;
+}
+
+.hero-description {
+    font-size: 21px;
+    font-weight: 500;
+    color: var(--website-secondary-text);
+    margin-bottom: 50px;
+    line-height: 1.6;
+    letter-spacing: -0.01em;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+    transition: color 0.3s ease;
+}
+
+.hero-cta-container {
+    margin-top: 40px;
+}
+
+.hero-cta {
+    /* Call to Action Button */
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background-color: var(--website-blue);
+    color: var(--website-white);
+    padding: 16px 32px;
+    border-radius: 980px;
+    /* Pill shape */
+    font-weight: 600;
+    font-size: 18px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+    letter-spacing: -0.01em;
+}
+
+.hero-cta:hover {
+    background-color: var(--website-indigo);
+}
+
+.hero-cta svg {
+    width: 20px;
+    height: 20px;
+    transition: transform 0.3s ease;
+}
+
+.hero-cta:hover svg {
+    transform: translateX(3px);
+    /* Arrow animation */
+}
+
+
+body.dark-mode .hero-title {
+    background: linear-gradient(135deg, var(--website-dark-text) 0%, var(--website-dark-secondary-text) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+body.dark-mode .hero-subtitle {
+    color: var(--website-dark-secondary-text);
+}
+
+body.dark-mode .hero-description {
+    color: var(--website-dark-secondary-text);
+    /* Use secondary for description */
+}
+
+/* Responsive styles for hero section */
+@media (max-width: 992px) {
+    .hero-title {
+        font-size: 64px;
+    }
+
+    .hero-subtitle {
+        font-size: 28px;
+    }
+
+    .hero-description {
+        font-size: 18px;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero {
+        padding: 100px 0 60px;
+        min-height: calc(100vh - 60px);
+        /* Adjust for mobile nav */
+    }
+
+    .hero-content {
+        padding: 0 20px;
+    }
+
+    .hero-title {
+        font-size: 48px;
+    }
+
+    .hero-subtitle {
+        font-size: 24px;
+        margin-bottom: 20px;
+    }
+
+    .hero-description {
+        font-size: 16px;
+        margin-bottom: 30px;
+    }
+
+    .hero-cta {
+        padding: 14px 28px;
+        font-size: 16px;
+        border-radius: 30px;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-title {
+        font-size: 40px;
+        /* Further reduce size */
+    }
+
+    .hero-subtitle {
+        font-size: 20px;
+    }
+
+    .hero-description {
+        font-size: 15px;
+    }
+}
+
+
+/* ## about.html (About Section) ## */
+/* .about-section uses generic section styles */
+
+.about-container {
+    /* Glassmorphism container */
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    padding: 40px;
+}
+
+.about-content {
+    display: grid;
+    grid-template-columns: 1.2fr 1.8fr;
+    /* Increased image column width */
+    gap: 35px;
+    align-items: start;
+    /* Align items to the top */
+}
+
+.about-image-container {
+    position: relative;
+}
+
+.about-image-wrapper {
+    /* Container for image/placeholder */
+    width: 100%;
+    padding-bottom: 120%;
+    /* Taller aspect ratio for portrait photos */
+    position: relative;
+    border-radius: 24px;
+    overflow: hidden;
+    background-color: var(--website-gray6);
+    /* Placeholder background */
+    box-shadow: var(--shadow-md);
+    transition: var(--transition-smooth);
+}
+
+
+.about-image-placeholder {
+    /* Placeholder SVG container */
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.about-image-placeholder svg {
+    width: 50%;
+    height: 50%;
+    color: var(--website-gray3);
+    transition: color 0.3s ease;
+}
+
+.about-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    /* height: 100%; */
+    object-fit: cover;
+    border-radius: 24px;
+    transition: transform 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.about-text {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    /* Space between heading and paragraphs */
+}
+
+.about-heading {
+    font-size: 28px;
+    font-weight: 700;
+    margin-bottom: 10px;
+    letter-spacing: -0.02em;
+    line-height: 1.2;
+    color: var(--website-heading-color);
+    /* Use variable */
+}
+
+.about-text p {
+    font-size: 17px;
+    font-weight: 500;
+    line-height: 1.7;
+    color: var(--website-secondary-text);
+    margin-bottom: 15px;
+    letter-spacing: -0.01em;
+}
+
+/* Dark mode styles for About section */
+body.dark-mode .about-container {
+    background-color: rgba(40, 40, 42, 0.7);
+}
+
+body.dark-mode .about-heading {
+    color: var(--website-dark-heading-color);
+}
+
+body.dark-mode .about-text p {
+    color: var(--website-dark-secondary-text);
+}
+
+body.dark-mode .about-image-wrapper {
+    background-color: var(--website-dark-card-background);
+    /* Darker placeholder bg */
+    box-shadow: var(--shadow-dark-md);
+}
+
+body.dark-mode .about-image-wrapper:hover {
+    box-shadow: var(--shadow-dark-lg);
+}
+
+body.dark-mode .about-image-placeholder svg {
+    color: var(--website-dark-secondary-text);
+}
+
+/* Responsive styles for About section */
+@media (max-width: 768px) {
+    .about-content {
+        grid-template-columns: 1fr;
+        /* Stack image and text */
+        gap: 30px;
+    }
+
+    .about-image-wrapper {
+        max-width: 350px;
+        margin: 0 auto;
+    }
+
+    .about-heading {
+        font-size: 24px;
+    }
+
+    .about-text p {
+        font-size: 16px;
+    }
+}
+
+
+/* ## skills.html (Skills Section) ## */
+/* .skills-section uses generic section styles */
+
+.skills-container {
+    /* Glassmorphism container */
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    padding: 50px;
+}
+
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+    gap: 40px;
+    margin-bottom: 50px;
+    /* Space before resume button */
+}
+
+.skills-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+    padding: 20px;
+    border-radius: 20px;
+    position: relative;
+    z-index: 1;
+}
+
+/* Skill icon container */
+.skills-icon-container {
+    margin-bottom: 20px;
+}
+
+.skills-icon {
+    width: 80px;
+    height: 80px;
+    border-radius: 18px;
+    background-color: var(--website-card-background);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.3s ease, background-color 0.3s ease, border-color 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+    /* Subtle shadow */
+}
+
+
+.skills-icon svg {
+    width: 40px;
+    height: 40px;
+    filter: drop-shadow(0 1px 2px var(--website-separator));
+    transition: filter 0.3s ease;
+}
+
+.skills-name {
+    font-size: 18px;
+    font-weight: 600;
+    text-align: center;
+    color: var(--website-text);
+    max-width: 140px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin-top: 15px;
+    letter-spacing: -0.01em;
+    transition: color 0.3s ease;
+}
+
+/* Resume Button */
+.skills-resume-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+.skills-resume-button {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background-color: var(--website-blue);
+    color: var(--website-white);
+    padding: 16px 32px;
+    border-radius: 30px;
+    /* Pill shape */
+    font-weight: 600;
+    font-size: 17px;
+    letter-spacing: -0.01em;
+    text-decoration: none;
+    transition: all 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
+    position: relative;
+    overflow: hidden;
+}
+
+.skills-resume-button:hover {
+    background-color: var(--website-indigo);
+}
+
+/* Dark mode styles for Skills section */
+body.dark-mode .skills-container {
+    background-color: rgba(40, 40, 42, 0.7);
+    border-color: rgba(255, 255, 255, 0.05);
+}
+
+body.dark-mode .skills-icon {
+    background-color: var(--website-dark-card-background);
+    border-color: rgba(255, 255, 255, 0.1);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+body.dark-mode .skills-icon svg {
+    filter: drop-shadow(0 1px 2px rgba(0, 0, 0, 0.3));
+}
+
+body.dark-mode .skills-name {
+    color: var(--website-dark-text);
+}
+
+/* Responsive styles for Skills section */
+@media (max-width: 768px) {
+    .skills-grid {
+        gap: 20px;
+        grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+        /* Adjust minmax */
+    }
+
+    .skills-icon {
+        width: 70px;
+        height: 70px;
+    }
+
+    .skills-icon svg {
+        width: 35px;
+        height: 35px;
+    }
+
+    .skills-name {
+        font-size: 16px;
+    }
+
+    .skills-resume-button {
+        padding: 14px 28px;
+        font-size: 16px;
+    }
+}
+
+
+/* ## education.html (Education Section) ## */
+/* .education-section uses generic section styles */
+
+.publication-section {
+    padding-bottom: 7ch;
+    padding-top: 0;
+}
+
+
+.site-cards {
+    /* Container for multiple site cards */
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    /* Space between cards */
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    padding: 40px;
+}
+
+
+/* Dark mode styles for Education section container */
+body.dark-mode .site-cards {
+    background-color: rgba(40, 40, 42, 0.7);
+    border-color: rgba(255, 255, 255, 0.05);
+}
+
+/* Responsive styles for Education section container */
+@media (max-width: 768px) {
+    .site-cards {
+        gap: 20px;
+        padding: 22px;
+    }
+}
+
+
+/* ## experience.html (Experience Section) ## */
+/* .experience-section uses generic section styles */
+
+.timeline-container {
+    /* Glassmorphism container for timeline */
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    padding: 40px;
+    transition: padding 0.3s ease, background-color 0.3s ease, border-color 0.3s ease;
+}
+
+.timeline {
+    position: relative;
+    padding: 20px 0;
+}
+
+.timeline::before {
+    /* The vertical line */
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 120px;
+    /* Position relative to date */
+    width: 4px;
+    background-color: var(--website-blue);
+    border-radius: 4px;
+    box-shadow: 0 0 10px rgba(0, 122, 255, 0.3);
+    transition: left 0.3s ease;
+}
+
+.timeline-item {
+    position: relative;
+    margin-bottom: 50px;
+    display: flex;
+    transition: all 0.3s ease;
+    align-items: flex-start;
+    /* Align date and content */
+}
+
+.timeline-item:last-child {
+    margin-bottom: 0;
+}
+
+.timeline-dot {
+    /* Dot on the timeline */
+    position: absolute;
+    left: 122px;
+    /* Aligned with the line */
+    top: 20px;
+    /* Vertical position */
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: var(--website-blue);
+    border: 2px solid var(--website-white);
+    /* White border */
+    transform: translateX(-50%);
+    z-index: 1;
+    transition: left 0.3s ease, top 0.3s ease, border-color 0.3s ease;
+}
+
+.timeline-date {
+    /* Date column */
+    width: 100px;
+    padding-right: 20px;
+    text-align: right;
+    font-size: 14px;
+    font-weight: 700;
+    color: var(--website-blue);
+    display: flex;
+    flex-direction: column;
+    letter-spacing: -0.01em;
+    transition: all 0.3s ease;
+    padding-top: 15px;
+    /* Align with content */
+}
+
+.timeline-content {
+    margin-left: 60px;
+    flex: 1;
+    transition: margin-left 0.3s ease;
+}
+
+
+/* Dark Mode Styles for Timeline */
+body.dark-mode .timeline-container {
+    background-color: rgba(40, 40, 42, 0.7);
+    border-color: rgba(255, 255, 255, 0.05);
+}
+
+body.dark-mode .timeline::before {
+    background-color: var(--website-blue);
+    /* Keep blue for visibility */
+}
+
+body.dark-mode .timeline-dot {
+    background-color: var(--website-blue);
+    border-color: var(--website-dark-background);
+    /* Match dark background */
+}
+
+body.dark-mode .timeline-date {
+    color: var(--website-blue);
+    /* Keep blue for contrast */
+}
+
+/* Responsive styles for Timeline */
+@media (max-width: 992px) {
+    .timeline-container {
+        padding: 30px;
+        max-width: calc(100vw - 40px);
+    }
+
+    .timeline::before {
+        left: 100px;
+    }
+
+    .timeline-dot {
+        left: 102px;
+    }
+
+    .timeline-date {
+        width: 80px;
+        font-size: 13px;
+    }
+
+    .timeline-content {
+        margin-left: 50px;
+    }
+}
+
+@media (max-width: 768px) {
+    .timeline::before {
+        left: 30px;
+        /* Move line closer to edge */
+    }
+
+    .timeline-item {
+        flex-direction: column;
+        /* Stack date and content */
+    }
+
+    .timeline-dot {
+        left: 32px;
+        top: 20px;
+        /* Adjust dot position */
+    }
+
+    .timeline-date {
+        width: 100%;
+        text-align: left;
+        padding-left: 50px;
+        /* Indent date */
+        padding-right: 0;
+        margin-bottom: 15px;
+        flex-direction: row;
+        /* Date elements side-by-side */
+        gap: 10px;
+        padding-top: 0;
+    }
+
+    .timeline-content {
+        margin-left: 0;
+        /* Remove margin */
+        width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    .timeline-container {
+        padding: 20px 15px;
+    }
+
+    .timeline::before {
+        left: 20px;
+    }
+
+    .timeline-dot {
+        left: 22px;
+        top: 18px;
+        width: 10px;
+        height: 10px;
+    }
+
+    .timeline-date {
+        padding-left: 35px;
+        font-size: 12px;
+        margin-bottom: 12px;
+    }
+}
+
+
+/* ## hobbies.html (Hobbies & Interests Section) ## */
+/* .hobbies-section uses generic section styles */
+
+.hobbies-container {
+    /* Main container for hobbies */
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    padding: 40px;
+}
+
+.music-content {
+    /* Grid layout for content */
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    /* Default 2 columns */
+    gap: 30px;
+    margin-bottom: 40px;
+    /* Space below grid */
+}
+
+/* Songs Carousel Styling */
+.songs-carousel-wrapper {
+    grid-column: span 1;
+    border-radius: 24px;
+    overflow: hidden;
+    transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+    position: relative;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid transparent;
+    /* For dark mode */
+}
+
+.songs-header {
+    padding: 20px;
+    display: flex;
+    align-items: center;
+}
+
+.songs-header h3 {
+    font-size: 22px;
+    margin: 0;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    line-height: 1.2;
+    color: var(--website-heading-color);
+    /* Use variable */
+}
+
+.songs-carousel {
+    flex: 1;
+    display: flex;
+    /* Use flex for layout */
+    flex-direction: column;
+    padding: 0 20px 20px;
+    min-height: 300px;
+    /* Ensure minimum height */
+}
+
+.songs-carousel-container {
+    position: relative;
+    overflow: hidden;
+    border-radius: 16px;
+    background-color: rgba(0, 0, 0, 0.03);
+    /* Subtle background */
+    margin-bottom: 15px;
+    transition: background-color 0.3s ease;
+}
+
+.song-card {
+    /* Individual song card */
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.5s ease;
+    z-index: 1;
+}
+
+.song-card.active {
+    opacity: 1;
+    pointer-events: auto;
+    z-index: 2;
+}
+
+.song-card.prev,
+.song-card.next {
+    opacity: 0;
+    pointer-events: none;
+    z-index: 1;
+}
+
+.song-image {
+    /* Background image */
+    flex: 1;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 200px;
+    position: relative;
+}
+
+.song-image::after {
+    /* Gradient overlay */
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 50%;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.7), transparent);
+}
+
+.song-info {
+    /* Text overlay */
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 20px;
+    color: white;
+    z-index: 2;
+}
+
+.song-title {
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 5px;
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+}
+
+.song-year {
+    font-size: 12px;
+    opacity: 0.7;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+.songs-carousel-controls {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 10px;
+}
+
+.carousel-control {
+    /* Prev/Next buttons */
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background-color: var(--website-card-background);
+    border: 1px solid var(--website-separator);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+    color: var(--website-text);
+    /* Icon color */
+}
+
+.carousel-control:hover {
+    background-color: var(--website-blue);
+    color: var(--website-white);
+    transform: scale(1.1);
+    border-color: transparent;
+}
+
+.carousel-control svg {
+    width: 24px;
+    height: 24px;
+}
+
+.carousel-indicators {
+    /* Dot indicators */
+    display: flex;
+    gap: 8px;
+}
+
+.carousel-indicator {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background-color: var(--website-overlay-medium);
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.carousel-indicator.active {
+    background-color: var(--website-blue);
+    transform: scale(1.2);
+}
+
+/* Interests Grid */
+.interests-wrapper {
+    grid-column: span 2;
+    /* Takes two columns by default */
+    display: flex;
+    flex-direction: column;
+}
+
+.interests-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    /* 3 columns */
+    gap: 25px;
+    flex: 1;
+}
+
+.interest-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+    background-color: var(--website-card-background);
+    border-radius: 20px;
+    transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+    border: 1px solid transparent;
+    /* For dark mode */
+}
+
+.interest-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px var(--website-separator);
+}
+
+.interest-icon {
+    width: 60px;
+    height: 60px;
+    border-radius: 18px;
+    background-color: var(--website-card-background);
+    /* Match item bg */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 15px;
+    border: 1px solid var(--website-window-background);
+    /* Subtle border */
+    position: relative;
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+.interest-icon svg {
+    width: 30px;
+    height: 30px;
+    position: relative;
+    z-index: 1;
+    filter: drop-shadow(0 2px 4px var(--website-separator));
+    color: var(--website-text);
+    /* Icon color */
+    transition: color 0.3s ease;
+}
+
+.interest-name {
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--website-text);
+    margin-top: 10px;
+    letter-spacing: -0.01em;
+    transition: color 0.3s ease;
+}
+
+/* Music interests styling (if separate) */
+.music-interests-wrapper {
+    border-radius: 24px;
+    overflow: hidden;
+    transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+    position: relative;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 20px 0;
+    border: 1px solid transparent;
+}
+
+.music-header {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 20px;
+}
+
+.music-header-text h3 {
+    font-size: 22px;
+    margin: 0;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    line-height: 1.2;
+    color: var(--website-heading-color);
+    /* Use variable */
+}
+
+.music-description {
+    flex: 1;
+}
+
+.music-description p {
+    font-size: 18px;
+    line-height: 1.7;
+    color: var(--website-secondary-text);
+    margin-bottom: 24px;
+    letter-spacing: -0.01em;
+    font-weight: 600;
+}
+
+.music-description p:last-child {
+    margin-bottom: 0;
+}
+
+/* Other interests section styling (if separate) */
+.other-interests-section {
+    border-radius: 24px;
+    overflow: hidden;
+    transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+    position: relative;
+    padding: 20px 0;
+    border: 1px solid transparent;
+}
+
+.other-interests-title {
+    font-size: 22px;
+    margin: 0 0 20px 0;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    line-height: 1.2;
+    color: var(--website-heading-color);
+    /* Use variable */
+}
+
+/* Dark mode styles for hobbies */
+body.dark-mode .hobbies-container {
+    background-color: rgba(40, 40, 42, 0.7);
+}
+
+body.dark-mode .songs-carousel-wrapper {
+    background-color: var(--website-dark-card-background);
+}
+
+body.dark-mode .songs-header h3 {
+    color: var(--website-dark-heading-color);
+}
+
+body.dark-mode .songs-carousel-container {
+    background-color: rgba(255, 255, 255, 0.05);
+}
+
+body.dark-mode .carousel-control {
+    background-color: var(--website-dark-elevated-background);
+    border-color: var(--website-dark-separator);
+    color: var(--website-dark-text);
+}
+
+body.dark-mode .carousel-control:hover {
+    background-color: var(--website-blue);
+    color: var(--website-white);
+    border-color: transparent;
+}
+
+body.dark-mode .carousel-indicator {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+body.dark-mode .interest-item {
+    background-color: var(--website-dark-card-background-alt);
+}
+
+body.dark-mode .interest-item:hover {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+body.dark-mode .interest-icon {
+    background-color: var(--website-dark-elevated-background);
+    border-color: rgba(255, 255, 255, 0.1);
+}
+
+body.dark-mode .interest-icon svg {
+    color: var(--website-dark-text);
+    filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.3));
+}
+
+body.dark-mode .interest-name {
+    color: var(--website-dark-text);
+}
+
+
+body.dark-mode .music-header-text h3,
+body.dark-mode .other-interests-title {
+    color: var(--website-dark-heading-color);
+}
+
+body.dark-mode .music-description p {
+    color: var(--website-dark-secondary-text);
+}
+
+/* Responsive styles for hobbies */
+@media (max-width: 768px) {
+    .music-content {
+        grid-template-columns: 1fr;
+        /* Stack columns */
+        gap: 30px;
+    }
+
+    .songs-carousel-wrapper,
+    .interests-wrapper,
+    .music-interests-wrapper,
+    .other-interests-section {
+        grid-column: span 1;
+        /* Ensure full width */
+    }
+
+    .songs-header h3,
+    .music-header-text h3,
+    .other-interests-title {
+        font-size: 20px;
+    }
+
+    .interests-grid {
+        grid-template-columns: repeat(2, 1fr);
+        /* 2 columns on tablet */
+        gap: 20px;
+    }
+
+    .interest-icon {
+        width: 50px;
+        height: 50px;
+    }
+
+    .interest-icon svg {
+        width: 25px;
+        height: 25px;
+    }
+
+    .interest-name {
+        font-size: 14px;
+    }
+
+    .music-interests-wrapper,
+    .other-interests-section {
+        padding: 20px;
+    }
+
+    .music-description p {
+        font-size: 15px;
+        line-height: 1.6;
+    }
+}
+
+
+/* ## projects.html (Projects Section) ## */
+/* .projects-section uses generic section styles */
+
+.project-cards {
+    /* Grid container for project cards */
+    display: grid;
+    /* Default to 2 columns, adjust as needed */
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+    max-width: 1200px;
+    /* Limit width */
+    margin: 0 auto;
+    padding: 0 20px;
+    /* Padding on sides */
+}
+
+.project-card {
+    position: relative;
+    border-radius: 20px;
+    overflow: hidden;
+    transition: var(--transition-smooth);
+    min-height: 300px;
+    aspect-ratio: 1 / 1;
+    /* Maintain square aspect ratio */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* Center content vertically */
+    text-align: center;
+    padding: 0 30px;
+    box-shadow: var(--shadow-sm);
+    cursor: pointer;
+    /* Indicate clickable */
+    background-color: var(--website-light-card-background);
+    /* Default background */
+}
+
+.project-card:hover {
+    box-shadow: 0 10px 20px var(--website-separator);
+}
+
+/* Card content layout */
+.project-card .card-content {
+    padding: 0;
+    /* Reset padding */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* Center horizontally */
+    height: 100%;
+    position: relative;
+    z-index: 1;
+}
+
+/* Card label styling */
+.project-card .card-label {
+    position: absolute;
+    top: 20px;
+    text-align: left;
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--website-text);
+    /* Use text color */
+    letter-spacing: 0.5px;
+    margin: 0;
+    padding-right: 3em;
+    z-index: 2;
+    transition: color 0.3s ease;
+}
+
+/* Card title styling */
+.project-card .card-text {
+    text-align: left;
+    max-width: 100%;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+}
+
+.project-card .card-text h3 {
+    font-size: 38px;
+    font-weight: 600;
+    line-height: 1.1;
+    margin-bottom: 20px;
+    max-width: 90%;
+    /* Prevent text overflow */
+    color: var(--website-heading-color);
+    /* Use variable */
+}
+
+/* Card description styling */
+.project-card .card-text p {
+    font-size: 16px;
+    line-height: 1.5;
+    font-weight: 500;
+    display: block;
+    max-width: 90%;
+    color: var(--website-paragraph-color);
+    /* Use variable */
+}
+
+/* Expand button styling */
+.project-expand-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    z-index: 10;
+    transition: all 0.2s ease;
+    background-color: var(--website-overlay-darker);
+    /* Default dark button */
+}
+
+.project-expand-button svg {
+    width: 22px;
+    height: 22px;
+    color: white;
+    /* White icon */
+}
+
+.project-expand-button:hover {
+    background-color: var(--website-overlay-darkest);
+    transform: scale(1.1);
+}
+
+/* Project tech tags (hidden by default on card) */
+.project-card .project-tech {
+    display: none;
+}
+
+/* Project tech tags (general styling, used in modal) */
+.project-tech {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.project-tech span {
+    font-size: 14px;
+    background-color: rgba(0, 122, 255, 0.08);
+    color: var(--website-blue);
+    padding: 8px 16px;
+    border-radius: 20px;
+    font-weight: 600;
+    transition: all 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
+    letter-spacing: -0.01em;
+}
+
+/* Dark mode styles for project cards */
+body.dark-mode .project-card {
+    background-color: var(--website-dark-card-background);
+    box-shadow: var(--shadow-dark-sm);
+}
+
+body.dark-mode .project-card:hover {
+    box-shadow: var(--shadow-dark-md);
+}
+
+body.dark-mode .project-card .card-label {
+    color: var(--website-dark-text);
+}
+
+body.dark-mode .project-card .card-text h3 {
+    color: var(--website-dark-heading-color);
+}
+
+body.dark-mode .project-card .card-text p {
+    color: var(--website-dark-paragraph-color);
+}
+
+body.dark-mode .project-expand-button {
+    background-color: rgba(0, 0, 0, 0.8);
+    /* Consistent dark button */
+}
+
+body.dark-mode .project-expand-button:hover {
+    background-color: rgba(0, 0, 0, 0.9);
+}
+
+body.dark-mode .project-tech span {
+    background-color: rgba(0, 122, 255, 0.15);
+    color: var(--website-blue);
+    /* Keep blue */
+}
+
+/* Responsive styles for project cards */
+@media (max-width: 992px) {
+    .project-cards {
+        grid-template-columns: repeat(2, 1fr);
+        /* Maintain 2 columns */
+    }
+
+    .project-card .card-text h3 {
+        font-size: 30px;
+    }
+
+    .project-card .card-text p {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 768px) {
+    .project-cards {
+        grid-template-columns: 1fr;
+        /* Stack to 1 column */
+        padding: 0 15px;
+        /* Adjust padding */
+        gap: 25px;
+        /* Adjust gap */
+    }
+
+    .project-card .card-text h3 {
+        font-size: 26px;
+        /* Reduce title size */
+    }
+}
+
+
+/* ## testimonials.html (Testimonials Section) ## */
+/* .testimonials-section uses generic section styles */
+
+.testimonials-container {
+    /* Glassmorphism container */
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    padding: 40px;
+}
+
+/* Carousel Structure */
+.testimonials-carousel {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+}
+
+.testimonials-carousel-inner {
+    /* Holds the cards */
+    display: flex;
+    transition: transform 0.5s ease;
+    /* Slide transition */
+}
+
+/* Testimonial Card (Individual Item) */
+.testimonial-card {
+    background-color: var(--website-card-background);
+    border-radius: 28px;
+    overflow: hidden;
+    transition: var(--transition-smooth);
+    position: relative;
+    transform-origin: center bottom;
+    box-shadow: var(--shadow-md);
+    flex: 0 0 100%;
+    /* Each card takes full width */
+    box-sizing: border-box;
+    /* Include padding in width */
+    border: 1px solid transparent;
+    /* For dark mode */
+}
+
+.testimonial-content {
+    padding: 35px;
+    position: relative;
+    z-index: 1;
+}
+
+.testimonial-quote {
+    /* Decorative quote icon */
+    position: absolute;
+    top: 25px;
+    right: 25px;
+    width: 50px;
+    height: 50px;
+    color: var(--website-blue);
+    opacity: 0.1;
+    transform: rotate(180deg);
+    filter: drop-shadow(0 2px 5px rgba(0, 122, 255, 0.2));
+    transition: all 0.3s ease;
+}
+
+.testimonial-card:hover .testimonial-quote {
+    opacity: 0.2;
+    transform: rotate(180deg) scale(1.1);
+}
+
+.testimonial-text {
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 1.8;
+    color: var(--website-secondary-text);
+    margin-bottom: 35px;
+    letter-spacing: -0.01em;
+    position: relative;
+    text-shadow: 0 1px 1px var(--website-window-background);
+    /* Subtle shadow */
+    transition: color 0.3s ease;
+}
+
+
+.testimonial-text::after {
+    /* Closing quote mark */
+    content: '"';
+    position: absolute;
+    bottom: -20px;
+    right: 0;
+    font-size: 40px;
+    font-family: 'SF Pro Text', -ui-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    color: var(--website-blue);
+    opacity: 0.2;
+    line-height: 0;
+}
+
+.testimonial-author {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+
+.author-info h4 {
+    /* Author Name */
+    font-size: 20px;
+    margin: 0 0 6px 0;
+    letter-spacing: -0.01em;
+    font-weight: 700;
+    color: var(--website-heading-color);
+    /* Use variable */
+}
+
+.author-info p {
+    /* Author Title/Company */
+    font-size: 16px;
+    margin: 0;
+    color: var(--website-blue);
+    /* Use blue for title */
+    font-weight: 600;
+    display: inline-block;
+    padding: 2px 0;
+    transition: color 0.3s ease;
+}
+
+/* Carousel Controls */
+.testimonials-carousel-controls {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+    gap: 20px;
+}
+
+.testimonial-carousel-control {
+    /* Prev/Next buttons */
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: var(--website-card-background);
+    border: 1px solid var(--website-separator);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+    color: var(--website-text);
+    /* Icon color */
+}
+
+.testimonial-carousel-control:hover {
+    background-color: var(--website-blue);
+    color: var(--website-white);
+    border-color: transparent;
+}
+
+.testimonial-carousel-control svg {
+    width: 24px;
+    height: 24px;
+}
+
+.testimonial-carousel-indicators {
+    /* Dot indicators */
+    display: flex;
+    gap: 8px;
+}
+
+.testimonial-carousel-indicator {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background-color: var(--website-overlay-medium);
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.testimonial-carousel-indicator.active {
+    background-color: var(--website-blue);
+    transform: scale(1.2);
+}
+
+/* Dark Mode Styles for Testimonials */
+body.dark-mode .testimonials-container {
+    background-color: rgba(40, 40, 42, 0.7);
+    border-color: rgba(255, 255, 255, 0.05);
+}
+
+body.dark-mode .testimonial-card {
+    background-color: var(--website-dark-card-background-alt);
+    box-shadow: var(--shadow-dark-md);
+}
+
+body.dark-mode .testimonial-text {
+    color: var(--website-dark-secondary-text);
+    text-shadow: none;
+    /* Remove light shadow */
+}
+
+body.dark-mode .author-info h4 {
+    color: var(--website-dark-heading-color);
+}
+
+body.dark-mode .author-info p {
+    color: var(--website-blue);
+    /* Keep blue */
+}
+
+body.dark-mode .testimonial-carousel-control {
+    background-color: var(--website-dark-elevated-background);
+    border-color: var(--website-dark-separator);
+    color: var(--website-dark-text);
+}
+
+body.dark-mode .testimonial-carousel-control:hover {
+    background-color: var(--website-blue);
+    color: var(--website-white);
+    border-color: transparent;
+}
+
+body.dark-mode .testimonial-carousel-indicator {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+/* Responsive styles for Testimonials */
+@media (max-width: 768px) {
+    .testimonial-content {
+        padding: 25px;
+        /* Adjust padding */
+    }
+
+    .testimonial-text {
+        font-size: 16px;
+        margin-bottom: 30px;
+        padding-left: 20px;
+    }
+
+    .testimonial-text::before {
+        width: 3px;
+    }
+
+    .author-info h4 {
+        font-size: 18px;
+    }
+
+    .author-info p {
+        font-size: 15px;
+    }
+
+    .testimonial-carousel-control {
+        width: 36px;
+        height: 36px;
+    }
+
+    .testimonial-carousel-control svg {
+        width: 20px;
+        height: 20px;
+    }
+}
+
+
+
+/*--------------------------------------------------------------
+# Utilities / Global Styles
+--------------------------------------------------------------*/
+
+
+/* ## Dark Mode Styles (General Overrides) ## */
+body.dark-mode {
+    background-color: var(--website-dark-background);
+    color: var(--website-dark-text);
+}
+
+/* General Element Overrides */
+body.dark-mode h1,
+body.dark-mode h2,
+body.dark-mode h3,
+body.dark-mode h4 {
+    color: var(--website-dark-heading-color);
+}
+
+body.dark-mode p {
+    color: var(--website-dark-paragraph-color);
+}
+
+body.dark-mode .section-title {
+    color: var(--website-dark-text);
+}
+
+body.dark-mode .section-tagline {
+    color: var(--website-dark-secondary-text);
+}
+
+/* Dark Mode Toggle Button (if used in menu bar or elsewhere) */
+.dark-mode-toggle {
+    width: 24px;
+    height: 24px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--website-secondary-text);
+    /* Match icon color */
+}
+
+.dark-mode-toggle:hover {
+    transform: scale(1.1);
+    color: var(--website-text);
+    /* Match icon hover color */
+}
+
+.dark-mode-toggle svg {
+    width: 20px;
+    height: 20px;
+}
+
+body.dark-mode .dark-mode-toggle {
+    color: var(--website-dark-secondary-text);
+}
+
+body.dark-mode .dark-mode-toggle:hover {
+    color: var(--website-dark-text);
+}
+
+
+/* ## Mobile Styles ## */
+.mobile-header {
+    /* Top bar on mobile */
+    display: none;
+    /* Hidden by default */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 60px;
+    background-color: rgba(248, 248, 248, 0.8);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    z-index: 1000;
+    padding: 0 16px;
+    align-items: center;
+    justify-content: center;
+    /* Center title */
+    box-shadow: 0 1px 0 var(--website-separator);
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.mobile-header-title {
+    font-size: 18px;
+    font-weight: 600;
+    text-align: center;
+    color: var(--website-text);
+    /* Use variable */
+    transition: color 0.3s ease;
+}
+
+.mobile-dark-mode-toggle {
+    /* Dark mode toggle for mobile header */
+    position: absolute;
+    /* Position within header */
+    right: 16px;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background-color: rgba(0, 0, 0, 0.05);
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.mobile-dark-mode-toggle:active {
+    transform: scale(0.9);
+    background-color: var(--website-separator);
+}
+
+.mobile-dark-mode-toggle svg {
+    width: 24px;
+    height: 24px;
+    color: var(--website-text);
+    transition: color 0.3s ease;
+}
+
+.mobile-nav {
+    /* Bottom tab bar */
+    display: none;
+    /* Hidden by default */
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 60px;
+    background-color: rgba(248, 248, 248, 0.8);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    z-index: 1000;
+    box-shadow: 0 -1px 0 var(--website-separator);
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.mobile-nav-items {
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+    align-items: center;
+    height: 100%;
+    /* Ensure items fill height */
+}
+
+.mobile-nav-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    /* Center content vertically */
+    padding: 8px 0;
+    color: var(--website-secondary-text);
+    text-decoration: none;
+    font-size: 10px;
+    flex: 1;
+    /* Distribute space evenly */
+    text-align: center;
+    transition: color 0.3s ease;
+}
+
+.mobile-nav-item.active {
+    color: var(--website-blue);
+}
+
+.mobile-nav-icon {
+    width: 24px;
+    height: 24px;
+    margin-bottom: 4px;
+}
+
+/* Dark Mode for Mobile */
+body.dark-mode .mobile-header {
+    background-color: rgba(28, 28, 30, 0.8);
+    box-shadow: 0 1px 0 rgba(255, 255, 255, 0.05);
+}
+
+body.dark-mode .mobile-header-title {
+    color: var(--website-dark-text);
+}
+
+body.dark-mode .mobile-dark-mode-toggle {
+    background-color: var(--website-dark-separator);
+}
+
+body.dark-mode .mobile-dark-mode-toggle svg {
+    color: var(--website-dark-text);
+}
+
+body.dark-mode .mobile-nav {
+    background-color: rgba(28, 28, 30, 0.8);
+    box-shadow: 0 -1px 0 rgba(255, 255, 255, 0.05);
+}
+
+body.dark-mode .mobile-nav-item {
+    color: var(--website-dark-secondary-text);
+}
+
+body.dark-mode .mobile-nav-item.active {
+    color: var(--website-blue);
+    /* Keep blue for active */
+}
+
+/* Responsive Activation for Mobile Styles */
+@media (max-width: 768px) {
+    body {
+        padding-bottom: 30px;
+    }
+
+    .menu-bar {
+        display: none;
+        /* Hide menu bar */
+    }
+
+    .mobile-header {
+        display: flex;
+    }
+
+    .mobile-nav {
+        display: flex;
+    }
+
+    /* Hide desktop menu items when mobile nav is active */
+    .menu-items span {
+        display: none;
+    }
+}
+
+
+/* ## Social Media Colors / Utility Classes ## */
+
+
+/* --- Menu Bar Social Icons --- */
+.menu-icons .icon.social {
+    background: none;
+    color: inherit;
+    width: 24px;
+    height: 24px;
+    margin: 0 2px;
+    padding: 0;
+    box-shadow: none;
+}
+
+.menu-social-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: inherit;
+    font-size: 18px;
+    width: 100%;
+    height: 100%;
+    transition: color 0.2s;
+    background: none;
+    border-radius: 50%;
+    padding: 0;
+    text-decoration: none;
+}
+
+.menu-social-link i {
+    color: inherit;
+    font-size: 20px;
+    transition: color 0.2s;
+}
+
+/* Ensure default color matches battery/wifi in both modes */
+.menu-icons .icon.social,
+.menu-icons .icon.social .menu-social-link,
+.menu-icons .icon.social .menu-social-link i {
+    color: var(--website-secondary-text);
+}
+
+body.dark-mode .menu-icons .icon.social,
+body.dark-mode .menu-icons .icon.social .menu-social-link,
+body.dark-mode .menu-icons .icon.social .menu-social-link i {
+    color: var(--website-dark-secondary-text);
+}
+
+body .menu-icons .icon.social i.fa-linkedin:hover {
+    color: var(--website-linkedin);
+}
+
+body .menu-icons .icon.social i.fa-spotify:hover {
+    color: var(--website-spotify);
+}
+
+body .menu-icons .icon.social i.fa-github:hover {
+    color: var(--website-black);
+}

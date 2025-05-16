@@ -1,0 +1,130 @@
+# SimplySuvi.com
+
+> Welcome to simplysuvi.com, the personal website and digital portfolio of Suvrat Jain. This site offers a detailed look at Suvrat's professional experience, projects, education, skills, testimonials, and personal interests, all organized for easy access by both humans and language models. The site is built with modular components, structured data, and LLM-friendly resources to ensure clarity and depth.
+
+simplysuvi.com is structured into several main sections, each supported by dedicated data files, reusable components, and custom assets. Below is a comprehensive guide to the site's content and structure, with direct links and descriptions for each resource.
+
+---
+
+## Main Sections
+
+* [Home](https://simplysuvi.com/index.html): The landing page, introducing Suvrat and providing navigation to all major sections.
+* [About](https://simplysuvi.com/about/index.html): Personal background, values, and a brief biography.
+* [Resume (PDF)](https://simplysuvi.com/data/Suvrat%20Jain's%20Resume.pdf): Downloadable resume summarizing professional experience, education, and skills.
+* [Projects](https://simplysuvi.com/projects/index.html): Showcase of selected projects, with summaries and highlights.
+* [Experience](https://simplysuvi.com/experience/index.html): Detailed work history, roles, and achievements.
+* [Education](https://simplysuvi.com/education/index.html): Academic background and qualifications.
+* [Skills](https://simplysuvi.com/skills/index.html): List of technical and professional skills.
+* [Testimonials](https://simplysuvi.com/testimonials/index.html): Endorsements and feedback from colleagues and collaborators.
+* [Hobbies](https://simplysuvi.com/hobbies/index.html): Personal interests and activities outside of work.
+
+---
+
+## Data & Structured Content
+
+* [Experience Data (JSON)](https://simplysuvi.com/data/experience.json): Machine-readable list of professional experiences.
+* [Projects Data (JSON)](https://simplysuvi.com/data/projects.json): Structured data for all featured projects.
+* [Testimonials Data (JSON)](https://simplysuvi.com/data/testimonials.json): Endorsements and feedback in JSON format.
+* [Songs & Interests (Markdown)](https://simplysuvi.com/data/songs.md): Curated list of favorite songs and personal interests.
+* [Resume (PDF)](https://simplysuvi.com/data/Suvrat%20Jain's%20Resume.pdf): Comprehensive resume in PDF format.
+
+---
+
+## Components
+
+* [Navigation Component](https://simplysuvi.com/components/navigation.html): Reusable navigation bar included across the site.
+* [Footer Component](https://simplysuvi.com/components/footer.html): Consistent footer for all pages.
+
+---
+
+## Styles & Scripts
+
+* [Main Stylesheet](https://simplysuvi.com/css/styles.css): Core site styling.
+* [Resume Modal Styles](https://simplysuvi.com/css/resume-modal.css): Styles for the resume modal popup.
+* [Typing Animation Styles](https://simplysuvi.com/css/typing-animation.css): Styles for animated typing effects.
+* [Component Loader Script](https://simplysuvi.com/js/component-loader.js): Loads reusable components dynamically.
+* [Particles Script](https://simplysuvi.com/js/particles.js): Adds interactive particle effects.
+* [Resume Modal Script](https://simplysuvi.com/js/resume-modal.js): Handles resume modal functionality.
+* [Main Script](https://simplysuvi.com/js/script.js): General site interactivity.
+* [Typing Animation Script](https://simplysuvi.com/js/typing-animation.js): Controls typing animation on the site.
+
+---
+
+## Assets
+
+* [Site Assets](https://simplysuvi.com/assets/): Collection of images and graphics, including:
+  * Profile and face graphics (e.g., about-me-pic.jpg, face-graphic.png, my-face-transparent.png)
+  * Site logos in various styles (logo.png, logo-white.png, logo-face-black.png, etc.)
+  * Favicon images for different platforms ([Favicon directory](https://simplysuvi.com/assets/favicon/))
+
+---
+
+## Optional
+
+* [Raw Data Directory](https://simplysuvi.com/data/): Access to all structured data files (JSON, Markdown, PDF) for programmatic use or deeper analysis.
+* [All Assets](https://simplysuvi.com/assets/): Full set of images, icons, and graphics used throughout the site.
+* [CSS Directory](https://simplysuvi.com/css/): All custom stylesheets for layout and effects.
+* [JS Directory](https://simplysuvi.com/js/): All JavaScript files for interactivity and dynamic features.
+* [Components Directory](https://simplysuvi.com/components/): Source HTML for reusable site components.
+
+---
+
+## Profile
+
+**Name:** Suvrat Jain 
+**Location:** Rochester, NY
+**Role:** Data Science & AI Engineer
+**Website:** [https://simplysuvi.com](https://simplysuvi.com)
+**Email:** suvijain@gmail.com 
+**GitHub:** [https://github.com/simplysuvi](https://github.com/simplysuvi) 
+
+---
+
+### Current Role 
+**DieselCore** — *Data Science & AI Engineer* 
+*May 2024 – Present* 
+- Developed & deployed an AI chatbot using RAG (LlamaIndex, FAISS, Pinecone, ChromaDB) on Microsoft Teams, cutting document lookup time by 60%. 
+- Built scalable document embedding pipelines using OpenAI embeddings, BM25, RRF, and hybrid search techniques. 
+- Engineered a vision-based part identification system (YOLOv8 + CLIP + similarity matching), reaching ~92% accuracy on real-time edge devices. 
+- Integrated vision AI with ERP via FastAPI & PyTorch, reducing warehouse part mislabeling by 40%.
+
+---
+
+### Previous Role 
+**Golisano Institute for Sustainability (RIT)** — *Machine Learning Engineer* 
+*May 2022 – May 2024* 
+- Built automated part-sorting system using YOLOv8 and Siamese Networks with 95% accuracy and 5-second inference cycles. 
+- Developed segmentation models (UNet, SAM) for textile remanufacturing with GCode integration, improving material recovery by 30%. 
+- Created hybrid detection+similarity models for misclassification reduction, boosting accuracy by 30%. 
+- Managed dataset expansion to 18K+ images, Dockerized pipelines, and ML model versioning via MLflow.
+
+---
+
+### Education 
+**Rochester Institute of Technology** 
+*Master of Science in Data Science* — 2021–2023 
+- Relevant Coursework: Time Series Forecasting, Software Engineering, Data Analysis, Database Design
+
+---
+
+### Key Projects 
+- **HUE Vision:** Real-time eye-tracking web app using TensorFlow.js and JavaScript for ML-based gaze prediction and heatmap visualization. 
+- **Eventify-U:** Personalized event recommender using AngularJS, Node.js, Spring Boot, MySQL, and NLP for BrickHack 9.
+
+---
+
+### Publication
+- *Image-based machine learning in automotive used parts identification for remanufacturing*, 2024 — Wiley
+[DOI Link](https://doi.org/10.1002/9781394214297.ch39)
+
+---
+
+### Technical Skills 
+**Languages:** Python, Java, C++, SQL, HTML, CSS, JavaScript 
+**ML/AI:** Scikit-learn, PyTorch, TensorFlow, Keras, OpenCV, NumPy, Pandas 
+**Tools:** FastAPI, Docker, Streamlit, MLflow, Jupyter, Tableau, Power BI, LangChain, LlamaIndex 
+**Platforms:** Azure, AWS, GCP, Salesforce Cloud, Git, CI/CD
+
+---
+
+**Note:** This llms.txt file is designed to help language models and automated agents efficiently navigate and understand the full content and structure of SimplySuvi.com. For the most LLM-friendly experience, refer to the provided structured data and Markdown files where available. All directories and files listed above are accessible at the specified URLs.

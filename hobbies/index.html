@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <script>
+        try {
+            if (localStorage.getItem('darkMode') === 'true') {
+                document.documentElement.classList.add('dark-mode');
+                document.body && document.body.classList.add('dark-mode');
+            }
+        } catch (e) { }
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Suvrat Jain's Hobbies & Interests - Music, AI Ethics, Deep Learning, Data Visualization, and more">
+    <title>Hobbies & Interests | Suvrat Jain</title>
+
+    <!-- Favicon and App Icons -->
+    <link rel="apple-touch-icon" sizes="180x180" href="../assets/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../assets/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../assets/favicon/favicon-16x16.png">
+    <link rel="icon" type="image/x-icon" href="../assets/favicon/favicon.ico">
+    <link rel="manifest" href="../assets/favicon/site.webmanifest">
+    <meta name="theme-color" content="#ffffff">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-config" content="../assets/favicon/browserconfig.xml">
+    <!-- Android Chrome -->
+    <link rel="icon" type="image/png" sizes="192x192" href="../assets/favicon/android-chrome-192x192.png">
+    <link rel="icon" type="image/png" sizes="512x512" href="../assets/favicon/android-chrome-512x512.png">
+
+    <!-- Preload critical assets -->
+    <link rel="preload" href="../css/styles.css" as="style">
+    <link rel="preload" href="../js/script.js" as="script">
+
+    <!-- Optimized font loading -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=SF+Pro+Display:wght@400;500;600;700&display=swap" media="print"
+        onload="this.media='all'">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=SF+Pro+Text:wght@400;500&display=swap"
+        media="print" onload="this.media='all'">
+
+    <!-- Font Awesome CDN for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- Critical CSS -->
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/resume-modal.css">
+
+    <!-- Component Loader -->
+    <script src="../js/component-loader.js"></script>
+
+
+    <!-- Main JavaScript -->
+    <script src="../js/script.js" defer></script>
+    <script src="../js/resume-modal.js" defer></script>
+</head>
+
+<body>
+    <div class="container">
+        <!-- Navigation will be loaded here -->
+        <div id="navigation-container"></div>
+
+        <!-- Hobbies & Interests Section with Spotify Embed -->
+        <section class="hobbies-section">
+            <h2 class="section-title">Work ends. Wonder doesn’t.</h2>
+            <p class="section-tagline">A collection of hobbies that don’t require version control.</p>
+            <div class="hobbies-container">
+                <div class="music-content">
+                    <div class="music-interests-wrapper">
+                        <div class="music-header">
+                            <div class="music-header-text">
+                                <h3>Where words end, music begins.</h3>
+                            </div>
+                        </div>
+                        <div class="music-description">
+                            <p>Music has always been more than just a hobby — it's a core part of who I am. I find joy
+                                in singing, writing songs, and crafting melodies that capture emotions words alone
+                                can't. Whether it's a quiet late-night idea or a tune stuck in my head all day, I love
+                                turning thoughts into music that resonates. Creating original songs allows me to tell
+                                stories, reflect on experiences, and connect with people in a way nothing else can. It's
+                                where creativity flows freely, and I feel most like myself.</p>
+                        </div>
+                    </div>
+
+                    <div class="songs-carousel-wrapper">
+                        <div class="songs-header">
+                            <div class="songs-header-text">
+                                <h3>My Releases</h3>
+                            </div>
+                        </div>
+                        <div class="songs-carousel">
+                            <div class="songs-carousel-container">
+                                <!-- Songs will be dynamically loaded here -->
+                            </div>
+                            <div class="songs-carousel-controls">
+                                <button class="carousel-control prev">
+                                    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z" fill="currentColor" />
+                                    </svg>
+                                </button>
+                                <div class="carousel-indicators"></div>
+                                <button class="carousel-control next">
+                                    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z" fill="currentColor" />
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="other-interests-section">
+                    <h3 class="other-interests-title">Other Interests</h3>
+                    <div class="interests-wrapper">
+                        <div class="interests-grid">
+                            <div class="interest-item">
+                                <div class="interest-icon ai-ethics">
+                                    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M12 2c5.514 0 10 4.486 10 10s-4.486 10-10 10-10-4.486-10-10 4.486-10 10-10zm0-2c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm-1 6h2v8h-2v-8zm0 10h2v2h-2v-2z"
+                                            fill="#FF9500" />
+                                    </svg>
+                                </div>
+                                <div class="interest-name">AI Ethics</div>
+                            </div>
+                            <div class="interest-item">
+                                <div class="interest-icon deep-learning">
+                                    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M13 4h-2v7H4v2h7v7h2v-7h7v-2h-7V4z" fill="#5AC8FA" />
+                                    </svg>
+                                </div>
+                                <div class="interest-name">Deep Learning</div>
+                            </div>
+                            <div class="interest-item">
+                                <div class="interest-icon data-viz">
+                                    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M3 13h2v7H3v-7zm4-7h2v14H7V6zm4-3h2v17h-2V3zm4 3h2v14h-2V6zm4 4h2v10h-2V10z"
+                                            fill="#FF2D55" />
+                                    </svg>
+                                </div>
+                                <div class="interest-name">Data Visualization</div>
+                            </div>
+                            <div class="interest-item">
+                                <div class="interest-icon big-data">
+                                    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"
+                                            fill="#007AFF" />
+                                    </svg>
+                                </div>
+                                <div class="interest-name">Big Data</div>
+                            </div>
+                            <div class="interest-item">
+                                <div class="interest-icon nlp">
+                                    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M20 2H4c-1.1 0-1.99.9-1.99 2L2 22l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm-7 9h-2V5h2v6zm0 4h-2v-2h2v2z"
+                                            fill="#34C759" />
+                                    </svg>
+                                </div>
+                                <div class="interest-name">NLP</div>
+                            </div>
+                            <div class="interest-item">
+                                <div class="interest-icon cloud">
+                                    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M19.35 10.04C18.67 6.59 15.64 4 12 4 9.11 4 6.6 5.64 5.35 8.04 2.34 8.36 0 10.91 0 14c0 3.31 2.69 6 6 6h13c2.76 0 5-2.24 5-5 0-2.64-2.05-4.78-4.65-4.96z"
+                                            fill="#AF52DE" />
+                                    </svg>
+                                </div>
+                                <div class="interest-name">Cloud Computing</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+    <!-- Footer will be loaded here -->
+    <div id="footer-container"></div>
+</body>
+
+</html>

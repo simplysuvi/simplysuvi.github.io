@@ -1,0 +1,48 @@
+/**
+ * CSS for the smooth word transition animation
+ */
+
+/* Element with the animated text */
+.hero-typing {
+    position: relative;
+    display: inline-block;
+}
+
+/* Container for the changing words */
+.word-container {
+    position: relative;
+    display: inline-block;
+    min-width: 80px; /* Ensure container has minimum width to prevent layout shifts */
+    text-align: left;
+    height: 1.3em; /* Fixed height to prevent layout shifts */
+    vertical-align: bottom;
+}
+
+/* Individual animated words */
+.animated-word {
+    position: absolute;
+    left: 0;
+    top: 0;
+    opacity: 0;
+    transform: translateY(10px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+    color: var(--website-blue); /* Make the changing word blue for emphasis */
+}
+
+/* Visible word state */
+.animated-word.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Dark mode styles */
+body.dark-mode .animated-word {
+    color: var(--website-blue); /* Keep blue in dark mode for consistency */
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    .word-container {
+        min-width: 60px; /* Smaller min-width on mobile */
+    }
+}

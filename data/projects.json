@@ -1,0 +1,186 @@
+[
+  {
+    "id": "patient-readmission",
+    "title": "Predicting Patient Readmission",
+    "headline": "30 days ahead.",
+    "description": "A machine learning model that predicts hospital readmissions within 30 days, helping healthcare providers take early action with over 100,000 patient records.",
+    "tech": ["Python", "Scikit-learn", "Pandas", "Matplotlib", "Jupyter Notebook"],
+    "features": [
+      "Data preprocessing and feature engineering",
+      "Model training and evaluation",
+      "Hyperparameter tuning",
+      "Performance metrics visualization",
+      "Feature importance analysis"
+    ],
+    "links": {
+      "demo": "https://simplysuvi.github.io/Patients-readmission-classification-Project/",
+      "github": "https://github.com/simplysuvi/Patients-readmission-classification-Project"
+    },
+    "backgroundColor": "#f5f5f7",
+    "textColor": "#1d1d1f"
+  },
+  {
+    "id": "moodytector",
+    "title": "Moodytector",
+    "headline": "Read the room — through your webcam.",
+    "description": "A real-time web app that detects emotion, age, and gender from facial expressions using Face-api.js, making your browser emotionally intelligent.",
+    "tech": ["JavaScript", "HTML", "CSS", "Face-api.js", "TensorFlow.js"],
+    "features": [
+      "Real-time emotion detection",
+      "Age prediction",
+      "Gender prediction",
+      "Webcam integration",
+      "Responsive design"
+    ],
+    "links": {
+      "demo": "https://moodytector.netlify.app/",
+      "github": "https://github.com/simplysuvi/face-emo"
+    },
+    "notification": "New emotion detected: Happy",
+    "backgroundColor": "#e6f2ff",
+    "textColor": "#1d1d1f"
+  },
+  {
+    "id": "hue-vision",
+    "title": "HUE Vision: Eye-Tracking Web Application",
+    "headline": "See what your users see.",
+    "description": "A webcam-powered tool that tracks user gaze on websites in real time, enabling UX researchers to analyze attention with heatmaps and session data.",
+    "tech": ["JavaScript", "HTML", "CSS", "TensorFlow.js", "WebRTC"],
+    "features": [
+      "Real-time eye tracking",
+      "Gaze heatmap visualization",
+      "User session recording",
+      "Webcam integration",
+      "Data export for analysis"
+    ],
+    "links": {
+      "demo": "https://simplysuvi.github.io/hue-vision/",
+      "github": "https://github.com/simplysuvi/hue-vision"
+    },
+    "backgroundColor": "#FDE2E4",
+    "textColor": "black"
+  },
+  {
+    "id": "emotionwise",
+    "title": "EmotionWise: Real-Time Emotion Recognition",
+    "headline": "Feel what the face reveals.",
+    "description": "Built with Affectiva's Affdex SDK, EmotionWise analyzes facial expressions, mood, and appearance in real time for next-level emotion insight.",
+    "tech": ["JavaScript", "HTML", "CSS", "Affdex SDK", "WebRTC"],
+    "features": [
+      "Real-time emotion recognition",
+      "Facial expression analysis",
+      "Appearance detection",
+      "Gender and age estimation",
+      "Glasses detection"
+    ],
+    "links": {
+      "demo": "https://emotionwise.netlify.app/",
+      "github": "https://github.com/simplysuvi/emotionplay"
+    },
+    "notification": "Emotion detected: Surprise",
+    "backgroundColor": "#fff4e6",
+    "textColor": "#1d1d1f"
+  },
+  {
+    "id": "faceid",
+    "title": "Facial Authentication Web App",
+    "headline": "Your face is your password.",
+    "description": "A secure facial recognition login system that compares live webcam input with stored facial data to authenticate users — all in-browser with no servers needed.",
+    "tech": ["JavaScript", "HTML", "CSS", "Face-api.js", "LocalStorage"],
+    "features": [
+      "Facial recognition for authentication",
+      "User profile management",
+      "Secure local storage of facial data",
+      "Multiple face registration",
+      "Responsive design"
+    ],
+    "links": {
+      "demo": "https://simplysuvi.github.io/faceID/",
+      "github": "https://github.com/simplysuvi/faceID"
+    },
+    "backgroundColor": "#f8f0ff",
+    "textColor": "#1d1d1f"
+  },
+  {
+    "id": "ipl-eda",
+    "title": "IPL Data Analysis (2008–2020)",
+    "headline": "Every run has a reason.",
+    "description": "A deep dive into 13 seasons of IPL data, uncovering patterns behind wins, losses, player performance, and team strategies using visual storytelling.",
+    "tech": ["Python", "Pandas", "Matplotlib", "Seaborn", "Jupyter Notebook"],
+    "features": [
+      "Comprehensive data cleaning and preprocessing",
+      "Statistical analysis of match outcomes",
+      "Player performance visualization",
+      "Team strategy analysis",
+      "Interactive visualizations"
+    ],
+    "links": {
+      "demo": "https://simplysuvi.github.io/IPL-EDA/",
+      "github": "https://github.com/simplysuvi/IPL-EDA"
+    },
+    "notification": "New insight: Team wins 70% more when batting first",
+    "backgroundColor": "#ffffff",
+    "textColor": "#1d1d1f"
+  },
+  {
+    "id": "eventify-u",
+    "title": "Eventify-U (BrickHack 2023)",
+    "headline": "Discover your next event — your way.",
+    "description": "Built in 24 hours at BrickHack 2023, Eventify-U delivers personalized event recommendations with smart filters and a sleek interface powered by real-time API integration.",
+    "tech": ["JavaScript", "HTML", "CSS", "API Integration"],
+    "features": [
+      "Personalized event recommendations",
+      "User-friendly search interface",
+      "Event filtering by category, date, and location",
+      "Responsive design for mobile and desktop",
+      "Integration with event APIs"
+    ],
+    "links": {
+      "demo": "https://devpost.com/software/eventify-u",
+      "github": "https://github.com/meghagupta08/brickhack"
+    },
+    "backgroundColor": "#e6f2ff",
+    "textColor": "#1d1d1f"
+  },
+  {
+    "id": "compliment-generator",
+    "title": "Compliment Generator",
+    "headline": "A little kindness, one click away.",
+    "description": "A feel-good web app that lifts your mood with genuine, randomly generated compliments — because everyone deserves a reminder they're awesome.",
+    "tech": ["JavaScript", "HTML", "CSS"],
+    "features": [
+      "Random compliment generation",
+      "Mood-based filtering",
+      "Share functionality",
+      "Responsive design",
+      "Offline support"
+    ],
+    "links": {
+      "demo": "https://simplysuvi.github.io/youarespecial/",
+      "github": "https://github.com/simplysuvi/youarespecial"
+    },
+    "notification": "New compliment: You're making a difference",
+    "backgroundColor": "#f5f5f7",
+    "textColor": "#1d1d1f"
+  },
+  {
+    "id": "face-detect",
+    "title": "Pico.js Face Detection",
+    "headline": "Lightweight. Real-time. In-browser.",
+    "description": "A minimal face detection demo using Pico.js — built with pure JavaScript to deliver fast, real-time facial recognition directly in the browser.",
+    "tech": ["JavaScript", "HTML", "CSS", "Pico.js"],
+    "features": [
+      "Real-time face detection",
+      "Lightweight implementation",
+      "Works in browser",
+      "No external dependencies",
+      "Performance optimization"
+    ],
+    "links": {
+      "demo": "https://simplysuvi.github.io/face-detect/",
+      "github": "https://github.com/simplysuvi/face-detect"
+    },
+    "backgroundColor": "#f5f5f7",
+    "textColor": "#1d1d1f"
+  }
+]

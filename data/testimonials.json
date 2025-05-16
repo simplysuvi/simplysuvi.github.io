@@ -1,0 +1,83 @@
+[
+  {
+    "id": "ryan-parsons",
+    "text": "Suvrat was an amazing colleague who demonstrated great proficiency in computer vision development, electronic controls design, and system integration. His attention to detail and dedication to clear, concise documentation of his work helped set him apart. His contribution was critical to the development of a machine learning processing chain for the complex, multi faceted, system prototype we developed together over the past year.",
+    "author": {
+      "name": "Ryan Parsons",
+      "position": "Senior Mechanical Engineer",
+      "company": "Rochester Institute of Technology"
+    }
+  },
+  {
+    "id": "mark-walluk",
+    "text": "Working with Suvrat on a technically challenging project over the course of a year showed his outstanding capabilities and talents. Suvrat is easy to work with, articulate in his conversation and writing, has a logical approach to solving problems, and is a self-starter who pays attention to the details. He has strong machine learning/artificial intelligence programming skills, especially related to the image processing application we were working on.",
+    "author": {
+      "name": "Mark Walluk",
+      "position": "Technical Program Manager - COE Assistant Director",
+      "company": "Rochester Institute of Technology"
+    }
+  },
+  {
+    "id": "nenad-nenadic",
+    "text": "Both as a co-op student and then a full-time employee, Suvrat was always measured, polite, and a pleasure to work with. His self-driven enthusiasm, problem-oriented approach, and practical mind were significant assets for us. Over the few years at RIT, his knowledge of applied computer vision grew substantially, and he selflessly shared his new insights with the team along the way.",
+    "author": {
+      "name": "Nenad Nenadic",
+      "position": "Research Faculty",
+      "company": "Rochester Institute of Technology"
+    }
+  },
+  {
+    "id": "abu-islam",
+    "text": "Suvrat worked under my supervision both as a coop student and as a full-time engineer. Suvrat has a very pleasant interpersonal skills and is a pleasure to work with. He can stay calm under stressful situation. He is a self-learner. Suvrat is adept in seeking latest developments in tools and methodologies and adapting them to solve problems at hand. With minimum guidance he can initiate work and make progress. During his tenure Suvrat has consistently demonstrated exceptional skills in applied computer vision and machine learning. I wish Suvrat all the best for his future career ambitions.",
+    "author": {
+      "name": "Abu Islam",
+      "position": "R&D Faculty",
+      "company": "Rochester Institute of Technology"
+    }
+  },
+  {
+    "id": "michael-thurston",
+    "text": "Suvrat worked on our team at the Golisano Institute for Sustainability for several years while completing his masters in data science, and then for an additional year as an OPT employee. Suvrat was a strong contributor to our team developing image processing and machine learning technologies for a variety of manufacturing applications. He made good contributions to multiple project teams and showed the ability to work productively with little direct oversight.",
+    "author": {
+      "name": "Michael Thurston",
+      "position": "Technical Director, Golisano Institute for Sustainability Research Faculty",
+      "company": "Golisano Institute for Sustainability, RIT"
+    }
+  },
+  {
+    "id": "megha-gupta",
+    "text": "Suvrat is truly exceptional in his ability to remain calm and composed, even in high-pressure situations. One of Suvrat's standout qualities is his deep insights and understanding of machine learning projects. Furthermore, his expertise in computer vision is truly commendable. Suvrat's dedication to staying updated on the latest advancements in computer vision was evident, making him a valuable asset to any team.",
+    "author": {
+      "name": "Megha Gupta",
+      "position": "Software Engineer II - AI/ML",
+      "company": "Intuit"
+    }
+  },
+  {
+    "id": "jasdeep-heer",
+    "text": "Suvrat is an extremely talented young individual who is not only multi-skilled and dedicated but also someone who is always willing to go the extra mile to service our clients. It was a pleasure having Suvrat on our team and he is an asset to any company.",
+    "author": {
+      "name": "Jasdeep Heer",
+      "position": "Director, Managed Services & Digital Messaging",
+      "company": "Merkle"
+    }
+  },
+  {
+    "id": "neil-hughes",
+    "text": "Having spent a couple of months working with Suvrat I can say that he has a great work ethic and can deliver in a fast-paced, complex environment whilst maintaining a positive attitude. A pleasure to work with.",
+    "author": {
+      "name": "Neil Hughes",
+      "position": "Digital Marketing | Customer Engagement | MarTech",
+      "company": "Merkle"
+    }
+  },
+  {
+    "id": "ben-koolen",
+    "text": "Suvrat joined my team during our peak delivery period last year, and was incredibly quick and intuitive in understanding the role. The quality, accuracy and speed of his work was never in doubt and he quickly became a very important and respected member of our team, due to his intuitiveness, interest in learning more and quick understanding. It was a pleasure to work with Suvrat, and I look forward to seeing his career progress!",
+    "author": {
+      "name": "Ben Koolen",
+      "position": "Marketing Automation & AI Solutions Expert",
+      "company": "Braze"
+    }
+  }
+]
