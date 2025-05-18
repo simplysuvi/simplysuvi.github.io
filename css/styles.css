@@ -101,7 +101,7 @@ body {
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     overflow-x: hidden;
-    transition: background-color 0.3s ease, color 0.3s ease, opacity 0.7s cubic-bezier(0.4,0,0.2,1);
+    transition: background-color 0.3s ease, color 0.3s ease, opacity 0.7s cubic-bezier(0.4, 0, 0.2, 1);
     min-height: 100%;
     display: flex;
     flex-direction: column;
@@ -111,13 +111,13 @@ body {
 body.preload {
     opacity: 0;
     pointer-events: none;
-    transition: opacity 0.7s cubic-bezier(0.4,0,0.2,1);
+    transition: opacity 0.7s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 body:not(.preload) {
     opacity: 1;
     pointer-events: auto;
-    transition: opacity 0.7s cubic-bezier(0.4,0,0.2,1);
+    transition: opacity 0.7s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 body.dark-mode.preload {
@@ -1240,6 +1240,33 @@ body.dark-mode .publication-doi a {
 /*--------------------------------------------------------------
 # Page Specific Styles
 --------------------------------------------------------------*/
+
+/* Smooth entry animation for hero elements */
+.animate-on-load {
+    opacity: 0;
+    transform: translateY(40px) scale(0.98);
+    filter: blur(8px);
+    pointer-events: none;
+    transition:
+        opacity 0.8s cubic-bezier(0.22, 0.61, 0.36, 1),
+        transform 0.8s cubic-bezier(0.22, 0.61, 0.36, 1),
+        filter 0.8s cubic-bezier(0.22, 0.61, 0.36, 1);
+    will-change: opacity, transform, filter;
+}
+
+.fade-in-up {
+    opacity: 1 !important;
+    transform: translateY(0) scale(1) !important;
+    filter: blur(0) !important;
+    pointer-events: auto !important;
+}
+
+@media (max-width: 768px) {
+    .animate-on-load {
+        transform: translateY(24px) scale(0.98);
+        filter: blur(6px);
+    }
+}
 
 /* ## index.html (Hero Section) ## */
 .hero {

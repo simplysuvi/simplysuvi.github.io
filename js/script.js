@@ -1,11 +1,11 @@
 /**
  * Smooth page load: add .preload to body on initial load, remove after window load
  */
-(function() {
+(function () {
     if (!document.body.classList.contains('preload')) {
         document.body.classList.add('preload');
     }
-    window.addEventListener('load', function() {
+    window.addEventListener('load', function () {
         document.body.classList.remove('preload');
     });
 })();
@@ -49,6 +49,14 @@ document.addEventListener('DOMContentLoaded', () => {
                     module.classList.remove('active');
                 }, 300);
             });
+        });
+
+        // Hero animation: fade in hero elements in sequence
+        const heroAnimatedEls = document.querySelectorAll('.hero .animate-on-load');
+        heroAnimatedEls.forEach((el, idx) => {
+            setTimeout(() => {
+                el.classList.add('fade-in-up');
+            }, idx * 200); // 200ms stagger
         });
     });
 });
