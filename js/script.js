@@ -1144,7 +1144,10 @@ function renderExperience(experiences) {
             <div class="experience-card-content">
                 <div class="experience-card-company" style="color: ${experience.color}">${experience.company}</div>
                 <div class="experience-card-role">${experience.title}</div>
-                <div class="experience-card-date">${experience.startDate} - ${experience.endDate}</div>
+                <div class="experience-card-date">
+                    ${experience.startDate} - ${experience.endDate}
+                    ${experience.location ? `<span class="experience-card-location"><i class="fas fa-location-dot"></i> ${experience.location}</span>` : ''}
+                </div>
                 ${experience.skills ? `
                 <div class="experience-card-skills">
                     ${experience.skills.map(skill => `<span class="skill-pill">${skill}</span>`).join('')}

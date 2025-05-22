@@ -5,6 +5,7 @@
         "company": "DieselCore",
         "startDate": "May 2024",
         "endDate": "Present",
+        "location": "Houston, TX (Remote)",
         "color": "#91c148",
         "skills": [
             "Python",
@@ -31,6 +32,7 @@
         "company": "Rochester Institute of Technology",
         "startDate": "May 2022",
         "endDate": "May 2024",
+        "location": "Rochester, NY",
         "color": "#F76902",
         "skills": [
             "PyTorch",
@@ -56,6 +58,7 @@
         "company": "Merkle",
         "startDate": "Sep 2020",
         "endDate": "Aug 2021",
+        "location": "Pune, India",
         "color": "#f23b1c",
         "skills": [
             "Python",

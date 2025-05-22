@@ -55,12 +55,27 @@
     color: var(--website-heading-color);
 }
 
-/* Date Range */
+/* Date Range and Location */
 .experience-card-date {
     font-size: 18px;
     color: var(--website-secondary-text);
     margin-bottom: 15px;
     font-weight: 500;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.experience-card-location {
+    display: inline-flex;
+    align-items: center;
+    color: var(--website-secondary-text);
+}
+
+.experience-card-location i {
+    margin-right: 5px;
+    font-size: 18px;
 }
 
 /* Skills Pills */
@@ -136,7 +151,8 @@ body.dark-mode .experience-card-role {
     color: var(--website-dark-heading-color);
 }
 
-body.dark-mode .experience-card-date {
+body.dark-mode .experience-card-date,
+body.dark-mode .experience-card-location {
     color: var(--website-dark-secondary-text);
 }
 
@@ -168,6 +184,15 @@ body.dark-mode .experience-card-responsibilities li {
     .experience-card-date {
         font-size: 14px;
         margin-bottom: 12px;
+        gap: 8px;
+    }
+
+    .experience-card-location {
+        font-size: 14px;
+    }
+
+    .experience-card-location i {
+        font-size: 12px;
     }
 
     .experience-card-skills {
