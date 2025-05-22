@@ -1124,43 +1124,37 @@ async function loadExperience() {
 }
 
 /**
- * Renders experience data as a timeline
+ * Renders experience data as cards
  * @param {Array} experiences - Array of experience objects
  */
 function renderExperience(experiences) {
-    const timelineContainer = document.querySelector('.timeline');
-    if (!timelineContainer) return;
+    const cardsContainer = document.querySelector('.experience-cards');
+    if (!cardsContainer) return;
 
     // Clear existing content
-    timelineContainer.innerHTML = '';
+    cardsContainer.innerHTML = '';
 
     // Add each experience item
     experiences.forEach(experience => {
-        const timelineItem = document.createElement('div');
-        timelineItem.className = 'timeline-item';
-        timelineItem.id = experience.id;
+        const card = document.createElement('div');
+        card.className = 'experience-card';
+        card.id = experience.id;
 
-        timelineItem.innerHTML = `
-            <div class="timeline-dot"></div>
-            <div class="timeline-date">
-                <span>${experience.startDate}</span>
-                <span>${experience.endDate}</span>
-            </div>
-            <div class="timeline-content site-card">
-                <div class="card-content">
-                    <div class="card-header">
-                        <h3>${experience.title}</h3>
-                        <p class="company">${experience.company}</p>
-                    </div>
-                    <div class="card-body">
-                        <ul>
-                            ${experience.responsibilities.map(responsibility => `<li>${responsibility}</li>`).join('')}
-                        </ul>
-                    </div>
-                </div>
+        card.innerHTML = `
+            <div class="experience-card-content">
+                <div class="experience-card-company" style="color: ${experience.color}">${experience.company}</div>
+                <div class="experience-card-role">${experience.title}</div>
+                <div class="experience-card-date">${experience.startDate} - ${experience.endDate}</div>
+                ${experience.skills ? `
+                <div class="experience-card-skills">
+                    ${experience.skills.map(skill => `<span class="skill-pill">${skill}</span>`).join('')}
+                </div>` : ''}
+                <ul class="experience-card-responsibilities">
+                    ${experience.responsibilities.map(responsibility => `<li>${responsibility}</li>`).join('')}
+                </ul>
             </div>
         `;
 
-        timelineContainer.appendChild(timelineItem);
+        cardsContainer.appendChild(card);
     });
 }

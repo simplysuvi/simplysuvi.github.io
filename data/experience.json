@@ -2,32 +2,52 @@
     {
         "id": "dieselcore",
         "title": "Data Science and AI Engineer",
-        "company": "DieselCore LLC",
+        "company": "DieselCore",
         "startDate": "May 2024",
         "endDate": "Present",
+        "color": "#91c148",
+        "skills": [
+            "Python",
+            "FastAPI",
+            "OpenCV",
+            "PyTorch",
+            "LLM",
+            "Docker",
+            "REST API",
+            "Azure"
+        ],
         "responsibilities": [
-            "Developing and integrating advanced AI solutions to enhance internal communication tools and improve operational efficiency",
-            "Leading the implementation of cutting-edge machine learning models for strategic business applications",
-            "Spearheading technology evaluation and solution design for quality assurance and process optimization",
-            "Collaborating with cross-functional teams to ensure seamless project execution and technology adaptation"
+            "Leading AI and data initiatives across the company, from identifying opportunities to delivering production-grade solutions tailored to business needs",
+            "Built and deployed an AI chatbot on Microsoft Teams using RAG pipelines (LlamaIndex, FAISS, Cohere Reranker, ColBERT), cutting document lookup time by 60% across teams",
+            "Created large-scale document parsing and embedding workflows using Python and OpenAI embeddings, improving search accuracy by combining BM25, hybrid search, and RRF",
+            "Developed a real-time computer vision system using YOLOv8 and CLIP for part identification on mobile devices, reaching ~92% accuracy in live classification tasks",
+            "Integrated the vision system with ERP workflows through FastAPI and REST APIs, automating part tracking and reducing manual logging errors by 40%",
+            "Managed full ML lifecycle—from data collection and model training to deployment—using PyTorch, OpenCV, and Docker for scalable, production-ready solutions"
         ]
     },
     {
         "id": "rit-engineer",
         "title": "Data Science Engineer",
-        "company": "Golisano Institute for Sustainability, RIT",
+        "company": "Rochester Institute of Technology",
         "startDate": "May 2022",
         "endDate": "May 2024",
+        "color": "#F76902",
+        "skills": [
+            "PyTorch",
+            "TensorFlow",
+            "MLFlow",
+            "OpenCV",
+            "Python",
+            "Keras",
+            "TCP/IP"
+        ],
         "responsibilities": [
-            "Led the development of a vision system integrating YOLOv8 and UNet segmentation models to achieve precise clothing dismantling",
-            "Leveraged AWS SageMaker to build scalable image classification pipelines using TensorFlow",
-            "Implemented advanced data augmentation techniques, resulting in a 10% improvement in IoU score",
-            "Developed ETL and data augmentation pipelines, expanding dataset by 30% and achieving a 12% lift in model accuracy",
-            "Implemented efficient CUDA kernels for GPU acceleration, demonstrating proficiency in deep learning frameworks",
-            "Developed performant CNN models for automobile part categorization (98.2% on 10k+ images, using OpenCV)",
-            "Boosted automobile part classification accuracy by 73% by fine-tuning an Inception v3 model",
-            "Implemented a Siamese Network for similarity learning, achieving 98% accuracy on out-of-training data",
-            "Developed a multi-stage ETL pipeline for object detection/classification, reducing manual inspection time by 30%"
+            "Led the development of a vision system using YOLOv8 and UNet to identify and segment garments for automated dismantling and laser cutting",
+            "Built scalable image classification pipelines on AWS SageMaker using TensorFlow, improving inference speed and model deployment",
+            "Expanded datasets by 30% through custom ETL and augmentation pipelines, boosting model accuracy by 12%",
+            "Fine-tuned Inception v3 and developed Siamese Networks to improve part classification and similarity detection, achieving up to 98% accuracy on real-world data",
+            "Designed GPU-accelerated training workflows with custom CUDA kernels, reducing training time and improving throughput",
+            "Deployed multi-stage object detection systems that cut manual inspection time by 30% in automotive remanufacturing workflows"
         ]
     },
     {
@@ -36,13 +56,24 @@
         "company": "Merkle",
         "startDate": "Sep 2020",
         "endDate": "Aug 2021",
+        "color": "#f23b1c",
+        "skills": [
+            "Python",
+            "Selenium",
+            "API Testing",
+            "Salesforce",
+            "Web Development",
+            "QA Testing",
+            "Manual Testing",
+            "Automation Testing"
+        ],
         "responsibilities": [
             "Deployed 100+ email campaigns for brands like Estée Lauder and MAC Cosmetics using Salesforce Marketing Cloud",
             "Developed personalized email campaigns with a reach of more than 400,000 customers in 100+ countries",
             "Developed automated test suites (Python, Selenium) for web applications, reducing manual testing effort by 24%",
             "Built API test automation scripts to validate functionality and data integrity",
             "Reduced overall test cycle time by 40% using Python scripting in automation testing",
-            "Identified & reported 500+ unique bugs across web & mobile applications for UltraTech Cement",
+            "Identified & reported 500+ unique bugs across web & mobile applications for a leading Indian cement manufacturer",
             "Performed manual testing of mobile applications, including smoke, functional, integration, regression, and UI testing"
         ]
     }

@@ -1,0 +1,203 @@
+/**
+ * Experience Cards CSS - Apple-inspired cards for experience section
+ */
+
+/* Experience Cards Container */
+.experience-cards-container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 40px;
+    border-radius: 28px;
+    position: relative;
+    overflow: hidden;
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+/* Experience Card */
+.experience-card {
+    background-color: var(--website-card-background);
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: var(--shadow-md);
+    transition: all 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
+    margin-bottom: 40px;
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    display: flex;
+    flex-direction: column;
+}
+
+.experience-card:hover {
+    box-shadow: var(--shadow-lg);
+}
+
+/* Card Content */
+.experience-card-content {
+    padding: 35px;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Company Name */
+.experience-card-company {
+    font-size: 48px;
+    font-weight: 700;
+    margin-bottom: 20px;
+    line-height: 1.1;
+    letter-spacing: -0.02em;
+    /* Color will be set dynamically based on company brand color */
+}
+
+/* Role Title */
+.experience-card-role {
+    font-size: 28px;
+    font-weight: 600;
+    margin-bottom: 15px;
+    color: var(--website-heading-color);
+}
+
+/* Date Range */
+.experience-card-date {
+    font-size: 18px;
+    color: var(--website-secondary-text);
+    margin-bottom: 15px;
+    font-weight: 500;
+}
+
+/* Skills Pills */
+.experience-card-skills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 25px;
+}
+
+.skill-pill {
+    display: inline-block;
+    padding: 6px 12px;
+    border-radius: 16px;
+    font-size: 14px;
+    font-weight: 600;
+    background-color: var(--website-black);
+    color: #fff;
+    transition: all 0.3s ease;
+}
+
+body.dark-mode .skill-pill {
+    background-color: var(--website-dark-text);
+    color: var(--website-black);
+}
+
+/* Responsibilities List */
+.experience-card-responsibilities {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.experience-card-responsibilities li {
+    position: relative;
+    padding-left: 28px;
+    margin-bottom: 16px;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 1.6;
+    color: var(--website-paragraph-color);
+}
+
+.experience-card-responsibilities li:last-child {
+    margin-bottom: 0;
+}
+
+.experience-card-responsibilities li::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 10px;
+    width: 8px;
+    height: 8px;
+    background-color: var(--website-heading-color);
+    border-radius: 50%;
+    box-shadow: 0 0 5px rgba(0, 122, 255, 0.3);
+}
+
+body.dark-mode .experience-card-responsibilities li::before {
+    background-color: var(--website-dark-heading-color);
+}
+
+/* Dark Mode Styles */
+body.dark-mode .experience-card {
+    background-color: var(--website-dark-card-background);
+    border-color: rgb(88 85 85 / 0.02);
+}
+
+/* Company name color is set dynamically and doesn't change in dark mode */
+
+body.dark-mode .experience-card-role {
+    color: var(--website-dark-heading-color);
+}
+
+body.dark-mode .experience-card-date {
+    color: var(--website-dark-secondary-text);
+}
+
+body.dark-mode .experience-card-responsibilities li {
+    color: var(--website-dark-paragraph-color);
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .experience-cards-container {
+        padding: 30px 20px;
+        max-width: calc(100vw - 5px);
+    }
+
+    .experience-card-content {
+        padding: 25px;
+    }
+
+    .experience-card-company {
+        font-size: 36px;
+        margin-bottom: 15px;
+    }
+
+    .experience-card-role {
+        font-size: 22px;
+        margin-bottom: 10px;
+    }
+
+    .experience-card-date {
+        font-size: 14px;
+        margin-bottom: 12px;
+    }
+
+    .experience-card-skills {
+        margin-bottom: 20px;
+        gap: 6px;
+    }
+
+    .skill-pill {
+        padding: 4px 10px;
+        font-size: 12px;
+    }
+
+    .experience-card-responsibilities li {
+        font-size: 15px;
+        padding-left: 24px;
+        margin-bottom: 12px;
+    }
+}
+
+@media (max-width: 480px) {
+    .experience-card-company {
+        font-size: 28px;
+    }
+
+    .experience-card-role {
+        font-size: 18px;
+    }
+
+    .experience-card-responsibilities li {
+        font-size: 14px;
+        padding-left: 20px;
+    }
+}
