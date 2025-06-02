@@ -49,6 +49,7 @@
     <!-- Critical CSS -->
     <link rel="stylesheet" href="../css/styles.css">
     <link rel="stylesheet" href="../css/resume-modal.css">
+    <link rel="stylesheet" href="../css/toggle-switch.css">
 
     <!-- Component Loader -->
     <script src="../js/component-loader.js"></script>
@@ -57,6 +58,7 @@
     <!-- Main JavaScript -->
     <script src="../js/script.js" defer></script>
     <script src="../js/resume-modal.js" defer></script>
+    <script src="../js/content-toggle.js" defer></script>
 </head>
 
 <body>
@@ -67,51 +69,93 @@
         <!-- About Section -->
         <section class="about-section">
             <h2 class="section-title">Suvrat, beyond the résumé.</h2>
-            <p class="section-tagline">The backstory, the mindset, and the soft skills that don’t make it to a résumé —
+            <p class="section-tagline">The backstory, the mindset, and the soft skills that don't make it to a résumé —
                 but shape everything I do.</p>
-            <div class="about-container">
-                <div class="about-content">
-                    <div class="about-image-container">
-                        <div class="about-image-wrapper">
-                            <img src="../assets/about-me-pic.jpg" alt="Suvrat Jain" class="about-image">
+
+            <!-- Toggle Switch -->
+            <div class="toggle-container">
+                <span id="aboutLabel" class="toggle-label active">Personal</span>
+                <label class="toggle-switch">
+                    <input type="checkbox" id="contentToggle">
+                    <span class="toggle-slider"></span>
+                </label>
+                <span id="experienceLabel" class="toggle-label">Professional</span>
+            </div>
+
+            <!-- Content Sections Container -->
+            <div class="content-sections-container">
+                <!-- About Content Section -->
+                <div id="aboutSection" class="content-section active">
+                    <div class="about-container">
+                        <div class="about-content">
+                            <div class="about-image-container">
+                                <div class="about-image-wrapper">
+                                    <img src="../assets/about-me-pic.jpg" alt="Suvrat Jain" class="about-image">
+                                </div>
+                            </div>
+                            <div class="about-text">
+                                <h3 class="about-heading">More than a title.</h3>
+                                <p>I'm Suvrat — a data scientist, builder, and naturally curious human. I enjoy working
+                                    on ideas
+                                    that blend logic with creativity, and I'm someone who learns best by doing. I've
+                                    always
+                                    appreciated clean design, honest work, and people who ask good questions. I'm
+                                    originally
+                                    from India, and now working in the U.S., trying to create things that feel
+                                    meaningful. My approach to life is pretty simple: stay curious, work hard, and be
+                                    kind.
+                                    Whether I'm debugging a model or brainstorming a new project, I like to take my time
+                                    to
+                                    understand the "why" behind things. I believe in growth, but not at the cost of joy.
+                                </p>
+                                <p>My approach combines technical expertise with creative problem-solving. I believe the
+                                    most
+                                    powerful insights often emerge at the intersection of rigorous analysis and
+                                    innovative
+                                    thinking. Whether I'm building predictive models, creating data visualizations, or
+                                    developing end-to-end machine learning pipelines, I'm driven by the potential to
+                                    create
+                                    solutions that make a meaningful impact.</p>
+                                <h3 class="about-heading">How It All Compiled.</h3>
+                                <p>Tech came into my life like a quiet wave — slow at first, then all-consuming. I began
+                                    learning to code in high school, curious about what made things tick. That early
+                                    spark
+                                    turned into a full-blown career as I studied engineering, explored data science, and
+                                    started
+                                    building real-world tools. I found a rhythm in systems, algorithms, and
+                                    visualizations — in
+                                    making the abstract feel intuitive. Now I work on everything from AI assistants to
+                                    computer
+                                    vision tools — and I still get excited about learning something new every day.</p>
+                                <h3 class="about-heading">W.O.W — World Outside Work.</h3>
+                                <p>I like keeping life simple — but full.<br>
+                                    Music is where I return to myself. I write, sing, and
+                                    play guitar whenever I can. Some songs have found a home on Spotify. Others live
+                                    quietly in
+                                    my voice notes — raw, unfiltered, just for me. It's less about perfection, more
+                                    about
+                                    presence.<br>
+                                    I've always been drawn to stories. The ones that stay with you long after the
+                                    credits roll or the final page turns. Books that shift your perspective. Films that
+                                    stir
+                                    something deeper.<br>
+                                    And then, there's travel. I don't chase landmarks. I follow feeling. The
+                                    stillness of a quiet street. A café where no one knows your name. The space between
+                                    where
+                                    you are and who you're becoming. Stepping away from routine helps me reconnect —
+                                    with
+                                    myself, with new ideas, with the world as it is.<br>
+                                    These moments outside of work don't just
+                                    ground me. They shape how I show up — more present, more curious, more human.</p>
+                            </div>
                         </div>
                     </div>
-                    <div class="about-text">
-                        <h3 class="about-heading">More than a title.</h3>
-                        <p>I’m Suvrat — a data scientist, builder, and naturally curious human. I enjoy working on ideas
-                            that blend logic with creativity, and I’m someone who learns best by doing. I’ve always
-                            appreciated clean design, honest work, and people who ask good questions. I’m originally
-                            from India, and now working in the U.S., trying to create things that feel
-                            meaningful. My approach to life is pretty simple: stay curious, work hard, and be kind.
-                            Whether I’m debugging a model or brainstorming a new project, I like to take my time to
-                            understand the “why” behind things. I believe in growth, but not at the cost of joy.</p>
-                        <p>My approach combines technical expertise with creative problem-solving. I believe the most
-                            powerful insights often emerge at the intersection of rigorous analysis and innovative
-                            thinking. Whether I'm building predictive models, creating data visualizations, or
-                            developing end-to-end machine learning pipelines, I'm driven by the potential to create
-                            solutions that make a meaningful impact.</p>
-                        <h3 class="about-heading">How It All Compiled.</h3>
-                        <p>Tech came into my life like a quiet wave — slow at first, then all-consuming. I began
-                            learning to code in high school, curious about what made things tick. That early spark
-                            turned into a full-blown career as I studied engineering, explored data science, and started
-                            building real-world tools. I found a rhythm in systems, algorithms, and visualizations — in
-                            making the abstract feel intuitive. Now I work on everything from AI assistants to computer
-                            vision tools — and I still get excited about learning something new every day.</p>
-                        <h3 class="about-heading">W.O.W — World Outside Work.</h3>
-                        <p>I like keeping life simple — but full.<br>
-                            Music is where I return to myself. I write, sing, and
-                            play guitar whenever I can. Some songs have found a home on Spotify. Others live quietly in
-                            my voice notes — raw, unfiltered, just for me. It’s less about perfection, more about
-                            presence.<br>
-                            I’ve always been drawn to stories. The ones that stay with you long after the
-                            credits roll or the final page turns. Books that shift your perspective. Films that stir
-                            something deeper.<br>
-                            And then, there’s travel. I don’t chase landmarks. I follow feeling. The
-                            stillness of a quiet street. A café where no one knows your name. The space between where
-                            you are and who you’re becoming. Stepping away from routine helps me reconnect — with
-                            myself, with new ideas, with the world as it is.<br>
-                            These moments outside of work don’t just
-                            ground me. They shape how I show up — more present, more curious, more human.</p>
+                </div>
+
+                <!-- Experience Content Section -->
+                <div id="experienceSection" class="content-section">
+                    <div class="experience-cards-container">
+                        <div class="about-experience-cards"></div>
                     </div>
                 </div>
             </div>

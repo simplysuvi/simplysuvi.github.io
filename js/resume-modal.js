@@ -68,6 +68,13 @@ function initResumeModal() {
                 </div>
             </div>
         `;
+
+        // Add load event listener to iframe
+        const iframe = modalContainer.querySelector('.resume-iframe');
+        iframe.addEventListener('load', () => {
+            iframe.classList.add('loaded');
+            modalContainer.querySelector('.resume-modal-content').classList.add('loaded');
+        });
         document.body.appendChild(modalContainer);
 
         // Add event listener to close button
@@ -115,14 +122,27 @@ function openResumeModal() {
     const modalContainer = document.querySelector('.resume-modal-container');
     if (!modalContainer) return;
 
-    // Show modal with animation
+    // Prepare for animation
+    const modal = modalContainer.querySelector('.resume-modal');
+    modal.classList.remove('closing');
+    
+    // Force browser to process any pending style changes
+    void modalContainer.offsetWidth;
+    
+    // Show container first
     modalContainer.classList.add('active');
     document.body.style.overflow = 'hidden'; // Prevent scrolling
 
-    // Animate modal content
-    setTimeout(() => {
-        modalContainer.querySelector('.resume-modal').classList.add('active');
-    }, 10);
+    // Use requestAnimationFrame for smoother animation
+    requestAnimationFrame(() => {
+        // Force browser to process the previous style changes
+        void modal.offsetWidth;
+        
+        // Animate modal content with a slight delay for better visual effect
+        setTimeout(() => {
+            modal.classList.add('active');
+        }, 30); // Reduced delay for better responsiveness
+    });
 }
 
 /**
@@ -134,11 +154,20 @@ function closeResumeModal() {
     if (!modalContainer) return;
 
     const modal = modalContainer.querySelector('.resume-modal');
+    
+    // Add closing class for smooth exit animation
+    modal.classList.add('closing');
     modal.classList.remove('active');
 
     // Wait for animation to complete before hiding container
+    // Use a slightly shorter duration for better responsiveness
     setTimeout(() => {
         modalContainer.classList.remove('active');
         document.body.style.overflow = ''; // Restore scrolling
-    }, 1);
+        
+        // Remove closing class after animation completes
+        setTimeout(() => {
+            modal.classList.remove('closing');
+        }, 50);
+    }, 350); // Slightly shorter delay matched with CSS transition
 }

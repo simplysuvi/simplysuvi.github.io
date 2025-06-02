@@ -12,7 +12,6 @@ simplysuvi.com is structured into several main sections, each supported by dedic
 * [About](https://simplysuvi.com/about/index.html): Personal background, values, and a brief biography.
 * [Resume (PDF)](https://simplysuvi.com/data/Suvrat%20Jain's%20Resume.pdf): Downloadable resume summarizing professional experience, education, and skills.
 * [Projects](https://simplysuvi.com/projects/index.html): Showcase of selected projects, with summaries and highlights.
-* [Experience](https://simplysuvi.com/experience/index.html): Detailed work history, roles, and achievements.
 * [Education](https://simplysuvi.com/education/index.html): Academic background and qualifications.
 * [Skills](https://simplysuvi.com/skills/index.html): List of technical and professional skills.
 * [Testimonials](https://simplysuvi.com/testimonials/index.html): Endorsements and feedback from colleagues and collaborators.

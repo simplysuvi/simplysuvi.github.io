@@ -1,0 +1,230 @@
+/**
+ * Toggle Switch CSS
+ * Apple-inspired toggle switch for switching between content sections
+ */
+
+.toggle-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 20px 0 40px;
+    gap: 15px;
+    max-width: 300px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.toggle-label {
+    font-size: 15px;
+    font-weight: 600;
+    color: var(--website-secondary-text);
+    cursor: pointer;
+    transition: color 0.3s ease, transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1), background-color 0.3s ease;
+    padding: 5px 10px;
+    border-radius: 15px;
+    position: relative;
+    z-index: 1;
+    user-select: none;
+}
+
+.toggle-label.active {
+    color: var(--website-text);
+    font-weight: 700;
+    transform: scale(1.05);
+}
+
+.toggle-label:hover {
+    color: var(--website-text);
+    background-color: rgba(0, 0, 0, 0.03);
+}
+
+body.dark-mode .toggle-label:hover {
+    background-color: rgba(255, 255, 255, 0.05);
+}
+
+.toggle-container {
+    position: relative;
+}
+
+.toggle-switch {
+    position: relative;
+    display: inline-block;
+    width: 51px;
+    height: 31px;
+}
+
+.toggle-switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.toggle-slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #e9e9eb;
+    transition: background-color 0.4s cubic-bezier(0.25, 0.1, 0.25, 1);
+    border-radius: 34px;
+    overflow: hidden;
+    will-change: background-color;
+    transform: translateZ(0);
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+
+/* Ripple effect */
+.toggle-slider::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 5px;
+    height: 5px;
+    background: rgba(255, 255, 255, 0.5);
+    opacity: 0;
+    border-radius: 100%;
+    transform: scale(1, 1) translate(-50%, -50%);
+    transform-origin: 50% 50%;
+}
+
+.toggle-slider.ripple::after {
+    animation: ripple 0.6s ease-out;
+}
+
+@keyframes ripple {
+    0% {
+        transform: scale(0, 0) translate(-50%, -50%);
+        opacity: 0.5;
+    }
+
+    100% {
+        transform: scale(20, 20) translate(-50%, -50%);
+        opacity: 0;
+    }
+}
+
+.toggle-slider:before {
+    position: absolute;
+    content: "";
+    height: 27px;
+    width: 27px;
+    left: 2px;
+    bottom: 2px;
+    background-color: white;
+    transition: transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1), background-color 0.4s cubic-bezier(0.25, 0.1, 0.25, 1);
+    border-radius: 50%;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    z-index: 2;
+    will-change: transform, background-color;
+    transform: translateZ(0);
+}
+
+input:checked+.toggle-slider {
+    background-color: var(--website-blue);
+}
+
+input:checked+.toggle-slider:before {
+    transform: translateX(20px) scale(1.02);
+}
+
+.toggle-switch:hover .toggle-slider:before {
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+/* Content sections */
+.content-section {
+    position: absolute;
+    width: 100%;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(15px) scale(0.98) translateZ(0);
+    transition:
+        opacity 0.5s cubic-bezier(0.25, 0.1, 0.25, 1),
+        transform 0.5s cubic-bezier(0.34, 1.56, 0.64, 1),
+        visibility 0s linear 0.5s;
+    will-change: opacity, transform;
+    backface-visibility: hidden;
+}
+
+.content-section.active {
+    position: relative;
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0) scale(1) translateZ(0);
+    transition:
+        opacity 0.5s cubic-bezier(0.25, 0.1, 0.25, 1),
+        transform 0.5s cubic-bezier(0.34, 1.56, 0.64, 1),
+        visibility 0s linear;
+    will-change: auto;
+}
+
+.content-section.fade-out {
+    opacity: 0;
+    transform: translateY(-15px) scale(0.98) translateZ(0);
+    pointer-events: none;
+    transition:
+        opacity 0.4s ease-out,
+        transform 0.4s ease-out,
+        visibility 0s linear 0.4s;
+}
+
+/* Container for content sections to enable absolute positioning */
+.content-sections-container {
+    position: relative;
+    min-height: 400px;
+    /* Adjust based on your content */
+}
+
+/* Dark mode styles */
+body.dark-mode .toggle-label {
+    color: var(--website-dark-secondary-text);
+}
+
+body.dark-mode .toggle-label.active {
+    color: var(--website-dark-text);
+}
+
+body.dark-mode .toggle-slider {
+    background-color: #39393d;
+}
+
+body.dark-mode .toggle-slider:before {
+    background-color: #8e8e93;
+}
+
+body.dark-mode input:checked+.toggle-slider {
+    background-color: var(--website-blue);
+}
+
+body.dark-mode input:checked+.toggle-slider:before {
+    background-color: white;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    .toggle-container {
+        margin: 15px auto 30px;
+        gap: 10px;
+    }
+
+    .toggle-switch {
+        width: 46px;
+        height: 28px;
+    }
+
+    .toggle-slider:before {
+        height: 24px;
+        width: 24px;
+    }
+
+    input:checked+.toggle-slider:before {
+        transform: translateX(18px);
+    }
+
+    .toggle-label {
+        font-size: 14px;
+    }
+}

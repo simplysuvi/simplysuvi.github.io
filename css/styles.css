@@ -17,7 +17,7 @@
     --website-gray6: #F2F2F7;
 
     /* Light mode colors */
-    --website-background: #f5f5f7;
+    --website-background: #FFFFFF0;
     --website-text: #1d1d1f;
     --website-secondary-text: #6e6e73;
     --website-tertiary-text: #8E8E93;
@@ -66,8 +66,8 @@
     --shadow-dark-lg: 0 20px 40px rgba(0, 0, 0, 0.1), 0 10px 20px rgba(0, 0, 0, 0.05);
 
     /* Transitions */
-    --transition-fast: all 0.2s ease;
-    --transition-base: all 0.3s ease;
+    --transition-fast: all 0.2s cubic-bezier(0.165, 0.84, 0.44, 1);
+    --transition-base: all 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
     --transition-smooth: all 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
     --transition-bounce: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 
@@ -520,17 +520,17 @@ body.dark-mode .time:hover {
 }
 
 /* Grouped container styles for maintainability */
-.about-container,
+/* .about-container, */
 .skills-container,
 .site-cards,
 .timeline-container,
 .hobbies-container,
 .testimonials-container {
-    max-width: 1100px;
+    max-width: 1200px;
     margin: 0 auto;
-    background-color: var(--website-window-background);
+    /* background-color: var(--website-window-background); */
     border-radius: 28px;
-    box-shadow: var(--shadow-lg);
+    /* box-shadow: var(--shadow-lg); */
     position: relative;
     overflow: hidden;
     transition: background-color 0.3s ease, border-color 0.3s ease;
@@ -661,7 +661,7 @@ body.dark-mode .footer-copyright {
     .hobbies-container,
     .testimonials-container {
         padding: 30px 20px;
-        max-width: calc(100vw - 40px);
+        max-width: calc(100vw - 10px);
     }
 
     .footer-logo-text {
@@ -1002,11 +1002,11 @@ body.dark-mode .project-modal-setup h4 {
     border-radius: 28px;
     overflow: hidden;
     transition: var(--transition-smooth);
+    background-color: var(--website-card-background);
     position: relative;
     transform-origin: center bottom;
     box-shadow: var(--shadow-md);
     border: 1px solid transparent;
-    /* For dark mode transition */
 }
 
 .card-content {
@@ -1252,6 +1252,8 @@ body.dark-mode .publication-doi a {
         transform 0.8s cubic-bezier(0.22, 0.61, 0.36, 1),
         filter 0.8s cubic-bezier(0.22, 0.61, 0.36, 1);
     will-change: opacity, transform, filter;
+    transform-style: preserve-3d;
+    backface-visibility: hidden;
 }
 
 .fade-in-up {
@@ -1259,6 +1261,7 @@ body.dark-mode .publication-doi a {
     transform: translateY(0) scale(1) !important;
     filter: blur(0) !important;
     pointer-events: auto !important;
+    will-change: auto;
 }
 
 @media (max-width: 768px) {
@@ -1400,7 +1403,7 @@ body.dark-mode .hero-description {
     }
 
     .hero-description {
-        font-size: 18px;
+        font-size: 20px;
     }
 }
 
@@ -1438,16 +1441,15 @@ body.dark-mode .hero-description {
 
 @media (max-width: 480px) {
     .hero-title {
-        font-size: 40px;
-        /* Further reduce size */
+        font-size: 44px;
     }
 
     .hero-subtitle {
-        font-size: 20px;
+        font-size: 22px;
     }
 
     .hero-description {
-        font-size: 15px;
+        font-size: 18px;
     }
 }
 
@@ -1456,10 +1458,15 @@ body.dark-mode .hero-description {
 /* .about-section uses generic section styles */
 
 .about-container {
-    /* Glassmorphism container */
     backdrop-filter: blur(20px);
     -webkit-backdrop-filter: blur(20px);
     padding: 30px;
+    max-width: 1100px;
+    margin: 0 auto;
+    border-radius: 28px;
+    position: relative;
+    overflow: hidden;
+    transition: background-color 0.3s ease, border-color 0.3s ease;
 }
 
 .about-content {
@@ -1538,7 +1545,7 @@ body.dark-mode .hero-description {
 }
 
 .about-text p {
-    font-size: 17px;
+    font-size: 20px;
     font-weight: 500;
     line-height: 1.7;
     color: var(--website-secondary-text);
@@ -1547,9 +1554,6 @@ body.dark-mode .hero-description {
 }
 
 /* Dark mode styles for About section */
-body.dark-mode .about-container {
-    background-color: rgba(40, 40, 42, 0.7);
-}
 
 body.dark-mode .about-heading {
     color: var(--website-dark-heading-color);
@@ -1591,7 +1595,7 @@ body.dark-mode .about-image-placeholder svg {
     }
 
     .about-text p {
-        font-size: 16px;
+        font-size: 18px;
     }
 }
 
@@ -1696,10 +1700,6 @@ body.dark-mode .about-image-placeholder svg {
 }
 
 /* Dark mode styles for Skills section */
-body.dark-mode .skills-container {
-    background-color: rgba(40, 40, 42, 0.7);
-    border-color: rgba(255, 255, 255, 0.05);
-}
 
 body.dark-mode .skills-icon {
     background-color: var(--website-dark-card-background);
@@ -1766,10 +1766,6 @@ body.dark-mode .skills-name {
 
 
 /* Dark mode styles for Education section container */
-body.dark-mode .site-cards {
-    background-color: rgba(40, 40, 42, 0.7);
-    border-color: rgba(255, 255, 255, 0.05);
-}
 
 /* Responsive styles for Education section container */
 @media (max-width: 768px) {
@@ -1974,23 +1970,18 @@ body.dark-mode .timeline-date {
 
 
 /* ## hobbies.html (Hobbies & Interests Section) ## */
-/* .hobbies-section uses generic section styles */
 
 .hobbies-container {
-    /* Main container for hobbies */
     backdrop-filter: blur(20px);
     -webkit-backdrop-filter: blur(20px);
-    padding: 40px;
+    padding: 0 20px;
 }
 
 .music-content {
-    /* Grid layout for content */
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    /* Default 2 columns */
+    grid-template-columns: 2fr 1fr;
     gap: 30px;
     margin-bottom: 40px;
-    /* Space below grid */
 }
 
 /* Songs Carousel Styling */
@@ -2004,33 +1995,31 @@ body.dark-mode .timeline-date {
     display: flex;
     flex-direction: column;
     border: 1px solid transparent;
-    /* For dark mode */
 }
 
-.songs-header {
-    padding: 20px;
+.songs-header,
+.books-header {
+    padding: 15px 0;
     display: flex;
     align-items: center;
 }
 
-.songs-header h3 {
-    font-size: 22px;
+.songs-header h3,
+.books-header h3 {
+    font-size: 26px;
     margin: 0;
     font-weight: 700;
     letter-spacing: -0.02em;
     line-height: 1.2;
     color: var(--website-heading-color);
-    /* Use variable */
 }
 
 .songs-carousel {
     flex: 1;
     display: flex;
-    /* Use flex for layout */
     flex-direction: column;
-    padding: 0 20px 20px;
-    min-height: 300px;
-    /* Ensure minimum height */
+    padding: 0 6px 12px;
+    min-height: 220px;
 }
 
 .songs-carousel-container {
@@ -2038,13 +2027,11 @@ body.dark-mode .timeline-date {
     overflow: hidden;
     border-radius: 16px;
     background-color: rgba(0, 0, 0, 0.03);
-    /* Subtle background */
     margin-bottom: 15px;
     transition: background-color 0.3s ease;
 }
 
 .song-card {
-    /* Individual song card */
     position: absolute;
     top: 0;
     left: 0;
@@ -2077,7 +2064,7 @@ body.dark-mode .timeline-date {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    min-height: 200px;
+    min-height: 140px;
     position: relative;
 }
 
@@ -2098,7 +2085,7 @@ body.dark-mode .timeline-date {
     bottom: 0;
     left: 0;
     right: 0;
-    padding: 20px;
+    padding: 12px;
     color: white;
     z-index: 2;
 }
@@ -2123,6 +2110,188 @@ body.dark-mode .timeline-date {
     padding: 0 10px;
 }
 
+/* Books Section Styling */
+.books-section {
+    margin-top: 40px;
+    border-radius: 24px;
+    overflow: hidden;
+    transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+    position: relative;
+}
+
+.books-description {
+    flex: 1;
+}
+
+.books-description p {
+    font-size: 20px;
+    line-height: 1.7;
+    color: var(--website-secondary-text);
+    margin-bottom: 24px;
+    letter-spacing: -0.01em;
+    font-weight: 600;
+}
+
+.books-description p:last-child {
+    margin-bottom: 0;
+}
+
+.books-container {
+    position: relative;
+    overflow: hidden;
+    padding: 20px 0;
+    border-radius: 16px;
+}
+
+.books-scroll {
+    display: flex;
+    gap: 20px;
+    padding: 0 20px;
+    overflow-x: auto;
+    scrollbar-width: none;
+    /* Firefox */
+    -ms-overflow-style: none;
+    /* IE and Edge */
+    animation: scrollBooks 60s linear infinite;
+    width: max-content;
+}
+
+.books-scroll:hover,
+.book-item:hover~.books-scroll {
+    animation-play-state: paused;
+}
+
+.books-scroll::-webkit-scrollbar {
+    display: none;
+    /* Chrome, Safari, Opera */
+}
+
+@keyframes scrollBooks {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
+.book-item {
+    flex: 0 0 auto;
+    width: 180px;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.book-item:hover {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+}
+
+.book-cover {
+    width: 100%;
+    height: 270px;
+    background-size: contain;
+    background-position: center;
+    position: relative;
+}
+
+.book-info {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 15px;
+    height: 100%;
+    color: white;
+    z-index: 2;
+    opacity: 0;
+    transform: translateY(10px);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.book-item:hover .book-info {
+    opacity: 1;
+    transform: translateY(0);
+    align-content: end;
+    background-color: #00000094;
+}
+
+.book-title {
+    font-size: 16px;
+    font-weight: 700;
+    margin-bottom: 5px;
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+}
+
+.book-author {
+    font-size: 14px;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+/* Dark mode styles for books section */
+body.dark-mode .book-item {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+body.dark-mode .book-item:hover {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+/* Responsive styles for books section */
+@media (max-width: 768px) {
+    .books-section {
+        margin-top: 30px;
+    }
+
+    .book-item {
+        width: 180px;
+    }
+
+    .book-cover {
+        width: 100%;
+        height: 270px;
+        background-size: contain;
+        background-position: center;
+        position: relative;
+        transition: all 0.3s ease;
+    }
+
+    .book-info {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        padding: 15px;
+        color: white;
+        z-index: 2;
+        opacity: 0;
+        transform: translateY(10px);
+        transition: opacity 0.3s ease, transform 0.3s ease;
+    }
+
+    .book-item:hover .book-info {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    .book-item:hover .book-cover::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: rgba(0, 0, 0, 0.7);
+        z-index: 1;
+    }
+
+    .book-cover {
+        height: 250px;
+    }
+}
+
 .carousel-control {
     /* Prev/Next buttons */
     width: 36px;
@@ -2143,8 +2312,9 @@ body.dark-mode .timeline-date {
 .carousel-control:hover {
     background-color: var(--website-blue);
     color: var(--website-white);
-    transform: scale(1.1);
+    transform: scale(1.1) translateZ(0);
     border-color: transparent;
+    will-change: transform;
 }
 
 .carousel-control svg {
@@ -2169,7 +2339,7 @@ body.dark-mode .timeline-date {
 
 .carousel-indicator.active {
     background-color: var(--website-blue);
-    transform: scale(1.2);
+    transform: scale(1.2) translateZ(0);
 }
 
 /* Interests Grid */
@@ -2198,12 +2368,14 @@ body.dark-mode .timeline-date {
     border-radius: 20px;
     transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
     border: 1px solid transparent;
-    /* For dark mode */
+    will-change: transform, box-shadow;
+    transform: translateZ(0);
 }
 
 .interest-item:hover {
-    transform: translateY(-5px);
+    transform: translateY(-5px) translateZ(0);
     box-shadow: 0 8px 16px var(--website-separator);
+    will-change: auto;
 }
 
 .interest-icon {
@@ -2263,7 +2435,7 @@ body.dark-mode .timeline-date {
 }
 
 .music-header-text h3 {
-    font-size: 22px;
+    font-size: 26px;
     margin: 0;
     font-weight: 700;
     letter-spacing: -0.02em;
@@ -2277,7 +2449,7 @@ body.dark-mode .timeline-date {
 }
 
 .music-description p {
-    font-size: 18px;
+    font-size: 20px;
     line-height: 1.7;
     color: var(--website-secondary-text);
     margin-bottom: 24px;
@@ -2289,30 +2461,7 @@ body.dark-mode .timeline-date {
     margin-bottom: 0;
 }
 
-/* Other interests section styling (if separate) */
-.other-interests-section {
-    border-radius: 24px;
-    overflow: hidden;
-    transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
-    position: relative;
-    padding: 20px 0;
-    border: 1px solid transparent;
-}
-
-.other-interests-title {
-    font-size: 22px;
-    margin: 0 0 20px 0;
-    font-weight: 700;
-    letter-spacing: -0.02em;
-    line-height: 1.2;
-    color: var(--website-heading-color);
-    /* Use variable */
-}
-
 /* Dark mode styles for hobbies */
-body.dark-mode .hobbies-container {
-    background-color: rgba(40, 40, 42, 0.7);
-}
 
 body.dark-mode .songs-carousel-wrapper {
     background-color: var(--website-dark-card-background);
@@ -2365,8 +2514,7 @@ body.dark-mode .interest-name {
 }
 
 
-body.dark-mode .music-header-text h3,
-body.dark-mode .other-interests-title {
+body.dark-mode .music-header-text h3 {
     color: var(--website-dark-heading-color);
 }
 
@@ -2378,22 +2526,19 @@ body.dark-mode .music-description p {
 @media (max-width: 768px) {
     .music-content {
         grid-template-columns: 1fr;
-        /* Stack columns */
         gap: 30px;
     }
 
     .songs-carousel-wrapper,
     .interests-wrapper,
-    .music-interests-wrapper,
-    .other-interests-section {
+    .music-interests-wrapper {
         grid-column: span 1;
         /* Ensure full width */
     }
 
     .songs-header h3,
-    .music-header-text h3,
-    .other-interests-title {
-        font-size: 20px;
+    .music-header-text h3 {
+        font-size: 24px;
     }
 
     .interests-grid {
@@ -2416,13 +2561,12 @@ body.dark-mode .music-description p {
         font-size: 14px;
     }
 
-    .music-interests-wrapper,
-    .other-interests-section {
-        padding: 20px;
+    .music-interests-wrapper {
+        padding: 15px;
     }
 
     .music-description p {
-        font-size: 15px;
+        font-size: 18px;
         line-height: 1.6;
     }
 }
@@ -2666,22 +2810,26 @@ body.dark-mode .project-tech span {
     padding: 40px;
 }
 
-/* Carousel Structure */
-.testimonials-carousel {
-    position: relative;
+/* Masonry Layout */
+.testimonials-masonry {
+    column-count: 3;
+    column-gap: 2rem;
     width: 100%;
-    overflow: hidden;
-}
-
-.testimonials-carousel-inner {
-    /* Holds the cards */
-    display: flex;
-    transition: transform 0.5s ease;
-    /* Slide transition */
+    grid-template-columns: repeat(3, 1fr);
+    grid-auto-rows: min-content;
+    grid-auto-flow: dense;
+    gap: 2rem;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0;
 }
 
 /* Testimonial Card (Individual Item) */
 .testimonial-card {
+    display: block;
+    width: 100%;
+    margin-bottom: 2rem;
     background-color: var(--website-card-background);
     border-radius: 28px;
     overflow: hidden;
@@ -2689,18 +2837,35 @@ body.dark-mode .project-tech span {
     position: relative;
     transform-origin: center bottom;
     box-shadow: var(--shadow-md);
-    flex: 0 0 100%;
-    /* Each card takes full width */
     box-sizing: border-box;
-    /* Include padding in width */
     border: 1px solid transparent;
-    /* For dark mode */
+}
+
+/* Puzzle-style grid: vary both width and height for some cards (desktop only) */
+.testimonial-card:nth-child(2) {
+    grid-column: span 2;
+    grid-row: span 2;
+}
+
+.testimonial-card:nth-child(5) {
+    grid-row: span 2;
+}
+
+.testimonial-card:nth-child(7) {
+    grid-column: span 2;
+}
+
+.testimonial-card:nth-child(9) {
+    grid-row: span 2;
 }
 
 .testimonial-content {
-    padding: 35px;
+    padding: 25px;
     position: relative;
     z-index: 1;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
 }
 
 .testimonial-quote {
@@ -2733,8 +2898,8 @@ body.dark-mode .project-tech span {
     text-shadow: 0 1px 1px var(--website-window-background);
     /* Subtle shadow */
     transition: color 0.3s ease;
+    flex: 1;
 }
-
 
 .testimonial-text::after {
     /* Closing quote mark */
@@ -2753,8 +2918,8 @@ body.dark-mode .project-tech span {
     display: flex;
     align-items: center;
     gap: 15px;
+    margin-top: auto;
 }
-
 
 .author-info h4 {
     /* Author Name */
@@ -2778,68 +2943,7 @@ body.dark-mode .project-tech span {
     transition: color 0.3s ease;
 }
 
-/* Carousel Controls */
-.testimonials-carousel-controls {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 30px;
-    gap: 20px;
-}
-
-.testimonial-carousel-control {
-    /* Prev/Next buttons */
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    background-color: var(--website-card-background);
-    border: 1px solid var(--website-separator);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
-    color: var(--website-text);
-    /* Icon color */
-}
-
-.testimonial-carousel-control:hover {
-    background-color: var(--website-blue);
-    color: var(--website-white);
-    border-color: transparent;
-}
-
-.testimonial-carousel-control svg {
-    width: 24px;
-    height: 24px;
-}
-
-.testimonial-carousel-indicators {
-    /* Dot indicators */
-    display: flex;
-    gap: 8px;
-}
-
-.testimonial-carousel-indicator {
-    width: 8px;
-    height: 8px;
-    border-radius: 50%;
-    background-color: var(--website-overlay-medium);
-    transition: all 0.3s ease;
-    cursor: pointer;
-}
-
-.testimonial-carousel-indicator.active {
-    background-color: var(--website-blue);
-    transform: scale(1.2);
-}
-
 /* Dark Mode Styles for Testimonials */
-body.dark-mode .testimonials-container {
-    background-color: rgba(40, 40, 42, 0.7);
-    border-color: rgba(255, 255, 255, 0.05);
-}
 
 body.dark-mode .testimonial-card {
     background-color: var(--website-dark-card-background-alt);
@@ -2861,37 +2965,48 @@ body.dark-mode .author-info p {
     /* Keep blue */
 }
 
-body.dark-mode .testimonial-carousel-control {
-    background-color: var(--website-dark-elevated-background);
-    border-color: var(--website-dark-separator);
-    color: var(--website-dark-text);
-}
-
-body.dark-mode .testimonial-carousel-control:hover {
-    background-color: var(--website-blue);
-    color: var(--website-white);
-    border-color: transparent;
-}
-
-body.dark-mode .testimonial-carousel-indicator {
-    background-color: rgba(255, 255, 255, 0.2);
-}
-
 /* Responsive styles for Testimonials */
+@media (max-width: 992px) {
+    .testimonials-masonry {
+        column-count: 2;
+        column-gap: 1.5rem;
+        /* grid-template-columns: repeat(2, 1fr); */
+        gap: 1rem;
+    }
+
+    /* Remove column span on tablet to avoid overflow */
+    .testimonial-card {
+        grid-column: span 1 !important;
+        grid-row: span 1 !important;
+    }
+
+    .testimonial-card:nth-child(5),
+    .testimonial-card:nth-child(9) {
+        grid-row: span 2 !important;
+    }
+}
+
 @media (max-width: 768px) {
+    .testimonials-masonry {
+        column-count: 1;
+        column-gap: 1rem;
+        /* grid-template-columns: 1fr; */
+        gap: 0.5rem;
+        margin: 0;
+    }
+
+    .testimonial-card {
+        grid-column: span 1 !important;
+        grid-row: span 1 !important;
+    }
+
     .testimonial-content {
-        padding: 25px;
-        /* Adjust padding */
+        padding: 20px;
     }
 
     .testimonial-text {
         font-size: 16px;
         margin-bottom: 30px;
-        padding-left: 20px;
-    }
-
-    .testimonial-text::before {
-        width: 3px;
     }
 
     .author-info h4 {
@@ -2900,16 +3015,6 @@ body.dark-mode .testimonial-carousel-indicator {
 
     .author-info p {
         font-size: 15px;
-    }
-
-    .testimonial-carousel-control {
-        width: 36px;
-        height: 36px;
-    }
-
-    .testimonial-carousel-control svg {
-        width: 20px;
-        height: 20px;
     }
 }
 
@@ -3206,4 +3311,300 @@ body .menu-icons .icon.social i.fa-spotify:hover {
 
 body .menu-icons .icon.social i.fa-github:hover {
     color: var(--website-black);
+}
+
+/*--------------------------------------------------------------
+# Experience Cards
+--------------------------------------------------------------*/
+
+/* Experience Cards Container */
+.experience-cards-container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 40px;
+    border-radius: 28px;
+    position: relative;
+    overflow: hidden;
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+/* Experience Card */
+.experience-card {
+    overflow: hidden;
+    transition: all 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
+    margin-bottom: 30px;
+    display: flex;
+    flex-direction: column;
+    will-change: transform, box-shadow;
+    transform: translateZ(0);
+    backface-visibility: hidden;
+}
+
+/* Card Content */
+.experience-card-content {
+    padding: 35px;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Company Name */
+.experience-card-company {
+    font-size: 48px;
+    font-weight: 700;
+    margin-bottom: 20px;
+    line-height: 1.1;
+    letter-spacing: -0.02em;
+    /* Color will be set dynamically based on company brand color */
+}
+
+/* Role Title */
+.experience-card-role {
+    font-size: 28px;
+    font-weight: 600;
+    margin-bottom: 15px;
+    color: var(--website-heading-color);
+}
+
+/* Date Range and Location */
+.experience-card-date {
+    font-size: 18px;
+    color: var(--website-secondary-text);
+    margin-bottom: 15px;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.experience-card-location {
+    display: inline-flex;
+    align-items: center;
+    color: var(--website-secondary-text);
+}
+
+.experience-card-location i {
+    margin-right: 5px;
+    font-size: 18px;
+}
+
+/* Skills Pills */
+.experience-card-skills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 25px;
+}
+
+.skill-pill {
+    display: inline-block;
+    padding: 6px 12px;
+    border-radius: 16px;
+    font-size: 14px;
+    font-weight: 600;
+    background-color: var(--website-black);
+    color: #fff;
+    transition: all 0.3s ease;
+}
+
+/* Responsibilities List */
+.experience-card-responsibilities {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.experience-card-responsibilities li {
+    position: relative;
+    padding-left: 28px;
+    margin-bottom: 16px;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 1.6;
+    color: var(--website-paragraph-color);
+}
+
+.experience-card-responsibilities li:last-child {
+    margin-bottom: 0;
+}
+
+.experience-card-responsibilities li::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 10px;
+    width: 8px;
+    height: 8px;
+    background-color: var(--website-heading-color);
+    border-radius: 50%;
+    box-shadow: 0 0 5px rgba(0, 122, 255, 0.3);
+}
+
+/* About page experience section specific styles */
+#experienceSection .about-experience-cards {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+/* Dark Mode Styles */
+body.dark-mode .experience-card {
+    background-color: var(--website-dark-card-background);
+    border-color: rgb(88 85 85 / 0.02);
+}
+
+body.dark-mode .skill-pill {
+    background-color: var(--website-dark-text);
+    color: var(--website-black);
+}
+
+body.dark-mode .experience-card-role {
+    color: var(--website-dark-heading-color);
+}
+
+body.dark-mode .experience-card-date,
+body.dark-mode .experience-card-location {
+    color: var(--website-dark-secondary-text);
+}
+
+body.dark-mode .experience-card-responsibilities li {
+    color: var(--website-dark-paragraph-color);
+}
+
+body.dark-mode .experience-card-responsibilities li::before {
+    background-color: var(--website-dark-heading-color);
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .experience-cards-container {
+        padding: 30px 10px;
+        max-width: calc(100vw - 5px);
+    }
+
+    .experience-card-content {
+        padding: 25px;
+    }
+
+    .experience-card-company {
+        font-size: 36px;
+        margin-bottom: 15px;
+    }
+
+    .experience-card-role {
+        font-size: 22px;
+        margin-bottom: 10px;
+    }
+
+    .experience-card-date {
+        font-size: 14px;
+        margin-bottom: 12px;
+        gap: 8px;
+    }
+
+    .experience-card-location {
+        font-size: 14px;
+    }
+
+    .experience-card-location i {
+        font-size: 12px;
+    }
+
+    .experience-card-skills {
+        margin-bottom: 20px;
+        gap: 6px;
+    }
+
+    .skill-pill {
+        padding: 4px 10px;
+        font-size: 12px;
+    }
+
+    .experience-card-responsibilities li {
+        font-size: 15px;
+        padding-left: 24px;
+        margin-bottom: 12px;
+    }
+
+    #experienceSection .about-experience-cards {
+        gap: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .experience-card-company {
+        font-size: 28px;
+    }
+
+    .experience-card-role {
+        font-size: 18px;
+    }
+
+    .experience-card-responsibilities li {
+        font-size: 14px;
+        padding-left: 20px;
+    }
+}
+
+/*--------------------------------------------------------------
+# Performance Optimizations
+--------------------------------------------------------------*/
+
+/* Global performance improvements */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+/* Optimize repaint performance for animations */
+.animate-on-load,
+.content-section,
+.experience-card,
+.interest-item,
+
+/* Card Entrance Animation */
+.site-card,
+.project-card,
+.testimonial-card,
+.experience-card {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: opacity 0.7s cubic-bezier(0.4, 0, 0.2, 1), transform 0.7s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.site-card.card-animate,
+.project-card.card-animate,
+.testimonial-card.card-animate,
+.experience-card.card-animate {
+    opacity: 1;
+    transform: none;
+}
+
+.carousel-control,
+.carousel-indicator,
+.toggle-slider,
+.resume-modal {
+    -webkit-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+}
+
+/* Reduce motion for accessibility */
+@media (prefers-reduced-motion: reduce) {
+
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+
+    .animate-on-load {
+        animation: none !important;
+        transition: none !important;
+    }
 }

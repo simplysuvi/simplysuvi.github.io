@@ -18,6 +18,19 @@
  * Main initialization function that runs when the DOM is fully loaded
  * Loads components and initializes all functionality
  */
+/**
+ * Animates card elements with a staggered entrance effect.
+ * @param {string} selector - CSS selector for card elements.
+ */
+function animateCards(selector) {
+    const cards = document.querySelectorAll(selector);
+    cards.forEach((card, idx) => {
+        setTimeout(() => {
+            card.classList.add('card-animate');
+        }, idx * 120);
+    });
+}
+
 document.addEventListener('DOMContentLoaded', () => {
     // Load dynamic components first
     loadComponents().then(() => {
@@ -31,6 +44,10 @@ document.addEventListener('DOMContentLoaded', () => {
         loadExperience();
         loadTestimonials();
         initSongsCarousel();
+        initBooksCarousel();
+
+        // Animate static cards (e.g., .site-card) on initial load
+        animateCards('.site-card');
 
         // Initialize resume modal if the function exists
         if (typeof initResumeModal === 'function') {
@@ -54,9 +71,11 @@ document.addEventListener('DOMContentLoaded', () => {
         // Hero animation: fade in hero elements in sequence
         const heroAnimatedEls = document.querySelectorAll('.hero .animate-on-load');
         heroAnimatedEls.forEach((el, idx) => {
-            setTimeout(() => {
-                el.classList.add('fade-in-up');
-            }, idx * 200); // 200ms stagger
+            requestAnimationFrame(() => {
+                setTimeout(() => {
+                    el.classList.add('fade-in-up');
+                }, idx * 150); // 150ms stagger for better flow
+            });
         });
     });
 });
@@ -281,16 +300,24 @@ function initScrollEffects() {
     });
 
     // Add scroll styles to the menu bar
-    window.addEventListener('scroll', debounce(() => {
-        const menuBar = document.querySelector('.menu-bar');
-        if (!menuBar) return;
+    let ticking = false;
 
-        if (window.scrollY > 20) {
-            menuBar.classList.add('scrolled');
-        } else {
-            menuBar.classList.remove('scrolled');
+    window.addEventListener('scroll', () => {
+        if (!ticking) {
+            requestAnimationFrame(() => {
+                const menuBar = document.querySelector('.menu-bar');
+                if (!menuBar) return;
+
+                if (window.scrollY > 20) {
+                    menuBar.classList.add('scrolled');
+                } else {
+                    menuBar.classList.remove('scrolled');
+                }
+                ticking = false;
+            });
+            ticking = true;
         }
-    }, 50));
+    }, { passive: true });
 }
 
 /**
@@ -492,6 +519,9 @@ function renderProjects(projects) {
 
         projectsContainer.appendChild(card);
     });
+
+    // Animate project cards after rendering
+    animateCards('.project-card');
 }
 
 /**
@@ -963,7 +993,7 @@ async function loadTestimonials() {
 }
 
 /**
- * Renders testimonials to the DOM and creates carousel structure
+ * Renders testimonials to the DOM in a masonry layout
  * @param {Array} testimonials - Array of testimonial objects
  */
 function renderTestimonials(testimonials) {
@@ -973,37 +1003,20 @@ function renderTestimonials(testimonials) {
     // Clear existing content
     testimonialsContainer.innerHTML = '';
 
-    // Create carousel structure
-    const carouselHTML = `
-        <div class="testimonials-carousel">
-            <div class="testimonials-carousel-inner"></div>
-            <div class="testimonials-carousel-controls">
-                <button class="testimonial-carousel-control prev">
-                    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z" fill="currentColor" />
-                    </svg>
-                </button>
-                <div class="testimonial-carousel-indicators"></div>
-                <button class="testimonial-carousel-control next">
-                    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z" fill="currentColor" />
-                    </svg>
-                </button>
-            </div>
-        </div>
-    `;
-
-    testimonialsContainer.innerHTML = carouselHTML;
-
-    const carouselInner = testimonialsContainer.querySelector('.testimonials-carousel-inner');
-    const indicatorsContainer = testimonialsContainer.querySelector('.testimonial-carousel-indicators');
+    // Create masonry layout container
+    const masonryContainer = document.createElement('div');
+    masonryContainer.className = 'testimonials-masonry';
+    testimonialsContainer.appendChild(masonryContainer);
 
     // Add each testimonial
-    testimonials.forEach((testimonial, index) => {
+    testimonials.forEach((testimonial) => {
         const testimonialCard = document.createElement('div');
         testimonialCard.className = 'testimonial-card';
         testimonialCard.id = testimonial.id;
-        testimonialCard.style.display = index === 0 ? 'block' : 'none';
+
+        // Calculate text length for sizing
+        const textLength = testimonial.text.length;
+        testimonialCard.setAttribute('data-length', textLength);
 
         testimonialCard.innerHTML = `
             <div class="testimonial-content">
@@ -1025,82 +1038,117 @@ function renderTestimonials(testimonials) {
             </div>
         `;
 
-        carouselInner.appendChild(testimonialCard);
-
-        // Create indicator
-        const indicator = document.createElement('div');
-        indicator.className = `testimonial-carousel-indicator ${index === 0 ? 'active' : ''}`;
-        indicator.dataset.index = index;
-        indicatorsContainer.appendChild(indicator);
+        masonryContainer.appendChild(testimonialCard);
     });
 
-    // Initialize carousel functionality
-    initTestimonialsCarousel();
+    // After all cards are added, set grid spans based on text length
+    const cards = masonryContainer.querySelectorAll('.testimonial-card');
+    cards.forEach(card => {
+        const len = parseInt(card.getAttribute('data-length'), 10);
+        // Short: 0-180 chars, Medium: 181-320, Long: 321+
+        if (len > 320) {
+            card.style.gridColumn = 'span 2';
+            card.style.gridRow = 'span 2';
+        } else if (len > 180) {
+            card.style.gridColumn = 'span 2';
+            card.style.gridRow = 'span 1';
+        } else {
+            card.style.gridColumn = 'span 1';
+            card.style.gridRow = 'span 1';
+        }
+    });
+
+    // Animate testimonial cards after rendering
+    animateCards('.testimonial-card');
 }
 
+// Remove the carousel initialization function since we're using a masonry layout
+
+// ======================================================================
+// BOOKS SECTION
+// ======================================================================
+
 /**
- * Initializes testimonials carousel with navigation controls
+ * Initializes the books section with book data
+ * Creates a horizontally scrolling display of books
  */
-function initTestimonialsCarousel() {
-    const testimonialsContainer = document.querySelector('.testimonials-container');
-    if (!testimonialsContainer) return;
+function initBooksCarousel() {
+    // Book data based on user's favorites
+    const booksData = [
+        {
+            title: "Convenience Store Woman",
+            author: "Sayaka Murata",
+            image: "https://is5-ssl.mzstatic.com/image/thumb/Publication128/v4/d1/01/8f/d1018fec-c74f-5df1-e3ff-1f6155cdc7a9/9780802165800.jpg/100000x100000-999.jpg",
+        },
+        {
+            title: "Steve Jobs",
+            author: "Walter Isaacson",
+            image: "https://m.media-amazon.com/images/I/41n1edvVlLL._SY445_SX342_.jpg",
+        },
+        {
+            title: "I Came Upon a Lighthouse",
+            author: "Shantanu Naidu",
+            image: "https://is5-ssl.mzstatic.com/image/thumb/Publication114/v4/4f/2b/f8/4f2bf8bc-d40e-a2ec-d313-4827c96bd215/9789390327539.jpg/100000x100000-999.jpg",
+        },
+        {
+            title: "Days at the Morisaki Bookshop",
+            author: "Satoshi Yagisawa",
+            image: "https://is5-ssl.mzstatic.com/image/thumb/Publication112/v4/46/fb/28/46fb28d7-2103-19ad-9b2c-3b9743b366e0/9780063278684.jpg/100000x100000-999.jpg",
+        },
+        {
+            title: "Mr. Penumbra's 24-Hour Bookstore",
+            author: "Robin Sloan",
+            image: "https://is5-ssl.mzstatic.com/image/thumb/Publication122/v4/91/a6/d1/91a6d168-ded9-d108-a77a-41d93c5f80d5/9780374708832.jpg/100000x100000-999.jpg",
+        },
+        {
+            title: "Friends, Lovers, and the Big Terrible Thing",
+            author: "Matthew Perry",
+            image: "https://is1-ssl.mzstatic.com/image/thumb/Publication122/v4/62/73/a9/6273a90b-f106-c826-5145-33a8d6f5d5f4/9781250866462.jpg/600x600bb.jpg",
+        },
+        {
+            title: "Shoe Dog: A Memoir by the Creator of Nike",
+            author: "Phil Knight",
+            image: "https://is1-ssl.mzstatic.com/image/thumb/Publication115/v4/46/d1/4c/46d14cc4-205b-ed79-5630-9a851d231f5e/9781501135934.jpg/600x600bb.jpg",
+        }
+    ];
 
-    const carouselCards = testimonialsContainer.querySelectorAll('.testimonial-card');
-    const indicators = testimonialsContainer.querySelectorAll('.testimonial-carousel-indicator');
-    const prevButton = testimonialsContainer.querySelector('.testimonial-carousel-control.prev');
-    const nextButton = testimonialsContainer.querySelector('.testimonial-carousel-control.next');
-
-    if (!carouselCards.length || !indicators.length || !prevButton || !nextButton) return;
-
-    let currentIndex = 0;
-    const totalSlides = carouselCards.length;
-
-    /**
-     * Updates the carousel to display the specified slide
-     * @param {number} newIndex - The index of the slide to display
-     */
-    function updateCarousel(newIndex) {
-        // Handle index wrapping
-        if (newIndex < 0) newIndex = totalSlides - 1;
-        if (newIndex >= totalSlides) newIndex = 0;
-
-        // Hide all cards and deactivate all indicators
-        carouselCards.forEach(card => {
-            card.style.display = 'none';
-        });
-
-        indicators.forEach(indicator => {
-            indicator.classList.remove('active');
-        });
-
-        // Show active card and activate indicator
-        carouselCards[newIndex].style.display = 'block';
-        indicators[newIndex].classList.add('active');
-
-        // Update current index
-        currentIndex = newIndex;
+    const booksContainer = document.querySelector('.books-scroll');
+    if (!booksContainer) {
+        console.error('Books container not found');
+        return;
     }
 
-    // Event listeners for controls
-    prevButton.addEventListener('click', () => {
-        updateCarousel(currentIndex - 1);
+    // Create book items
+    booksData.forEach(book => {
+        // Create book item
+        const bookItem = document.createElement('div');
+        bookItem.className = 'book-item';
+
+        // Create book cover
+        const bookCover = document.createElement('div');
+        bookCover.className = 'book-cover';
+        bookCover.style.backgroundImage = `url(${book.image})`;
+
+        // Create book info
+        const bookInfo = document.createElement('div');
+        bookInfo.className = 'book-info';
+        bookInfo.innerHTML = `
+            <div class="book-title">${book.title}</div>
+            <div class="book-author">${book.author}</div>
+        `;
+
+        // Append elements
+        bookCover.appendChild(bookInfo);
+        bookItem.appendChild(bookCover);
+        booksContainer.appendChild(bookItem);
     });
 
-    nextButton.addEventListener('click', () => {
-        updateCarousel(currentIndex + 1);
+    // Create duplicate books for infinite scroll effect
+    const bookItems = booksContainer.querySelectorAll('.book-item');
+    bookItems.forEach(item => {
+        const clone = item.cloneNode(true);
+        booksContainer.appendChild(clone);
     });
-
-    // Click on indicators
-    indicators.forEach((indicator, index) => {
-        indicator.addEventListener('click', () => {
-            updateCarousel(index);
-        });
-    });
-
-    // Auto-rotate carousel every 10 seconds
-    setInterval(() => {
-        updateCarousel(currentIndex + 1);
-    }, 10000);
 }
 
 // ======================================================================
@@ -1160,4 +1208,7 @@ function renderExperience(experiences) {
 
         cardsContainer.appendChild(card);
     });
+
+    // Animate experience cards after rendering
+    animateCards('.experience-card');
 }
