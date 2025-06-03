@@ -19,7 +19,7 @@ Welcome to [simplysuvi.com](https://simplysuvi.com) — my personal website and 
 
 I’m **Suvrat Jain** — a Data Scientist and AI Engineer with a passion for building intelligent systems that solve real problems. With experience across machine learning, computer vision, LLMs, and AI product development, I bring together engineering, creativity, and a deep sense of curiosity in everything I do.
 
-Outside of work, I like to a sing, read, stargaze, and. I believe in designing not just solutions, but experiences — whether that’s through clean code, a compelling product, or a song that resonates. 
+Outside of work, I like to sing, read, stargaze, and travel. I believe in designing not just solutions, but experiences — whether that’s through clean code, a compelling product, or a song that resonates. 
 
 My work spans:
 - Applied ML & AI development (LLMs, RAG, CV)
@@ -27,12 +27,6 @@ My work spans:
 - AI-powered tools for workplace and creative productivity
 
 This site is my digital home — a place to tell my story, share what I’ve built, and show what I care about.
-
----
-
-### About this repository
-
-This repository holds the codebase behind simplysuvi.com — a custom, handcrafted website that represents my personal brand, projects, and journey.
 
 ---
 
@@ -55,15 +49,5 @@ This repository holds the codebase behind simplysuvi.com — a custom, handcraft
 - **Mobile-First Design** – Optimized across screen sizes
 
 ---
-
-### Deployment
-
-This website is hosted and deployed via **GitHub Pages**.
-
----
-
-### License
-
-All code in this repository is open source under the [MIT License](LICENSE).
 
 Feel free to fork, explore, or reach out if you'd like to collaborate.
