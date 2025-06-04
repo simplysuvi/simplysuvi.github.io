@@ -137,7 +137,13 @@ function initDarkMode() {
     }
 
     // Check if user has a preference stored
-    const isDarkMode = localStorage.getItem('darkMode') === 'true';
+    const darkModePref = localStorage.getItem('darkMode');
+    let isDarkMode = darkModePref === 'true';
+
+    // If no preference, use system setting
+    if (darkModePref === null) {
+        isDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches;
+    }
 
     // Set initial state
     if (isDarkMode) {
@@ -148,6 +154,12 @@ function initDarkMode() {
         // Mobile icons
         mobileSunIcon.style.display = 'none';
         mobileMoonIcon.style.display = 'block';
+    } else {
+        document.body.classList.remove('dark-mode');
+        sunIcon.style.display = 'block';
+        moonIcon.style.display = 'none';
+        mobileSunIcon.style.display = 'block';
+        mobileMoonIcon.style.display = 'none';
     }
     // Set logo on initial load
     setLogoForTheme();
