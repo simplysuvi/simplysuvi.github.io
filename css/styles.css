@@ -2590,7 +2590,9 @@ body.dark-mode .music-description p {
 
 .project-card {
     position: relative;
+    background-color: var(--website-light-card-background);
     border-radius: 20px;
+    border: 1px solid #eae3e345;
     overflow: hidden;
     transition: var(--transition-smooth);
     min-height: 300px;
@@ -2599,15 +2601,18 @@ body.dark-mode .music-description p {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    /* Center content vertically */
     text-align: center;
     padding: 0 30px;
     box-shadow: var(--shadow-sm);
     cursor: pointer;
-    /* Indicate clickable */
     background-color: var(--website-light-card-background);
-    /* Default background */
+    background-repeat: no-repeat;
+    background-position: center;
+    background-blend-mode: soft-light;
+    background-size: contain;
 }
+
+
 
 .project-card:hover {
     box-shadow: 0 10px 20px var(--website-separator);
@@ -2734,6 +2739,8 @@ body.dark-mode .music-description p {
 body.dark-mode .project-card {
     background-color: var(--website-dark-card-background);
     box-shadow: var(--shadow-dark-sm);
+    background-blend-mode: multiply;
+    border: 1px solid #2f2e2ea6;
 }
 
 body.dark-mode .project-card:hover {
@@ -2753,12 +2760,11 @@ body.dark-mode .project-card .card-text p {
 }
 
 body.dark-mode .project-expand-button {
-    background-color: rgba(0, 0, 0, 0.8);
-    /* Consistent dark button */
+    background-color: rgb(165 157 157 / 37%);
 }
 
 body.dark-mode .project-expand-button:hover {
-    background-color: rgba(0, 0, 0, 0.9);
+    background-color: rgb(238 226 226 / 54%);
 }
 
 body.dark-mode .project-tech span {

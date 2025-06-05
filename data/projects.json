@@ -4,7 +4,13 @@
     "title": "Predicting Patient Readmission",
     "headline": "30 days ahead.",
     "description": "A machine learning model that predicts hospital readmissions within 30 days, helping healthcare providers take early action with over 100,000 patient records.",
-    "tech": ["Python", "Scikit-learn", "Pandas", "Matplotlib", "Jupyter Notebook"],
+    "tech": [
+      "Python",
+      "Scikit-learn",
+      "Pandas",
+      "Matplotlib",
+      "Jupyter Notebook"
+    ],
     "features": [
       "Data preprocessing and feature engineering",
       "Model training and evaluation",
@@ -16,15 +22,24 @@
       "demo": "https://simplysuvi.github.io/Patients-readmission-classification-Project/",
       "github": "https://github.com/simplysuvi/Patients-readmission-classification-Project"
     },
-    "backgroundColor": "#f5f5f7",
-    "textColor": "#1d1d1f"
+    "backgroundColor": "#ffedf2",
+    "textColor": "#1d1d1f",
+    "darkBackgroundColor": "#2a1a22",
+    "darkTextColor": "#ffe6f0",
+    "cardImage": "../data/project-card/patientread.png"
   },
   {
     "id": "moodytector",
     "title": "Moodytector",
     "headline": "Read the room — through your webcam.",
     "description": "A real-time web app that detects emotion, age, and gender from facial expressions using Face-api.js, making your browser emotionally intelligent.",
-    "tech": ["JavaScript", "HTML", "CSS", "Face-api.js", "TensorFlow.js"],
+    "tech": [
+      "JavaScript",
+      "HTML",
+      "CSS",
+      "Face-api.js",
+      "TensorFlow.js"
+    ],
     "features": [
       "Real-time emotion detection",
       "Age prediction",
@@ -37,15 +52,24 @@
       "github": "https://github.com/simplysuvi/face-emo"
     },
     "notification": "New emotion detected: Happy",
-    "backgroundColor": "#e6f2ff",
-    "textColor": "#1d1d1f"
+    "backgroundColor": "#fdf1e2",
+    "textColor": "#1d1d1f",
+    "darkBackgroundColor": "#2b2117",
+    "darkTextColor": "#ffe7c2",
+    "cardImage": "../data/project-card/moodytector.png"
   },
   {
     "id": "hue-vision",
     "title": "HUE Vision: Eye-Tracking Web Application",
     "headline": "See what your users see.",
     "description": "A webcam-powered tool that tracks user gaze on websites in real time, enabling UX researchers to analyze attention with heatmaps and session data.",
-    "tech": ["JavaScript", "HTML", "CSS", "TensorFlow.js", "WebRTC"],
+    "tech": [
+      "JavaScript",
+      "HTML",
+      "CSS",
+      "TensorFlow.js",
+      "WebRTC"
+    ],
     "features": [
       "Real-time eye tracking",
       "Gaze heatmap visualization",
@@ -57,15 +81,24 @@
       "demo": "https://simplysuvi.github.io/hue-vision/",
       "github": "https://github.com/simplysuvi/hue-vision"
     },
-    "backgroundColor": "#FDE2E4",
-    "textColor": "black"
+    "backgroundColor": "#d8f1ff",
+    "textColor": "black",
+    "darkBackgroundColor": "#16222a",
+    "darkTextColor": "#b8e6ff",
+    "cardImage": "../data/project-card/huevision.png"
   },
   {
     "id": "emotionwise",
     "title": "EmotionWise: Real-Time Emotion Recognition",
     "headline": "Feel what the face reveals.",
     "description": "Built with Affectiva's Affdex SDK, EmotionWise analyzes facial expressions, mood, and appearance in real time for next-level emotion insight.",
-    "tech": ["JavaScript", "HTML", "CSS", "Affdex SDK", "WebRTC"],
+    "tech": [
+      "JavaScript",
+      "HTML",
+      "CSS",
+      "Affdex SDK",
+      "WebRTC"
+    ],
     "features": [
       "Real-time emotion recognition",
       "Facial expression analysis",
@@ -78,15 +111,24 @@
       "github": "https://github.com/simplysuvi/emotionplay"
     },
     "notification": "Emotion detected: Surprise",
-    "backgroundColor": "#fff4e6",
-    "textColor": "#1d1d1f"
+    "backgroundColor": "#e5f6ef",
+    "textColor": "#1d1d1f",
+    "darkBackgroundColor": "#1a2a25",
+    "darkTextColor": "#c2f7e7",
+    "cardImage": "../data/project-card/emotionwise.png"
   },
   {
     "id": "faceid",
     "title": "Facial Authentication Web App",
     "headline": "Your face is your password.",
     "description": "A secure facial recognition login system that compares live webcam input with stored facial data to authenticate users — all in-browser with no servers needed.",
-    "tech": ["JavaScript", "HTML", "CSS", "Face-api.js", "LocalStorage"],
+    "tech": [
+      "JavaScript",
+      "HTML",
+      "CSS",
+      "Face-api.js",
+      "LocalStorage"
+    ],
     "features": [
       "Facial recognition for authentication",
       "User profile management",
@@ -99,14 +141,23 @@
       "github": "https://github.com/simplysuvi/faceID"
     },
     "backgroundColor": "#f8f0ff",
-    "textColor": "#1d1d1f"
+    "textColor": "#1d1d1f",
+    "darkBackgroundColor": "#241a2a",
+    "darkTextColor": "#f0e6ff",
+    "cardImage": "../data/project-card/faceid.png"
   },
   {
     "id": "ipl-eda",
     "title": "IPL Data Analysis (2008–2020)",
     "headline": "Every run has a reason.",
     "description": "A deep dive into 13 seasons of IPL data, uncovering patterns behind wins, losses, player performance, and team strategies using visual storytelling.",
-    "tech": ["Python", "Pandas", "Matplotlib", "Seaborn", "Jupyter Notebook"],
+    "tech": [
+      "Python",
+      "Pandas",
+      "Matplotlib",
+      "Seaborn",
+      "Jupyter Notebook"
+    ],
     "features": [
       "Comprehensive data cleaning and preprocessing",
       "Statistical analysis of match outcomes",
@@ -119,15 +170,23 @@
       "github": "https://github.com/simplysuvi/IPL-EDA"
     },
     "notification": "New insight: Team wins 70% more when batting first",
-    "backgroundColor": "#ffffff",
-    "textColor": "#1d1d1f"
+    "backgroundColor": "#a7c9eb",
+    "textColor": "#1d1d1f",
+    "darkBackgroundColor": "#1a2230",
+    "darkTextColor": "#b8d6ff",
+    "cardImage": "../data/project-card/ipl.png"
   },
   {
     "id": "eventify-u",
     "title": "Eventify-U (BrickHack 2023)",
     "headline": "Discover your next event — your way.",
     "description": "Built in 24 hours at BrickHack 2023, Eventify-U delivers personalized event recommendations with smart filters and a sleek interface powered by real-time API integration.",
-    "tech": ["JavaScript", "HTML", "CSS", "API Integration"],
+    "tech": [
+      "JavaScript",
+      "HTML",
+      "CSS",
+      "API Integration"
+    ],
     "features": [
       "Personalized event recommendations",
       "User-friendly search interface",
@@ -139,15 +198,22 @@
       "demo": "https://devpost.com/software/eventify-u",
       "github": "https://github.com/meghagupta08/brickhack"
     },
-    "backgroundColor": "#e6f2ff",
-    "textColor": "#1d1d1f"
+    "backgroundColor": "#ebdbb5",
+    "textColor": "#1d1d1f",
+    "darkBackgroundColor": "#2a251a",
+    "darkTextColor": "#ffeec2",
+    "cardImage": "../data/project-card/eventify.png"
   },
   {
     "id": "compliment-generator",
     "title": "Compliment Generator",
     "headline": "A little kindness, one click away.",
     "description": "A feel-good web app that lifts your mood with genuine, randomly generated compliments — because everyone deserves a reminder they're awesome.",
-    "tech": ["JavaScript", "HTML", "CSS"],
+    "tech": [
+      "JavaScript",
+      "HTML",
+      "CSS"
+    ],
     "features": [
       "Random compliment generation",
       "Mood-based filtering",
@@ -160,15 +226,23 @@
       "github": "https://github.com/simplysuvi/youarespecial"
     },
     "notification": "New compliment: You're making a difference",
-    "backgroundColor": "#f5f5f7",
-    "textColor": "#1d1d1f"
+    "backgroundColor": "#e7f1ed",
+    "textColor": "#1d1d1f",
+    "darkBackgroundColor": "#1a2522",
+    "darkTextColor": "#c2f7e7",
+    "cardImage": "../data/project-card/youarespecial.png"
   },
   {
     "id": "face-detect",
     "title": "Pico.js Face Detection",
     "headline": "Lightweight. Real-time. In-browser.",
     "description": "A minimal face detection demo using Pico.js — built with pure JavaScript to deliver fast, real-time facial recognition directly in the browser.",
-    "tech": ["JavaScript", "HTML", "CSS", "Pico.js"],
+    "tech": [
+      "JavaScript",
+      "HTML",
+      "CSS",
+      "Pico.js"
+    ],
     "features": [
       "Real-time face detection",
       "Lightweight implementation",
@@ -180,7 +254,10 @@
       "demo": "https://simplysuvi.github.io/face-detect/",
       "github": "https://github.com/simplysuvi/face-detect"
     },
-    "backgroundColor": "#f5f5f7",
-    "textColor": "#1d1d1f"
+    "backgroundColor": "#f8f0ff",
+    "textColor": "#1d1d1f",
+    "darkBackgroundColor": "#241a2a",
+    "darkTextColor": "#f0e6ff",
+    "cardImage": "../data/project-card/picojs.png"
   }
 ]

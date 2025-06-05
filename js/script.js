@@ -186,6 +186,9 @@ function initDarkMode() {
         // Save preference
         localStorage.setItem('darkMode', isDark);
 
+        // Re-render project cards to update their colors
+        loadProjects();
+
         // Create a notification
         const notification = document.createElement('div');
         notification.classList.add('site-notification');
@@ -481,10 +484,18 @@ function renderProjects(projects) {
     // Add each project
     projects.forEach(project => {
         const cardStyles = [];
-        if (project.backgroundColor) {
+        const isDark = document.body.classList.contains('dark-mode');
+        if (isDark && project.darkBackgroundColor) {
+            cardStyles.push(`background-color: ${project.darkBackgroundColor}`);
+        } else if (project.backgroundColor) {
             cardStyles.push(`background-color: ${project.backgroundColor}`);
         }
-        if (project.textColor) {
+        if (project.cardImage) {
+            cardStyles.push(`background-image: url(${project.cardImage})`);
+        }
+        if (isDark && project.darkTextColor) {
+            cardStyles.push(`color: ${project.darkTextColor}`);
+        } else if (project.textColor) {
             cardStyles.push(`color: ${project.textColor}`);
         }
 
@@ -498,7 +509,9 @@ function renderProjects(projects) {
         card.setAttribute('style', cardStyles.join(';'));
 
         // Define text color styles for inner elements if textColor is specified
-        const textColorStyle = project.textColor ? `style="color: ${project.textColor}"` : '';
+        const textColorStyle = (isDark && project.darkTextColor)
+            ? `style="color: ${project.darkTextColor}"`
+            : (project.textColor ? `style="color: ${project.textColor}"` : '');
 
         card.innerHTML = `
             <div class="card-label" ${textColorStyle}>${project.title}</div>
