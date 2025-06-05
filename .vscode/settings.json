@@ -1,3 +1,6 @@
 {
-    "livePreview.defaultPreviewPath": "/index.html"
+    "livePreview.defaultPreviewPath": "/index.html",
+    "files.exclude": {
+        "**/.DS_Store": false
+    }
 }
