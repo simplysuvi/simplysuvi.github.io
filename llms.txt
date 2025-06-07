@@ -42,7 +42,6 @@ simplysuvi.com is structured into several main sections, each supported by dedic
 * [Resume Modal Styles](https://simplysuvi.com/css/resume-modal.css): Styles for the resume modal popup.
 * [Typing Animation Styles](https://simplysuvi.com/css/typing-animation.css): Styles for animated typing effects.
 * [Component Loader Script](https://simplysuvi.com/js/component-loader.js): Loads reusable components dynamically.
-* [Particles Script](https://simplysuvi.com/js/particles.js): Adds interactive particle effects.
 * [Resume Modal Script](https://simplysuvi.com/js/resume-modal.js): Handles resume modal functionality.
 * [Main Script](https://simplysuvi.com/js/script.js): General site interactivity.
 * [Typing Animation Script](https://simplysuvi.com/js/typing-animation.js): Controls typing animation on the site.

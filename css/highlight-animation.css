@@ -1,0 +1,82 @@
+/**
+ * CSS for animated highlight effect on hero section keywords
+ */
+
+:root {
+    --highlight-color: #ffeb3b;
+    /* Default yellow highlight color */
+    --highlight-duration: 0.5s;
+    /* Default animation duration */
+    --highlight-delay: 0.2s;
+    /* Default base delay */
+}
+
+/* Highlight container */
+.highlight {
+    position: relative;
+    display: inline-block;
+    z-index: 1;
+}
+
+/* Highlight background effect */
+.highlight:before {
+    content: "";
+    position: absolute;
+    background-image: linear-gradient(var(--highlight-color), var(--highlight-color));
+    background-repeat: no-repeat;
+    background-position: 0;
+    background-size: 0% 100%;
+    width: 105%;
+    height: 1.5em;
+    top: 50%;
+    z-index: -1;
+    border-radius: 40px;
+    padding-left: .1875em;
+    padding-right: .1875em;
+    transform: translateY(-50%);
+    transition: width var(--highlight-duration) ease-out, background-size var(--highlight-duration) ease-out, opacity .2s ease;
+    transition-delay: calc(var(--highlight-duration) * var(--highlight-line) + var(--highlight-delay, 0));
+    opacity: 0;
+}
+
+/* When parent element has .animate class, animate the highlight */
+.animate-on-load.fade-in-up .highlight:before {
+    background-size: 100% 100%;
+    opacity: 0.5;
+}
+
+/* Different highlight colors */
+.highlight-blue {
+    --highlight-color: rgba(0, 122, 255, 0.5);
+}
+
+.highlight-pink {
+    --highlight-color: rgba(255, 45, 85, 0.7);
+}
+
+.highlight-green {
+    --highlight-color: rgb(145, 193, 72);
+}
+
+.highlight-purple {
+    --highlight-color: rgba(175, 82, 222, 0.5);
+}
+
+/* Different line positions for staggered animation */
+.highlight-line-1 {
+    --highlight-line: 0;
+}
+
+.highlight-line-2 {
+    --highlight-line: 1;
+}
+
+.highlight-line-3 {
+    --highlight-line: 2;
+}
+
+/* Dark mode adjustments */
+body.dark-mode .highlight:before {
+    opacity: 0.6;
+    /* Slightly higher opacity for better visibility in dark mode */
+}

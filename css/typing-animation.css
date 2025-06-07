@@ -12,9 +12,11 @@
 .word-container {
     position: relative;
     display: inline-block;
-    min-width: 80px; /* Ensure container has minimum width to prevent layout shifts */
+    min-width: 80px;
+    /* Ensure container has minimum width to prevent layout shifts */
     text-align: left;
-    height: 1.3em; /* Fixed height to prevent layout shifts */
+    height: 1.3em;
+    /* Fixed height to prevent layout shifts */
     vertical-align: bottom;
 }
 
@@ -26,7 +28,8 @@
     opacity: 0;
     transform: translateY(10px);
     transition: opacity 0.5s ease, transform 0.5s ease;
-    color: var(--website-blue); /* Make the changing word blue for emphasis */
+    color: var(--website-teal);
+    /* Make the changing word blue for emphasis */
 }
 
 /* Visible word state */
@@ -37,12 +40,14 @@
 
 /* Dark mode styles */
 body.dark-mode .animated-word {
-    color: var(--website-blue); /* Keep blue in dark mode for consistency */
+    color: var(--website-teal);
+    /* Keep blue in dark mode for consistency */
 }
 
 /* Responsive styles */
 @media (max-width: 768px) {
     .word-container {
-        min-width: 60px; /* Smaller min-width on mobile */
+        min-width: 60px;
+        /* Smaller min-width on mobile */
     }
 }

@@ -123,7 +123,7 @@ body.dark-mode .toggle-label:hover {
 }
 
 input:checked+.toggle-slider {
-    background-color: var(--website-blue);
+    background-color: var(--website-teal);
 }
 
 input:checked+.toggle-slider:before {
@@ -196,7 +196,7 @@ body.dark-mode .toggle-slider:before {
 }
 
 body.dark-mode input:checked+.toggle-slider {
-    background-color: var(--website-blue);
+    background-color: var(--website-teal);
 }
 
 body.dark-mode input:checked+.toggle-slider:before {

@@ -203,7 +203,7 @@ body.dark-mode .resume-modal-header::after {
     left: 0;
     width: 100%;
     height: 3px;
-    background: linear-gradient(90deg, transparent, var(--website-blue), transparent);
+    background: linear-gradient(90deg, transparent, var(--website-teal), transparent);
     opacity: 1;
     z-index: 10;
     animation: loading 1.5s infinite ease-in-out;
@@ -219,9 +219,11 @@ body.dark-mode .resume-modal-header::after {
     0% {
         transform: translateX(-100%);
     }
+
     50% {
         transform: translateX(100%);
     }
+
     100% {
         transform: translateX(100%);
     }
