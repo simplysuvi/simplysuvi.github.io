@@ -2793,7 +2793,7 @@ body.dark-mode .project-card {
     background-color: var(--website-dark-card-background);
     box-shadow: var(--shadow-dark-sm);
     background-blend-mode: multiply;
-    border: 1px solid #2f2e2ea6;
+    border: 4px solid #45404087;
 }
 
 body.dark-mode .project-card:hover {
