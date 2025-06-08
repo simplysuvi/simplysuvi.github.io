@@ -761,9 +761,8 @@ body.dark-mode .footer-copyright {
 }
 
 .project-modal-icon {
-    /* Optional icon */
-    width: 80px;
-    height: 80px;
+    width: 90px;
+    height: 90px;
     margin-bottom: 30px;
     display: flex;
     align-items: center;
@@ -825,6 +824,7 @@ body.dark-mode .footer-copyright {
 /* Project features styling */
 .project-features-container {
     margin: 30px 0;
+    padding: 0 10px;
 }
 
 .project-features-container h4 {
@@ -901,8 +901,6 @@ body.dark-mode .footer-copyright {
 }
 
 .project-link:hover {
-    transform: translateY(-3px);
-    /* Subtle lift */
     box-shadow: 0 5px 15px var(--website-separator);
 }
 

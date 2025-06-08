@@ -26,7 +26,8 @@
     "textColor": "#1d1d1f",
     "darkBackgroundColor": "#2a1a22",
     "darkTextColor": "#ffe6f0",
-    "cardImage": "../data/project-card/patientread.png"
+    "cardImage": "../data/project-card/patientread.png",
+    "icon": "../../data/project-icons/patientread-icon.png"
   },
   {
     "id": "moodytector",
@@ -56,7 +57,8 @@
     "textColor": "#1d1d1f",
     "darkBackgroundColor": "#2b2117",
     "darkTextColor": "#ffe7c2",
-    "cardImage": "../data/project-card/moodytector.png"
+    "cardImage": "../data/project-card/moodytector.png",
+    "icon": "../data/project-icons/moodytector-icon.png"
   },
   {
     "id": "hue-vision",
@@ -85,7 +87,8 @@
     "textColor": "black",
     "darkBackgroundColor": "#16222a",
     "darkTextColor": "#b8e6ff",
-    "cardImage": "../data/project-card/huevision.png"
+    "cardImage": "../data/project-card/huevision.png",
+    "icon": "../data/project-icons/huevision-icon.png"
   },
   {
     "id": "emotionwise",
@@ -115,7 +118,8 @@
     "textColor": "#1d1d1f",
     "darkBackgroundColor": "#1a2a25",
     "darkTextColor": "#c2f7e7",
-    "cardImage": "../data/project-card/emotionwise.png"
+    "cardImage": "../data/project-card/emotionwise.png",
+    "icon": "../data/project-icons/emotionwise-icon.png"
   },
   {
     "id": "faceid",
@@ -144,7 +148,8 @@
     "textColor": "#1d1d1f",
     "darkBackgroundColor": "#241a2a",
     "darkTextColor": "#f0e6ff",
-    "cardImage": "../data/project-card/faceid.png"
+    "cardImage": "../data/project-card/faceid.png",
+    "icon": "../data/project-icons/faceid-icon.png"
   },
   {
     "id": "ipl-eda",
@@ -174,7 +179,8 @@
     "textColor": "#1d1d1f",
     "darkBackgroundColor": "#1a2230",
     "darkTextColor": "#b8d6ff",
-    "cardImage": "../data/project-card/ipl.png"
+    "cardImage": "../data/project-card/ipl.png",
+    "icon": "../data/project-icons/ipleda-icon.png"
   },
   {
     "id": "eventify-u",
@@ -202,7 +208,8 @@
     "textColor": "#1d1d1f",
     "darkBackgroundColor": "#2a251a",
     "darkTextColor": "#ffeec2",
-    "cardImage": "../data/project-card/eventify.png"
+    "cardImage": "../data/project-card/eventify.png",
+    "icon": "../data/project-icons/eventify-icon.png"
   },
   {
     "id": "compliment-generator",
@@ -230,7 +237,8 @@
     "textColor": "#1d1d1f",
     "darkBackgroundColor": "#1a2522",
     "darkTextColor": "#c2f7e7",
-    "cardImage": "../data/project-card/youarespecial.png"
+    "cardImage": "../data/project-card/youarespecial.png",
+    "icon": "../data/project-icons/youaresepcial-icon.png"
   },
   {
     "id": "face-detect",
@@ -258,6 +266,7 @@
     "textColor": "#1d1d1f",
     "darkBackgroundColor": "#241a2a",
     "darkTextColor": "#f0e6ff",
-    "cardImage": "../data/project-card/picojs.png"
+    "cardImage": "../data/project-card/picojs.png",
+    "icon": "../data/project-icons/picojs-icon.png"
   }
 ]

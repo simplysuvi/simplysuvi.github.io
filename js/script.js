@@ -553,6 +553,24 @@ function renderProjects(projects) {
  * Initializes project cards with modal functionality
  * Sets up event listeners and modal interactions
  */
+let loadedProjects = [];
+// Patch loadProjects to store projects globally
+const originalLoadProjects = loadProjects;
+loadProjects = async function () {
+    try {
+        const response = await fetch('../data/projects.json');
+        if (!response.ok) {
+            throw new Error(`HTTP error! status: ${response.status}`);
+        }
+        const projects = await response.json();
+        loadedProjects = projects; // Store for modal lookup
+        renderProjects(projects);
+        initProjectCards();
+    } catch (error) {
+        console.error('Error loading projects:', error);
+    }
+};
+
 function initProjectCards() {
     // Get all project cards
     const projectCards = document.querySelectorAll('.project-card');
@@ -629,6 +647,9 @@ function initProjectCards() {
         const modalBody = document.querySelector('.project-modal-body');
         const cardLabel = card.querySelector('.card-label').textContent;
         const cardTitle = card.querySelector('.card-text h3').textContent;
+        const projectId = card.id;
+        // Find the project data by id
+        const projectData = loadedProjects.find(p => p.id === projectId);
 
         // Get description if it exists, otherwise use a default description
         let cardDescription = "A data science project showcasing advanced analytics and machine learning techniques.";
@@ -688,13 +709,16 @@ function initProjectCards() {
         }
 
         // Prepare modal content
+        let iconHTML = "";
+        if (projectData && projectData.icon) {
+            iconHTML = `
+                <div class="project-modal-icon">
+                    <img src="${projectData.icon}" alt="${cardLabel} icon" width="110" height="110" />
+                </div>
+            `;
+        }
         const modalContent = `
-            <div class="project-modal-icon">
-                <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" width="80" height="80">
-                    <rect width="24" height="24" rx="6" fill="#007AFF" opacity="0.2"/>
-                    <path d="M10 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V8c0-1.1-.9-2-2-2h-8l-2-2z" fill="#007AFF"/>
-                </svg>
-            </div>
+            ${iconHTML}
             <h2 class="project-modal-title">${cardLabel}</h2>
             <div class="project-modal-description">
                 <p>${cardDescription}</p>
