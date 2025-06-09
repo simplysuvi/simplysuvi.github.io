@@ -79,6 +79,18 @@
     --website-overlay-white-light: rgba(255, 255, 255, 0.7);
 }
 
+/* Highlight selected text with website teal in all modes */
+::selection {
+    background: var(--website-teal);
+    color: var(--website-white);
+}
+
+::-moz-selection {
+    background: var(--website-teal);
+    color: var(--website-white);
+}
+
+
 /*--------------------------------------------------------------
 # Base Styles
 --------------------------------------------------------------*/
