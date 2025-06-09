@@ -1,5 +1,35 @@
 [
   {
+    "id": "oflcwage-map",
+    "title": "OFLC Wage Atlas",
+    "headline": "Wage clarity. By zip, role, and region.",
+    "description": "An interactive map and data tool that visualizes prevailing wage information from the U.S. Department of Labor’s OFLC. Designed to support employers, immigration attorneys, and researchers, the OFLC Wage Atlas makes it easy to explore wage levels by job title and location—down to the zip code.",
+    "tech": [
+      "JavaScript",
+      "Leaflet.js",
+      "PapaParse",
+      "HTML5",
+      "CSS3"
+    ],
+    "features": [
+      "Color-coded wage map by region and level",
+    "Search by job title, SOC code, location, and wage level",
+    "Zip code lookup with geocoding and spatial analysis",
+    "Responsive design with map zoom and reset controls",
+    "Detailed wage info on hover and sortable data table"
+    ],
+    "links": {
+      "demo": "https://wageatlas.netlify.app/",
+      "github": "https://github.com/simplysuvi/OFLC-wage-map"
+    },
+    "backgroundColor": "#daf2e8",
+    "textColor": "#1d1d1f",
+    "darkBackgroundColor": "#1a2a24",
+    "darkTextColor": "#c2f7e7",
+    "cardImage": "../data/project-card/patientread.png",
+    "icon": "../../data/project-icons/patientread-icon.png"
+  },
+  {
     "id": "patient-readmission",
     "title": "Predicting Patient Readmission",
     "headline": "30 days ahead.",
