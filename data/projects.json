@@ -26,8 +26,8 @@
     "textColor": "#1d1d1f",
     "darkBackgroundColor": "#1a2a24",
     "darkTextColor": "#c2f7e7",
-    "cardImage": "../data/project-card/patientread.png",
-    "icon": "../../data/project-icons/patientread-icon.png"
+    "cardImage": "../data/project-card/oflc-wage.png",
+    "icon": "../../data/project-icons/oflcwage-icon.png"
   },
   {
     "id": "patient-readmission",
