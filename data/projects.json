@@ -3,7 +3,7 @@
     "id": "oflcwage-map",
     "title": "OFLC Wage Atlas",
     "headline": "Wage clarity. By zip, role, and region.",
-    "description": "An interactive map and data tool that visualizes prevailing wage information from the U.S. Department of Labor’s OFLC. Designed to support employers, immigration attorneys, and researchers, the OFLC Wage Atlas makes it easy to explore wage levels by job title and location—down to the zip code.",
+    "description": "An interactive map that visualizes prevailing wages from the U.S. Department of Labor’s OFLC — by job title, SOC code, and location. Built for employers, attorneys, and researchers to explore data down to the zip code.",
     "tech": [
       "JavaScript",
       "Leaflet.js",
