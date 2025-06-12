@@ -2355,6 +2355,154 @@ body.dark-mode .book-item:hover {
     }
 }
 
+/* Travel Section Styling */
+.travel-section {
+    margin-top: 40px;
+    border-radius: 24px;
+    overflow: hidden;
+    transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+    position: relative;
+}
+
+.travel-header {
+    padding: 15px 0;
+    display: flex;
+    align-items: center;
+}
+
+.travel-header-text h3 {
+    font-size: 26px;
+    margin: 0;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    line-height: 1.2;
+    color: var(--website-heading-color);
+}
+
+.travel-description {
+    flex: 1;
+}
+
+.travel-description p {
+    font-size: 20px;
+    line-height: 1.7;
+    color: var(--website-secondary-text);
+    margin-bottom: 24px;
+    letter-spacing: -0.01em;
+    font-weight: 600;
+}
+
+.travel-description p:last-child {
+    margin-bottom: 0;
+}
+
+.travel-images-container {
+    columns: 3 250px;
+    /* 3 columns, min width 250px */
+    column-gap: 1.5rem;
+    width: 90%;
+    margin: 0 auto;
+    padding: 20px 0;
+}
+
+.travel-image-item {
+    width: 100%;
+    margin: 0 1.5rem 1.5rem 0;
+    display: inline-block;
+    border: solid 2px var(--website-separator);
+    padding: 5px;
+    box-shadow: var(--shadow-sm);
+    border-radius: 12px;
+    transition: all .25s ease-in-out;
+    box-sizing: border-box;
+    /* Ensure padding and border are included in the element's total width and height */
+}
+
+.travel-image-item:hover img {
+    filter: grayscale(0);
+}
+
+.travel-image-item:hover {
+    border-color: var(--website-teal);
+    box-shadow: var(--shadow-md);
+}
+
+.travel-image {
+    width: 100%;
+    height: auto;
+    filter: grayscale(100%);
+    border-radius: 8px;
+    transition: all .25s ease-in-out;
+}
+
+.travel-image-item p {
+    margin: 5px 0;
+    padding: 0;
+    text-align: center;
+    font-size: 15px;
+    color: var(--website-heading-color);
+    font-weight: 600;
+}
+
+/* Dark mode styles for travel section */
+body.dark-mode .travel-section {
+    background-color: var(--website-dark-card-background);
+}
+
+body.dark-mode .travel-header h3 {
+    color: var(--website-dark-heading-color);
+}
+
+body.dark-mode .travel-description p {
+    color: var(--website-dark-secondary-text);
+}
+
+body.dark-mode .travel-image-item {
+    border-color: var(--website-dark-separator);
+    box-shadow: var(--shadow-dark-sm);
+}
+
+body.dark-mode .travel-image-item:hover {
+    border-color: var(--website-teal);
+    box-shadow: var(--shadow-dark-md);
+}
+
+body.dark-mode .travel-image-item p {
+    color: var(--website-dark-secondary-text);
+}
+
+/* Responsive styles for travel section */
+@media (max-width: 992px) {
+    .travel-images-container {
+        columns: 2 200px;
+        /* 2 columns on smaller screens */
+    }
+}
+
+@media (max-width: 768px) {
+    .travel-section {
+        margin-top: 30px;
+    }
+
+    .travel-images-container {
+        columns: 1 100%;
+        /* 1 column on mobile */
+        column-gap: 0;
+        width: 100%;
+        padding: 15px 0;
+    }
+
+    .travel-image-item {
+        margin: 0 0 1rem 0;
+        padding: 8px;
+        border-radius: 8px;
+    }
+
+    .travel-image-item p {
+        font-size: 14px;
+    }
+}
+
 .carousel-control {
     /* Prev/Next buttons */
     width: 36px;
@@ -2624,12 +2772,7 @@ body.dark-mode .music-description p {
         font-size: 14px;
     }
 
-    .music-interests-wrapper {
-        padding: 15px;
-    }
-
     .music-description p {
-        font-size: 18px;
         line-height: 1.6;
     }
 }
@@ -3774,7 +3917,7 @@ body.dark-mode .now-section a:focus {
 }
 
 .now-list {
-    list-style:symbols('•');
+    list-style: symbols('•');
     padding: 0;
     margin: 0;
 }
