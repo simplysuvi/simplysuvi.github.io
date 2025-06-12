@@ -15,7 +15,7 @@ simplysuvi.com is structured into several main sections, each supported by dedic
 * [Education](https://simplysuvi.com/education/index.html): Academic background and qualifications.
 * [Skills](https://simplysuvi.com/skills/index.html): List of technical and professional skills.
 * [Testimonials](https://simplysuvi.com/testimonials/index.html): Endorsements and feedback from colleagues and collaborators.
-* [Hobbies](https://simplysuvi.com/hobbies/index.html): Personal interests and activities outside of work.
+* [Interests](https://simplysuvi.com/interests/index.html): Personal interests and activities outside of work.
 
 ---
 

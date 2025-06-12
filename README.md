@@ -36,7 +36,7 @@ This site is my digital home — a place to tell my story, share what I’ve bui
 - **Experience & Education:** Career and academic path
 - **Projects:** Selected works across AI, engineering, and design
 - **Skills:** Technical strengths and tools I work with
-- **Hobbies:** Music, books, creativity, and life outside of code
+- **Interests:** Music, books, travel, and life outside of code
 - **Testimonials:** What others say about working with me
 
 ---

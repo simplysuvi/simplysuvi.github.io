@@ -536,7 +536,7 @@ body.dark-mode .time:hover {
 .skills-container,
 .site-cards,
 .timeline-container,
-.hobbies-container,
+.interests-container,
 .testimonials-container {
     max-width: 1200px;
     margin: 0 auto;
@@ -670,7 +670,7 @@ body.dark-mode .footer-copyright {
     .skills-container,
     .site-cards,
     .timeline-container,
-    .hobbies-container,
+    .interests-container,
     .testimonials-container {
         padding: 30px 20px;
         max-width: calc(100vw - 10px);
@@ -2032,9 +2032,9 @@ body.dark-mode .timeline-date {
 }
 
 
-/* ## hobbies.html (Hobbies & Interests Section) ## */
+/* ## interests.html (Interests Section) ## */
 
-.hobbies-container {
+.interests-container {
     backdrop-filter: blur(20px);
     -webkit-backdrop-filter: blur(20px);
     padding: 0 20px;
@@ -2672,7 +2672,7 @@ body.dark-mode .travel-image-item p {
     margin-bottom: 0;
 }
 
-/* Dark mode styles for hobbies */
+/* Dark mode styles for interests */
 
 body.dark-mode .songs-carousel-wrapper {
     background-color: var(--website-dark-card-background);
@@ -2733,7 +2733,7 @@ body.dark-mode .music-description p {
     color: var(--website-dark-secondary-text);
 }
 
-/* Responsive styles for hobbies */
+/* Responsive styles for interests */
 @media (max-width: 768px) {
     .music-content {
         grid-template-columns: 1fr;
