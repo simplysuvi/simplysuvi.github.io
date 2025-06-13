@@ -1,6 +1,6 @@
 /**
  * Toggle Switch CSS
- * Apple-inspired toggle switch for switching between content sections
+ * toggle switch for switching between content sections
  */
 
 .toggle-container {
@@ -9,7 +9,6 @@
     justify-content: center;
     margin: 20px 0 40px;
     gap: 15px;
-    max-width: 300px;
     margin-left: auto;
     margin-right: auto;
 }
