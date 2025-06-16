@@ -1678,7 +1678,6 @@ body.dark-mode .about-image-placeholder svg {
     grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
     gap: 40px;
     margin-bottom: 50px;
-    /* Space before resume button */
 }
 
 .skills-item {
@@ -1709,7 +1708,6 @@ body.dark-mode .about-image-placeholder svg {
     overflow: hidden;
     transition: transform 0.3s ease, background-color 0.3s ease, border-color 0.3s ease;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
-    /* Subtle shadow */
 }
 
 
@@ -3758,6 +3756,134 @@ body.dark-mode .experience-card-responsibilities li::before {
     }
 }
 
+/* ## skills.html (Modern Skills Section) ## */
+.modern-skills-container {
+    padding: 30px 20px;
+    /* Adjusted padding */
+}
+
+.modern-skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    /* Responsive grid */
+    gap: 30px;
+    /* Generous spacing between cards */
+    margin-bottom: 50px;
+}
+
+.skill-category-card {
+    background-color: var(--website-card-background);
+    border-radius: 20px;
+    /* Soft, rounded corners */
+    padding: 30px;
+    /* Generous internal spacing */
+    box-shadow: var(--shadow-md);
+    /* Soft shadow */
+    display: flex;
+    flex-direction: column;
+    transition: var(--transition-base);
+}
+
+body.dark-mode .skill-category-card {
+    background-color: var(--website-dark-card-background-alt);
+    box-shadow: var(--shadow-dark-md);
+}
+
+.skill-category-card .category-title {
+    font-family: 'SF Pro Display', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    font-size: 28px;
+    font-weight: 700;
+    color: var(--website-heading-color);
+    margin-bottom: 8px;
+    letter-spacing: -0.01em;
+}
+
+body.dark-mode .skill-category-card .category-title {
+    color: var(--website-dark-heading-color);
+}
+
+.skill-category-card .category-tagline {
+    font-family: 'SF Pro Text', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    font-size: 18px;
+    color: var(--website-secondary-text);
+    line-height: 1.4;
+    margin-bottom: 20px;
+    font-weight: 600;
+}
+
+body.dark-mode .skill-category-card .category-tagline {
+    color: var(--website-dark-tertiary-text);
+}
+
+.skill-category-card .tool-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+    /* Allow tools to wrap */
+    gap: 10px;
+    /* Spacing between tools */
+}
+
+.skill-category-card .tool-item {
+    font-family: 'SF Pro Text', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--website-secondary-text);
+    background-color: var(--website-gray6);
+    padding: 8px 12px;
+    border-radius: 10px;
+    transition: var(--transition-fast);
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.tool-icon {
+    width: 28px;
+    height: 28px;
+}
+
+body.dark-mode .skill-category-card .tool-item {
+    color: var(--website-dark-secondary-text);
+    background-color: var(--website-dark-elevated-background);
+}
+
+body.dark-mode .tool-icon {
+    filter: invert(1) brightness(1.5) saturate(0);
+}
+
+/* If icons are colored, this might not be ideal. For Simple Icons, they are usually monochrome. */
+/* If specific icons need different treatment, target them by their alt text or a more specific class. */
+
+/* Responsive adjustments for modern skills grid */
+@media (max-width: 768px) {
+    .modern-skills-grid {
+        grid-template-columns: 1fr;
+        /* Stack cards on smaller screens */
+        gap: 20px;
+    }
+
+    .skill-category-card {
+        padding: 25px;
+    }
+
+    .skill-category-card .category-title {
+        font-size: 22px;
+    }
+
+    .skill-category-card .category-tagline {
+        font-size: 14px;
+    }
+
+    .skill-category-card .tool-item {
+        font-size: 13px;
+        padding: 6px 10px;
+    }
+}
+
+
 /*--------------------------------------------------------------
 # Performance Optimizations
 --------------------------------------------------------------*/
@@ -3954,7 +4080,6 @@ body.dark-mode .now-list-item {
 
 body.dark-mode .now-list-item::before {
     color: var(--website-teal);
-    /* Keep teal for accent in dark mode */
 }
 
 .now-updated-date {
