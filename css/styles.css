@@ -527,7 +527,7 @@ body.dark-mode .icon.quote-icon:hover {
     z-index: 1;
     top: 150%;
     left: 50%;
-    margin-left: -110px;
+    margin-left: -135px;
     opacity: 0;
     transition: opacity 0.3s;
 }
