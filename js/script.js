@@ -392,6 +392,25 @@ function debounce(func, wait) {
 function initNavigation() {
     // Set active navigation item based on current page
     updateActiveNavItems();
+
+    const quoteIcon = document.getElementById('quoteIcon');
+    const quoteTooltip = document.getElementById('quoteTooltip');
+
+    if (quoteIcon && quoteTooltip) {
+        quoteIcon.addEventListener('click', (event) => {
+            event.stopPropagation();
+            const isVisible = quoteTooltip.style.visibility === 'visible';
+            quoteTooltip.style.visibility = isVisible ? 'hidden' : 'visible';
+            quoteTooltip.style.opacity = isVisible ? '0' : '1';
+        });
+
+        document.addEventListener('click', (event) => {
+            if (quoteTooltip.style.visibility === 'visible' && !quoteIcon.contains(event.target)) {
+                quoteTooltip.style.visibility = 'hidden';
+                quoteTooltip.style.opacity = '0';
+            }
+        });
+    }
 }
 
 // ======================================================================
