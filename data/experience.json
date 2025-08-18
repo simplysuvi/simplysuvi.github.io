@@ -18,12 +18,12 @@
             "Azure"
         ],
         "responsibilities": [
-            "Leading AI and data initiatives across the company, from identifying opportunities to delivering production-grade solutions tailored to business needs",
-            "Built and deployed an AI chatbot on Microsoft Teams using RAG pipelines (LlamaIndex, FAISS, Cohere Reranker, ColBERT), cutting document lookup time by 60% across teams",
-            "Created large-scale document parsing and embedding workflows using Python and OpenAI embeddings, improving search accuracy by combining BM25, hybrid search, and RRF",
-            "Developed a real-time computer vision system using YOLOv8 and CLIP for part identification on mobile devices, reaching ~92% accuracy in live classification tasks",
-            "Integrated the vision system with ERP workflows through FastAPI and REST APIs, automating part tracking and reducing manual logging errors by 40%",
-            "Managed full ML lifecycle—from data collection and model training to deployment—using PyTorch, OpenCV, and Docker for scalable, production-ready solutions"
+            "Led AI and data initiatives across the company, delivering production-ready solutions tailored to business needs",
+            "Built AI-driven tools that streamlined knowledge access and boosted team efficiency",
+            "Designed large-scale document parsing and embedding workflows using Python and OpenAI",
+            "Developed real-time ML pipelines with YOLO, CLIP, and PyTorch for high-accuracy classification",
+            "Integrated AI systems with ERP workflows via FastAPI and REST APIs, reducing manual errors",
+            "Managed end-to-end ML lifecycle using PyTorch, OpenCV, Docker, and scalable cloud environments"
         ]
     },
     {
