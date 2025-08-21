@@ -1,7 +1,7 @@
 [
     {
         "id": "dieselcore",
-        "title": "Data Science and AI Engineer",
+        "title": "AI/ML Engineer",
         "company": "DieselCore",
         "startDate": "May 2024",
         "endDate": "Present",
@@ -13,16 +13,13 @@
             "OpenCV",
             "PyTorch",
             "LLM",
-            "Docker",
-            "REST API",
-            "Azure"
+            "Docker"
         ],
         "responsibilities": [
             "Led AI and data initiatives across the company, delivering production-ready solutions tailored to business needs",
             "Built AI-driven tools that streamlined knowledge access and boosted team efficiency",
-            "Designed large-scale document parsing and embedding workflows using Python and OpenAI",
-            "Developed real-time ML pipelines with YOLO, CLIP, and PyTorch for high-accuracy classification",
-            "Integrated AI systems with ERP workflows via FastAPI and REST APIs, reducing manual errors",
+            "Designed large-scale document parsing and embedding workflows using Python and Large Language Models.",
+            "Integrated AI systems with workflows via FastAPI and REST APIs, reducing manual errors",
             "Managed end-to-end ML lifecycle using PyTorch, OpenCV, Docker, and scalable cloud environments"
         ]
     },
