@@ -770,8 +770,7 @@ body.dark-mode .footer-copyright {
     position: relative;
     padding: 40px;
     overflow-y: auto;
-    max-height: calc(90vh - 80px);
-    /* Account for padding */
+    /* max-height: calc(90vh - 80px); */
 }
 
 .project-modal-close {
@@ -831,7 +830,8 @@ body.dark-mode .footer-copyright {
 }
 
 .project-modal-description {
-    font-size: 17px;
+    font-size: 18px;
+    font-weight: 500;
     line-height: 1.6;
     margin-bottom: 30px;
     color: var(--website-secondary-text);
@@ -917,11 +917,9 @@ body.dark-mode .footer-copyright {
 .project-links-container {
     display: flex;
     flex-wrap: wrap;
-    /* Allow wrapping on small screens */
     gap: 15px;
     justify-content: center;
-    margin-top: 30px;
-    /* Increased margin */
+    margin-top: 20px;
 }
 
 .project-link {
