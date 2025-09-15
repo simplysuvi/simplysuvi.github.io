@@ -3,7 +3,7 @@
     "id": "oflcwage-map",
     "title": "OFLC Wage Atlas",
     "headline": "Wage clarity. By zip, role, and region.",
-    "description": "An interactive map that visualizes prevailing wages from the U.S. Department of Labor’s OFLC — by job title, SOC code, and location. Built for employers, attorneys, and researchers to explore data down to the zip code.",
+    "description": "An interactive map that visualizes prevailing wages from the U.S. Department of Labor’s OFLC - by job title, SOC code, and location. Built for employers, attorneys, and researchers to explore data down to the zip code.",
     "tech": [
       "JavaScript",
       "Leaflet.js",
@@ -13,10 +13,10 @@
     ],
     "features": [
       "Color-coded wage map by region and level",
-    "Search by job title, SOC code, location, and wage level",
-    "Zip code lookup with geocoding and spatial analysis",
-    "Responsive design with map zoom and reset controls",
-    "Detailed wage info on hover and sortable data table"
+      "Search by job title, SOC code, location, and wage level",
+      "Zip code lookup with geocoding and spatial analysis",
+      "Responsive design with map zoom and reset controls",
+      "Detailed wage info on hover and sortable data table"
     ],
     "links": {
       "demo": "https://wageatlas.netlify.app/",
@@ -62,7 +62,7 @@
   {
     "id": "moodytector",
     "title": "Moodytector",
-    "headline": "Read the room — through your webcam.",
+    "headline": "Read the room, through your webcam.",
     "description": "A real-time web app that detects emotion, age, and gender from facial expressions using Face-api.js, making your browser emotionally intelligent.",
     "tech": [
       "JavaScript",
@@ -155,7 +155,7 @@
     "id": "faceid",
     "title": "Facial Authentication Web App",
     "headline": "Your face is your password.",
-    "description": "A secure facial recognition login system that compares live webcam input with stored facial data to authenticate users — all in-browser with no servers needed.",
+    "description": "A secure facial recognition login system that compares live webcam input with stored facial data to authenticate users - all in-browser with no servers needed.",
     "tech": [
       "JavaScript",
       "HTML",
@@ -215,7 +215,7 @@
   {
     "id": "eventify-u",
     "title": "Eventify-U (BrickHack 2023)",
-    "headline": "Discover your next event — your way.",
+    "headline": "Discover your next event, your way.",
     "description": "Built in 24 hours at BrickHack 2023, Eventify-U delivers personalized event recommendations with smart filters and a sleek interface powered by real-time API integration.",
     "tech": [
       "JavaScript",
@@ -245,7 +245,7 @@
     "id": "compliment-generator",
     "title": "Compliment Generator",
     "headline": "A little kindness, one click away.",
-    "description": "A feel-good web app that lifts your mood with genuine, randomly generated compliments — because everyone deserves a reminder they're awesome.",
+    "description": "A feel-good web app that lifts your mood with genuine, randomly generated compliments - because everyone deserves a reminder they're awesome.",
     "tech": [
       "JavaScript",
       "HTML",
@@ -274,7 +274,7 @@
     "id": "face-detect",
     "title": "Pico.js Face Detection",
     "headline": "Lightweight. Real-time. In-browser.",
-    "description": "A minimal face detection demo using Pico.js — built with pure JavaScript to deliver fast, real-time facial recognition directly in the browser.",
+    "description": "A minimal face detection demo using Pico.js - built with pure JavaScript to deliver fast, real-time facial recognition directly in the browser.",
     "tech": [
       "JavaScript",
       "HTML",

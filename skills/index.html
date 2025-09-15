@@ -2,288 +2,309 @@
 <html lang="en">
 
 <head>
-    <script>
-        try {
-            if (localStorage.getItem('darkMode') === 'true') {
-                document.documentElement.classList.add('dark-mode');
-                document.body && document.body.classList.add('dark-mode');
-            }
-        } catch (e) { }
-    </script>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description"
-        content="Suvrat Jain's Skills - Data Scientist with expertise in Python, Machine Learning, Data Analysis, TensorFlow, PyTorch, and SQL">
-    <title>Skills | Suvrat Jain</title>
+        <script>
+                try {
+                        if (localStorage.getItem('darkMode') === 'true') {
+                                document.documentElement.classList.add('dark-mode');
+                                document.body && document.body.classList.add('dark-mode');
+                        }
+                } catch (e) { }
+        </script>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description"
+                content="Suvrat Jain's Skills - Data Scientist with expertise in Python, Machine Learning, Data Analysis, TensorFlow, PyTorch, and SQL">
+        <title>Skills | Suvrat Jain</title>
 
-    <!-- Favicon and App Icons -->
-    <link rel="apple-touch-icon" sizes="180x180" href="../assets/favicon/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="../assets/favicon/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="../assets/favicon/favicon-16x16.png">
-    <link rel="icon" type="image/x-icon" href="../assets/favicon/favicon.ico">
-    <link rel="manifest" href="../assets/favicon/site.webmanifest">
-    <meta name="theme-color" content="#ffffff">
-    <meta name="msapplication-TileColor" content="#ffffff">
-    <meta name="msapplication-config" content="../assets/favicon/browserconfig.xml">
-    <!-- Android Chrome -->
-    <link rel="icon" type="image/png" sizes="192x192" href="../assets/favicon/android-chrome-192x192.png">
-    <link rel="icon" type="image/png" sizes="512x512" href="../assets/favicon/android-chrome-512x512.png">
+        <!-- Favicon and App Icons -->
+        <link rel="apple-touch-icon" sizes="180x180" href="../assets/favicon/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="../assets/favicon/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="../assets/favicon/favicon-16x16.png">
+        <link rel="icon" type="image/x-icon" href="../assets/favicon/favicon.ico">
+        <link rel="manifest" href="../assets/favicon/site.webmanifest">
+        <meta name="theme-color" content="#ffffff">
+        <meta name="msapplication-TileColor" content="#ffffff">
+        <meta name="msapplication-config" content="../assets/favicon/browserconfig.xml">
+        <!-- Android Chrome -->
+        <link rel="icon" type="image/png" sizes="192x192" href="../assets/favicon/android-chrome-192x192.png">
+        <link rel="icon" type="image/png" sizes="512x512" href="../assets/favicon/android-chrome-512x512.png">
 
-    <!-- Preload critical assets -->
-    <link rel="preload" href="../css/styles.css" as="style">
-    <link rel="preload" href="../js/script.js" as="script">
+        <!-- Preload critical assets -->
+        <link rel="preload" href="../css/styles.css" as="style">
+        <link rel="preload" href="../js/script.js" as="script">
 
-    <!-- Optimized font loading -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="stylesheet"
-        href="https://fonts.googleapis.com/css2?family=SF+Pro+Display:wght@400;500;600;700&display=swap" media="print"
-        onload="this.media='all'">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=SF+Pro+Text:wght@400;500&display=swap"
-        media="print" onload="this.media='all'">
+        <!-- Optimized font loading -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet"
+                href="https://fonts.googleapis.com/css2?family=SF+Pro+Display:wght@400;500;600;700&display=swap"
+                media="print" onload="this.media='all'">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=SF+Pro+Text:wght@400;500&display=swap"
+                media="print" onload="this.media='all'">
 
-    <!-- Font Awesome CDN for icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <!-- Font Awesome CDN for icons -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+                crossorigin="anonymous" referrerpolicy="no-referrer" />
 
-    <!-- Critical CSS -->
-    <link rel="stylesheet" href="../css/styles.css">
-    <link rel="stylesheet" href="../css/resume-modal.css">
+        <!-- Critical CSS -->
+        <link rel="stylesheet" href="../css/styles.css">
+        <link rel="stylesheet" href="../css/resume-modal.css">
 
-    <!-- Component Loader -->
-    <script src="../js/component-loader.js"></script>
+        <!-- Component Loader -->
+        <script src="../js/component-loader.js"></script>
 
-    <!-- Main JavaScript -->
-    <script src="../js/script.js" defer></script>
-    <script src="../js/resume-modal.js" defer></script>
+        <!-- Main JavaScript -->
+        <script src="../js/script.js" defer></script>
+        <script src="../js/resume-modal.js" defer></script>
 </head>
 
 <body>
-    <div class="container">
-        <!-- Navigation will be loaded here -->
-        <div id="navigation-container"></div>
+        <div class="container">
+                <!-- Navigation will be loaded here -->
+                <div id="navigation-container"></div>
 
-        <!-- Skills Section -->
-        <section class="skills-section">
-            <h2 class="section-title">What I bring to the table (besides snacks).</h2>
-            <p class="section-tagline">The current stack. Subject to upgrades. Rapidly.</p>
-            <div class="skills-container modern-skills-container">
-                <div class="skills-grid modern-skills-grid">
-                    <!-- Programming -->
-                    <div class="skill-category-card">
-                        <h3 class="category-title">Programming</h3>
-                        <p class="category-tagline">For writing logic, automating tasks, and solving real problems.</p>
-                        <ul class="tool-list">
-                            <li class="tool-item"><img
-                                    src="https://cdn.jsdelivr.net/npm/simple-icons@v15/icons/python.svg" alt="Python"
-                                    class="tool-icon">Python</li>
-                            <li class="tool-item"><img
-                                    src="https://cdn.jsdelivr.net/npm/simple-icons@v15/icons/anaconda.svg"
-                                    alt="Anaconda" class="tool-icon">Anaconda</li>
-                            <li class="tool-item"><img
-                                    src="https://cdn.jsdelivr.net/npm/simple-icons@v15/icons/javascript.svg"
-                                    alt="JavaScript" class="tool-icon">JavaScript</li>
-                            <li class="tool-item"><img
-                                    src="https://cdn.jsdelivr.net/npm/simple-icons@v15/icons/gnubash.svg" alt="Bash"
-                                    class="tool-icon">Bash</li>
-                            <li class="tool-item"><img
-                                    src="https://cdn.jsdelivr.net/npm/simple-icons@v15/icons/sqlite.svg" alt="SQL"
-                                    class="tool-icon">SQL</li>
-                            <li class="tool-item"><img
-                                    src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/java/java-plain.svg"
-                                    alt="Java" class="tool-icon">Java</li>
-                            <li class="tool-item"><img
-                                    src="https://cdn.jsdelivr.net/npm/simple-icons@v15/icons/cplusplus.svg" alt="C++"
-                                    class="tool-icon">C++</li>
-                        </ul>
-                    </div>
+                <!-- Skills Section -->
+                <section class="skills-section">
+                        <h2 class="section-title">What I bring to the table (besides snacks).</h2>
+                        <p class="section-tagline">The current stack. Subject to upgrades. Rapidly.</p>
+                        <div class="skills-container modern-skills-container">
+                                <div class="skills-grid modern-skills-grid">
+                                        <!-- Programming -->
+                                        <div class="skill-category-card">
+                                                <h3 class="category-title">Programming</h3>
+                                                <p class="category-tagline">For writing logic, automating tasks, and
+                                                        solving real problems.</p>
+                                                <ul class="tool-list">
+                                                        <li class="tool-item"><img
+                                                                        src="https://cdn.jsdelivr.net/npm/simple-icons@v15/icons/python.svg"
+                                                                        alt="Python" class="tool-icon">Python</li>
+                                                        <li class="tool-item"><img
+                                                                        src="https://cdn.jsdelivr.net/npm/simple-icons@v15/icons/anaconda.svg"
+                                                                        alt="Anaconda" class="tool-icon">Anaconda</li>
+                                                        <li class="tool-item"><img
+                                                                        src="https://cdn.jsdelivr.net/npm/simple-icons@v15/icons/javascript.svg"
+                                                                        alt="JavaScript" class="tool-icon">JavaScript
+                                                        </li>
+                                                        <li class="tool-item"><img
+                                                                        src="https://cdn.jsdelivr.net/npm/simple-icons@v15/icons/gnubash.svg"
+                                                                        alt="Bash" class="tool-icon">Bash</li>
+                                                        <li class="tool-item"><img
+                                                                        src="https://cdn.jsdelivr.net/npm/simple-icons@v15/icons/sqlite.svg"
+                                                                        alt="SQL" class="tool-icon">SQL</li>
+                                                        <li class="tool-item"><img
+                                                                        src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/java/java-plain.svg"
+                                                                        alt="Java" class="tool-icon">Java</li>
+                                                        <li class="tool-item"><img
+                                                                        src="https://cdn.jsdelivr.net/npm/simple-icons@v15/icons/cplusplus.svg"
+                                                                        alt="C++" class="tool-icon">C++</li>
+                                                </ul>
+                                        </div>
 
-                    <!-- Frontend -->
-                    <div class="skill-category-card">
-                        <h3 class="category-title">Frontend</h3>
-                        <p class="category-tagline">For building simple, responsive interfaces that just work.</p>
-                        <ul class="tool-list">
-                            <li class="tool-item"><img
-                                    src="https://cdn.jsdelivr.net/npm/simple-icons@v15/icons/html5.svg" alt="HTML"
-                                    class="tool-icon">HTML</li>
-                            <li class="tool-item"><img src="https://cdn.jsdelivr.net/npm/simple-icons@v15/icons/css.svg"
-                                    alt="CSS" class="tool-icon">CSS</li>
-                            <li class="tool-item"><img
-                                    src="https://cdn.jsdelivr.net/npm/simple-icons@v15/icons/javascript.svg"
-                                    alt="JavaScript" class="tool-icon">JavaScript</li>
-                            <li class="tool-item"><img
-                                    src="https://cdn.jsdelivr.net/npm/simple-icons@v15/icons/streamlit.svg"
-                                    alt="Streamlit" class="tool-icon">Streamlit</li>
-                        </ul>
-                    </div>
+                                        <!-- Frontend -->
+                                        <div class="skill-category-card">
+                                                <h3 class="category-title">Frontend</h3>
+                                                <p class="category-tagline">For building simple, responsive interfaces
+                                                        that just work.</p>
+                                                <ul class="tool-list">
+                                                        <li class="tool-item"><img
+                                                                        src="https://cdn.jsdelivr.net/npm/simple-icons@v15/icons/html5.svg"
+                                                                        alt="HTML" class="tool-icon">HTML</li>
+                                                        <li class="tool-item"><img
+                                                                        src="https://cdn.jsdelivr.net/npm/simple-icons@v15/icons/css.svg"
+                                                                        alt="CSS" class="tool-icon">CSS</li>
+                                                        <li class="tool-item"><img
+                                                                        src="https://cdn.jsdelivr.net/npm/simple-icons@v15/icons/javascript.svg"
+                                                                        alt="JavaScript" class="tool-icon">JavaScript
+                                                        </li>
+                                                        <li class="tool-item"><img
+                                                                        src="https://cdn.jsdelivr.net/npm/simple-icons@v15/icons/streamlit.svg"
+                                                                        alt="Streamlit" class="tool-icon">Streamlit</li>
+                                                </ul>
+                                        </div>
 
-                    <!-- Backend -->
-                    <div class="skill-category-card">
-                        <h3 class="category-title">Backend</h3>
-                        <p class="category-tagline">For APIs, authentication, and the systems behind the scenes.</p>
-                        <ul class="tool-list">
-                            <li class="tool-item"><img
-                                    src="https://cdn.jsdelivr.net/npm/simple-icons@v15/icons/fastapi.svg" alt="FastAPI"
-                                    class="tool-icon">FastAPI</li>
-                            <li class="tool-item"><img
-                                    src="https://cdn.jsdelivr.net/npm/simple-icons@v15/icons/nodedotjs.svg"
-                                    alt="Node.js" class="tool-icon">Node.js</li>
-                            <li class="tool-item"><img
-                                    src="https://cdn.jsdelivr.net/npm/simple-icons@v15/icons/express.svg" alt="Express"
-                                    class="tool-icon">Express</li>
-                            <li class="tool-item"><img
-                                    src="https://cdn.jsdelivr.net/npm/simple-icons@v15/icons/nginx.svg" alt="NGINX"
-                                    class="tool-icon">NGINX</li>
-                            <li class="tool-item"><img
-                                    src="https://cdn.jsdelivr.net/npm/simple-icons@v15/icons/auth0.svg" alt="NGINX"
-                                    class="tool-icon">OAuth2 Proxy</li>
-                        </ul>
-                    </div>
+                                        <!-- Backend -->
+                                        <div class="skill-category-card">
+                                                <h3 class="category-title">Backend</h3>
+                                                <p class="category-tagline">For APIs, authentication, and the systems
+                                                        behind the scenes.</p>
+                                                <ul class="tool-list">
+                                                        <li class="tool-item"><img
+                                                                        src="https://cdn.jsdelivr.net/npm/simple-icons@v15/icons/fastapi.svg"
+                                                                        alt="FastAPI" class="tool-icon">FastAPI</li>
+                                                        <li class="tool-item"><img
+                                                                        src="https://cdn.jsdelivr.net/npm/simple-icons@v15/icons/nodedotjs.svg"
+                                                                        alt="Node.js" class="tool-icon">Node.js</li>
+                                                        <li class="tool-item"><img
+                                                                        src="https://cdn.jsdelivr.net/npm/simple-icons@v15/icons/express.svg"
+                                                                        alt="Express" class="tool-icon">Express</li>
+                                                        <li class="tool-item"><img
+                                                                        src="https://cdn.jsdelivr.net/npm/simple-icons@v15/icons/nginx.svg"
+                                                                        alt="NGINX" class="tool-icon">NGINX</li>
+                                                        <li class="tool-item"><img
+                                                                        src="https://cdn.jsdelivr.net/npm/simple-icons@v15/icons/auth0.svg"
+                                                                        alt="NGINX" class="tool-icon">OAuth2 Proxy</li>
+                                                </ul>
+                                        </div>
 
-                    <!-- Prototyping -->
-                    <div class="skill-category-card">
-                        <h3 class="category-title">Prototyping</h3>
-                        <p class="category-tagline">For testing ideas fast - and turning thoughts into tools.</p>
-                        <ul class="tool-list">
-                            <li class="tool-item"><img
-                                    src="https://cdn.jsdelivr.net/npm/simple-icons@v15/icons/jupyter.svg"
-                                    alt="Jupyter Notebook" class="tool-icon">Jupyter Notebook</li>
-                            <li class="tool-item"><img
-                                    src="https://cdn.jsdelivr.net/npm/simple-icons@v15/icons/streamlit.svg"
-                                    alt="Streamlit" class="tool-icon">Streamlit</li>
-                            <li class="tool-item"><img
-                                    src="https://cdn.jsdelivr.net/npm/simple-icons@v15/icons/gradio.svg" alt="Gradio"
-                                    class="tool-icon">Gradio</li>
-                        </ul>
-                    </div>
+                                        <!-- Prototyping -->
+                                        <div class="skill-category-card">
+                                                <h3 class="category-title">Prototyping</h3>
+                                                <p class="category-tagline">For testing ideas fast - and turning
+                                                        thoughts into tools.</p>
+                                                <ul class="tool-list">
+                                                        <li class="tool-item"><img
+                                                                        src="https://cdn.jsdelivr.net/npm/simple-icons@v15/icons/jupyter.svg"
+                                                                        alt="Jupyter Notebook" class="tool-icon">Jupyter
+                                                                Notebook</li>
+                                                        <li class="tool-item"><img
+                                                                        src="https://cdn.jsdelivr.net/npm/simple-icons@v15/icons/streamlit.svg"
+                                                                        alt="Streamlit" class="tool-icon">Streamlit</li>
+                                                        <li class="tool-item"><img
+                                                                        src="https://cdn.jsdelivr.net/npm/simple-icons@v15/icons/gradio.svg"
+                                                                        alt="Gradio" class="tool-icon">Gradio</li>
+                                                </ul>
+                                        </div>
 
-                    <!-- Deployment -->
-                    <div class="skill-category-card">
-                        <h3 class="category-title">Deployment</h3>
-                        <p class="category-tagline">For launching projects, managing services, and scaling with ease.
-                        </p>
-                        <ul class="tool-list">
-                            <li class="tool-item"><img
-                                    src="https://cdn.jsdelivr.net/npm/simple-icons@v15/icons/docker.svg" alt="Docker"
-                                    class="tool-icon">Docker</li>
-                            <li class="tool-item"><img
-                                    src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/azure/azure-plain.svg"
-                                    alt="Azure" class="tool-icon">Azure</li>
-                            <li class="tool-item"><img
-                                    src="https://cdn.jsdelivr.net/npm/simple-icons@v15/icons/googlecloud.svg"
-                                    alt="Google Cloud" class="tool-icon">Google Cloud</li>
-                            <li class="tool-item"><img src="https://cdn.jsdelivr.net/npm/simple-icons@v15/icons/git.svg"
-                                    alt="Git" class="tool-icon">Git</li>
-                            <li class="tool-item"><img
-                                    src="https://cdn.jsdelivr.net/npm/simple-icons@v15/icons/githubactions.svg"
-                                    alt="CI/CD" class="tool-icon">CI/CD</li>
-                            <li class="tool-item"><img
-                                    src="https://cdn.jsdelivr.net/npm/simple-icons@v15/icons/mlflow.svg" alt="MLFlow"
-                                    class="tool-icon">MLFlow</li>
-                            <li class="tool-item"><img
-                                    src="https://cdn.jsdelivr.net/npm/simple-icons@v15/icons/onnx.svg" alt="ONNX"
-                                    class="tool-icon">ONNX</li>
-                            <li class="tool-item"><img
-                                    src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/amazonwebservices/amazonwebservices-original-wordmark.svg"
-                                    alt="AWS" class="tool-icon">AWS</li>
-                        </ul>
-                    </div>
+                                        <!-- Deployment -->
+                                        <div class="skill-category-card">
+                                                <h3 class="category-title">Deployment</h3>
+                                                <p class="category-tagline">For launching projects, managing services,
+                                                        and scaling with ease.
+                                                </p>
+                                                <ul class="tool-list">
+                                                        <li class="tool-item"><img
+                                                                        src="https://cdn.jsdelivr.net/npm/simple-icons@v15/icons/docker.svg"
+                                                                        alt="Docker" class="tool-icon">Docker</li>
+                                                        <li class="tool-item"><img
+                                                                        src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/azure/azure-plain.svg"
+                                                                        alt="Azure" class="tool-icon">Azure</li>
+                                                        <li class="tool-item"><img
+                                                                        src="https://cdn.jsdelivr.net/npm/simple-icons@v15/icons/googlecloud.svg"
+                                                                        alt="Google Cloud" class="tool-icon">Google
+                                                                Cloud</li>
+                                                        <li class="tool-item"><img
+                                                                        src="https://cdn.jsdelivr.net/npm/simple-icons@v15/icons/git.svg"
+                                                                        alt="Git" class="tool-icon">Git</li>
+                                                        <li class="tool-item"><img
+                                                                        src="https://cdn.jsdelivr.net/npm/simple-icons@v15/icons/githubactions.svg"
+                                                                        alt="CI/CD" class="tool-icon">CI/CD</li>
+                                                        <li class="tool-item"><img
+                                                                        src="https://cdn.jsdelivr.net/npm/simple-icons@v15/icons/mlflow.svg"
+                                                                        alt="MLFlow" class="tool-icon">MLFlow</li>
+                                                        <li class="tool-item"><img
+                                                                        src="https://cdn.jsdelivr.net/npm/simple-icons@v15/icons/onnx.svg"
+                                                                        alt="ONNX" class="tool-icon">ONNX</li>
+                                                        <li class="tool-item"><img
+                                                                        src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/amazonwebservices/amazonwebservices-original-wordmark.svg"
+                                                                        alt="AWS" class="tool-icon">AWS</li>
+                                                </ul>
+                                        </div>
 
-                    <!-- Python Libraries -->
-                    <div class="skill-category-card">
-                        <h3 class="category-title">Python Libraries</h3>
-                        <p class="category-tagline">For machine learning, computer vision, and data workflows.</p>
-                        <ul class="tool-list">
-                            <li class="tool-item"><img
-                                    src="https://cdn.jsdelivr.net/npm/simple-icons@v15/icons/pytorch.svg" alt="PyTorch"
-                                    class="tool-icon">PyTorch</li>
-                            <li class="tool-item"><img
-                                    src="https://cdn.jsdelivr.net/npm/simple-icons@v15/icons/tensorflow.svg"
-                                    alt="TensorFlow" class="tool-icon">TensorFlow</li>
-                            <li class="tool-item"><img
-                                    src="https://cdn.jsdelivr.net/npm/simple-icons@v15/icons/scikitlearn.svg"
-                                    alt="Scikit-learn" class="tool-icon">Scikit-learn</li>
-                            <li class="tool-item"><img
-                                    src="https://cdn.jsdelivr.net/npm/simple-icons@v15/icons/opencv.svg" alt="OpenCV"
-                                    class="tool-icon">OpenCV</li>
-                            <li class="tool-item"><img
-                                    src="https://cdn.jsdelivr.net/npm/simple-icons@v15/icons/yolo.svg" alt="YOLO"
-                                    class="tool-icon">YOLO</li>
-                            <li class="tool-item"><img
-                                    src="https://cdn.jsdelivr.net/npm/simple-icons@v15/icons/meta.svg" alt="OpenCV"
-                                    class="tool-icon">FAISS</li>
-                            <li class="tool-item"><img
-                                    src="https://cdn.jsdelivr.net/npm/simple-icons@v15/icons/huggingface.svg"
-                                    alt="Transformers (HuggingFace)" class="tool-icon">Transformers (HuggingFace)</li>
-                            <li class="tool-item"><img
-                                    src="https://cdn.jsdelivr.net/npm/simple-icons@v15/icons/pandas.svg" alt="Pandas"
-                                    class="tool-icon">Pandas</li>
-                            <li class="tool-item"><img
-                                    src="https://cdn.jsdelivr.net/npm/simple-icons@v15/icons/numpy.svg" alt="Numpy"
-                                    class="tool-icon">Numpy</li>
-                        </ul>
-                    </div>
+                                        <!-- Python Libraries -->
+                                        <div class="skill-category-card">
+                                                <h3 class="category-title">Python Libraries</h3>
+                                                <p class="category-tagline">For machine learning, computer vision, and
+                                                        data workflows.</p>
+                                                <ul class="tool-list">
+                                                        <li class="tool-item"><img
+                                                                        src="https://cdn.jsdelivr.net/npm/simple-icons@v15/icons/pytorch.svg"
+                                                                        alt="PyTorch" class="tool-icon">PyTorch</li>
+                                                        <li class="tool-item"><img
+                                                                        src="https://cdn.jsdelivr.net/npm/simple-icons@v15/icons/tensorflow.svg"
+                                                                        alt="TensorFlow" class="tool-icon">TensorFlow
+                                                        </li>
+                                                        <li class="tool-item"><img
+                                                                        src="https://cdn.jsdelivr.net/npm/simple-icons@v15/icons/scikitlearn.svg"
+                                                                        alt="Scikit-learn"
+                                                                        class="tool-icon">Scikit-learn</li>
+                                                        <li class="tool-item"><img
+                                                                        src="https://cdn.jsdelivr.net/npm/simple-icons@v15/icons/opencv.svg"
+                                                                        alt="OpenCV" class="tool-icon">OpenCV</li>
+                                                        <li class="tool-item"><img
+                                                                        src="https://cdn.jsdelivr.net/npm/simple-icons@v15/icons/yolo.svg"
+                                                                        alt="YOLO" class="tool-icon">YOLO</li>
+                                                        <li class="tool-item"><img
+                                                                        src="https://cdn.jsdelivr.net/npm/simple-icons@v15/icons/meta.svg"
+                                                                        alt="OpenCV" class="tool-icon">FAISS</li>
+                                                        <li class="tool-item"><img
+                                                                        src="https://cdn.jsdelivr.net/npm/simple-icons@v15/icons/huggingface.svg"
+                                                                        alt="Transformers (HuggingFace)"
+                                                                        class="tool-icon">Transformers (HuggingFace)
+                                                        </li>
+                                                        <li class="tool-item"><img
+                                                                        src="https://cdn.jsdelivr.net/npm/simple-icons@v15/icons/pandas.svg"
+                                                                        alt="Pandas" class="tool-icon">Pandas</li>
+                                                        <li class="tool-item"><img
+                                                                        src="https://cdn.jsdelivr.net/npm/simple-icons@v15/icons/numpy.svg"
+                                                                        alt="Numpy" class="tool-icon">Numpy</li>
+                                                </ul>
+                                        </div>
 
-                    <!-- Data Visualization -->
-                    <div class="skill-category-card">
-                        <h3 class="category-title">Data Visualization</h3>
-                        <p class="category-tagline">For turning raw numbers into clear, visual stories.</p>
-                        <ul class="tool-list">
-                            <li class="tool-item"><img
-                                    src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/matplotlib/matplotlib-plain.svg"
-                                    alt="Matplotlib" class="tool-icon">Matplotlib</li>
-                            <li class="tool-item"><img src="https://seaborn.pydata.org/_images/logo-mark-lightbg.svg"
-                                    alt="Seaborn" class="tool-icon">Seaborn</li>
-                            <li class="tool-item"><img
-                                    src="https://cdn.jsdelivr.net/npm/simple-icons@v15/icons/plotly.svg" alt="Plotly"
-                                    class="tool-icon">Plotly</li>
-                        </ul>
-                    </div>
+                                        <!-- Data Visualization -->
+                                        <div class="skill-category-card">
+                                                <h3 class="category-title">Data Visualization</h3>
+                                                <p class="category-tagline">For turning raw numbers into clear, visual
+                                                        stories.</p>
+                                                <ul class="tool-list">
+                                                        <li class="tool-item"><img
+                                                                        src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/matplotlib/matplotlib-plain.svg"
+                                                                        alt="Matplotlib" class="tool-icon">Matplotlib
+                                                        </li>
+                                                        <li class="tool-item"><img
+                                                                        src="https://seaborn.pydata.org/_images/logo-mark-lightbg.svg"
+                                                                        alt="Seaborn" class="tool-icon">Seaborn</li>
+                                                        <li class="tool-item"><img
+                                                                        src="https://cdn.jsdelivr.net/npm/simple-icons@v15/icons/plotly.svg"
+                                                                        alt="Plotly" class="tool-icon">Plotly</li>
+                                                </ul>
+                                        </div>
 
-                    <!-- Currently Exploring/Learning -->
-                    <div class="skill-category-card">
-                        <h3 class="category-title">Currently Exploring</h3>
-                        <p class="category-tagline">Tools I’m learning, testing, or just curious about.</p>
-                        <ul class="tool-list">
-                            <li class="tool-item"><img
-                                    src="https://cdn.jsdelivr.net/npm/simple-icons@v15/icons/xcode.svg" alt="Xcode"
-                                    class="tool-icon">Xcode</li>
-                            <li class="tool-item"><img
-                                    src="https://cdn.jsdelivr.net/npm/simple-icons@v15/icons/swift.svg" alt="Swift"
-                                    class="tool-icon">Swift</li>
-                            <li class="tool-item"><img
-                                    src="https://cdn.jsdelivr.net/npm/simple-icons@v15/icons/apachespark.svg"
-                                    alt="Apache Spark" class="tool-icon">Apache Spark</li>
-                            <li class="tool-item"><img
-                                    src="https://cdn.jsdelivr.net/npm/simple-icons@v15/icons/firebase.svg"
-                                    alt="Firebase" class="tool-icon">Firebase</li>
-                            <li class="tool-item"><img
-                                    src="https://cdn.jsdelivr.net/npm/simple-icons@v15/icons/langgraph.svg"
-                                    alt="LangGraph" class="tool-icon">LangGraph</li>
-                        </ul>
-                    </div>
-                </div>
+                                        <!-- Currently Exploring/Learning -->
+                                        <div class="skill-category-card">
+                                                <h3 class="category-title">Currently Exploring</h3>
+                                                <p class="category-tagline">Tools I’m learning, testing, or just curious
+                                                        about.</p>
+                                                <ul class="tool-list">
+                                                        <li class="tool-item"><img
+                                                                        src="https://cdn.jsdelivr.net/npm/simple-icons@v15/icons/xcode.svg"
+                                                                        alt="Xcode" class="tool-icon">Xcode</li>
+                                                        <li class="tool-item"><img
+                                                                        src="https://cdn.jsdelivr.net/npm/simple-icons@v15/icons/swift.svg"
+                                                                        alt="Swift" class="tool-icon">Swift</li>
+                                                        <li class="tool-item"><img
+                                                                        src="https://cdn.jsdelivr.net/npm/simple-icons@v15/icons/apachespark.svg"
+                                                                        alt="Apache Spark" class="tool-icon">Apache
+                                                                Spark</li>
+                                                        <li class="tool-item"><img
+                                                                        src="https://cdn.jsdelivr.net/npm/simple-icons@v15/icons/firebase.svg"
+                                                                        alt="Firebase" class="tool-icon">Firebase</li>
+                                                        <li class="tool-item"><img
+                                                                        src="https://cdn.jsdelivr.net/npm/simple-icons@v15/icons/langgraph.svg"
+                                                                        alt="LangGraph" class="tool-icon">LangGraph</li>
+                                                </ul>
+                                        </div>
+                                </div>
 
-                <div class="skills-resume-container">
-                    <a href="#" class="skills-resume-button menu-resume-button">
-                        View Resume
-                    </a>
-                </div>
-            </div>
-        </section>
-    </div>
-    <!-- Footer will be loaded here -->
-    <div id="footer-container"></div>
+                                <div class="skills-resume-container">
+                                        <a href="#" class="skills-resume-button menu-resume-button">
+                                                View Resume
+                                        </a>
+                                </div>
+                        </div>
+                </section>
+        </div>
+        <!-- Footer will be loaded here -->
+        <div id="footer-container"></div>
 
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-RF3LBERGVH"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag() { dataLayer.push(arguments); }
-        gtag('js', new Date());
+        <!-- Google tag (gtag.js) -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-RF3LBERGVH"></script>
+        <script>
+                window.dataLayer = window.dataLayer || [];
+                function gtag() { dataLayer.push(arguments); }
+                gtag('js', new Date());
 
-        gtag('config', 'G-RF3LBERGVH');
-    </script>
+                gtag('config', 'G-RF3LBERGVH');
+        </script>
 </body>
 
 </html>

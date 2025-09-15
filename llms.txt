@@ -79,7 +79,7 @@ simplysuvi.com is structured into several main sections, each supported by dedic
 ---
 
 ### Current Role 
-**DieselCore** — *Data Science & AI Engineer* 
+**DieselCore** - *Data Science & AI Engineer* 
 *May 2024 – Present* 
 - Developed & deployed an AI chatbot using RAG (LlamaIndex, FAISS, Pinecone, ChromaDB) on Microsoft Teams, cutting document lookup time by 60%. 
 - Built scalable document embedding pipelines using OpenAI embeddings, BM25, RRF, and hybrid search techniques. 
@@ -89,7 +89,7 @@ simplysuvi.com is structured into several main sections, each supported by dedic
 ---
 
 ### Previous Role 
-**Golisano Institute for Sustainability (RIT)** — *Machine Learning Engineer* 
+**Golisano Institute for Sustainability (RIT)** - *Machine Learning Engineer* 
 *May 2022 – May 2024* 
 - Built automated part-sorting system using YOLOv8 and Siamese Networks with 95% accuracy and 5-second inference cycles. 
 - Developed segmentation models (UNet, SAM) for textile remanufacturing with GCode integration, improving material recovery by 30%. 
@@ -100,7 +100,7 @@ simplysuvi.com is structured into several main sections, each supported by dedic
 
 ### Education 
 **Rochester Institute of Technology** 
-*Master of Science in Data Science* — 2021–2023 
+*Master of Science in Data Science* - 2021–2023 
 - Relevant Coursework: Time Series Forecasting, Software Engineering, Data Analysis, Database Design
 
 ---
@@ -112,7 +112,7 @@ simplysuvi.com is structured into several main sections, each supported by dedic
 ---
 
 ### Publication
-- *Image-based machine learning in automotive used parts identification for remanufacturing*, 2024 — Wiley
+- *Image-based machine learning in automotive used parts identification for remanufacturing*, 2024 - Wiley
 [DOI Link](https://doi.org/10.1002/9781394214297.ch39)
 
 ---

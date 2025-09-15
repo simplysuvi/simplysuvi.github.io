@@ -27,13 +27,13 @@ function initContentToggle() {
         // Add ripple effect
         const toggleSlider = document.querySelector('.toggle-slider');
         toggleSlider.classList.remove('ripple');
-        
+
         // Trigger reflow to restart animation
         void toggleSlider.offsetWidth;
-        
+
         // Add ripple class to start animation
         toggleSlider.classList.add('ripple');
-        
+
         // Update toggle state
         updateToggleState(true);
     });
@@ -46,7 +46,7 @@ function initContentToggle() {
             toggleSlider.classList.remove('ripple');
             void toggleSlider.offsetWidth;
             toggleSlider.classList.add('ripple');
-            
+
             toggleSwitch.checked = false;
             updateToggleState(true);
         }
@@ -59,7 +59,7 @@ function initContentToggle() {
             toggleSlider.classList.remove('ripple');
             void toggleSlider.offsetWidth;
             toggleSlider.classList.add('ripple');
-            
+
             toggleSwitch.checked = true;
             updateToggleState(true);
         }
@@ -86,7 +86,7 @@ function initContentToggle() {
             updateToggleState._aboutTagline = sectionTagline ? sectionTagline.textContent : '';
         }
         const experienceTitle = "Built through Experience.";
-        const experienceTagline = "Every role, every project — all part of a story still unfolding.";
+        const experienceTagline = "Every role, every project - all part of a story still unfolding.";
 
         // Determine new values
         const newTitle = isExperienceActive ? experienceTitle : updateToggleState._aboutTitle;
@@ -119,25 +119,25 @@ function initContentToggle() {
             // Get current active and next sections
             const currentSection = isExperienceActive ? aboutSection : experienceSection;
             const nextSection = isExperienceActive ? experienceSection : aboutSection;
-            
+
             // Use requestAnimationFrame for smoother animations
             requestAnimationFrame(() => {
                 // Add fade-out class for smoother exit animation
                 currentSection.classList.add('fade-out');
-                
+
                 // Wait for fade-out transition to complete before showing new section
                 setTimeout(() => {
                     // Remove active class from current section
                     currentSection.classList.remove('active');
-                    
+
                     // Add active class to next section
                     nextSection.classList.add('active');
-                    
+
                     // Remove fade-out class after transition completes
                     setTimeout(() => {
                         currentSection.classList.remove('fade-out');
                     }, 400); // Match the fade-out transition duration
-                    
+
                 }, 400); // Match the fade-out transition duration
             });
         } else {
@@ -193,7 +193,7 @@ function renderAboutExperience(experiences) {
         const card = document.createElement('div');
         card.className = 'experience-card';
         card.id = `about-${experience.id}`;
-        
+
         // Set initial styles for animation - use transform and opacity for better performance
         card.style.opacity = '0';
         card.style.transform = 'translateY(20px) translateZ(0)';
@@ -221,13 +221,13 @@ function renderAboutExperience(experiences) {
 
         fragment.appendChild(card);
     });
-    
+
     // Append all cards at once for better performance
     cardsContainer.appendChild(fragment);
-    
+
     // Force a reflow before starting animations
     void cardsContainer.offsetWidth;
-    
+
     // Use requestAnimationFrame for smoother animations
     requestAnimationFrame(() => {
         const cards = cardsContainer.querySelectorAll('.experience-card');
