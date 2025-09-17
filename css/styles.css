@@ -992,7 +992,7 @@ body.dark-mode .project-modal-description {
 }
 
 body.dark-mode .project-modal-body .project-tech span {
-    background-color: rgba(0, 122, 255, 0.15);
+    background-color: rgba(108, 121, 136, 0.15);
     /* Slightly brighter blue */
     color: var(--website-teal);
     /* Keep blue for contrast */

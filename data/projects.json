@@ -1,5 +1,35 @@
 [
   {
+    "id": "linklet",
+    "title": "Linklet",
+    "headline": "Save LinkedIn posts. Find them fast.",
+    "description": "A Chrome extension that organizes your saved LinkedIn posts into a clean, searchable space. Built to eliminate endless scrolling, Linklet makes it effortless to capture insights and revisit them when you need them.",
+    "tech": [
+      "JavaScript",
+      "Chrome Extensions API",
+      "HTML5",
+      "CSS3"
+    ],
+    "features": [
+      "Instant search across saved LinkedIn posts",
+      "One-click save directly from LinkedIn",
+      "Create and add posts to custom Collections",
+      "Sort posts by date, relevance, or tags",
+      "Export your library as CSV, JSON, or HTML",
+      "Minimal, distraction-free interface"
+    ],
+    "links": {
+      "demo": "https://chromewebstore.google.com/detail/linklet/lhmnjaclknhcgkecakchbckodaogichm"
+    },
+    "backgroundColor": "rgb(246 216 162)",
+    "textColor": "#1e2a32",
+    "darkBackgroundColor": "rgb(55 48 35)",
+    "darkTextColor": "#f5f3ef",
+    "accentColor": "#f4a025",
+    "cardImage": "../data/project-card/linklet.png",
+    "icon": "../../data/project-icons/linklet-icon.png"
+  },
+  {
     "id": "oflcwage-map",
     "title": "OFLC Wage Atlas",
     "headline": "Wage clarity. By zip, role, and region.",
