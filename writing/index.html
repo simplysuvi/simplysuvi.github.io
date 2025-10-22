@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <script>
+        try {
+            if (localStorage.getItem('darkMode') === 'true') {
+                document.documentElement.classList.add('dark-mode');
+                document.body && document.body.classList.add('dark-mode');
+            }
+        } catch (e) { }
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Research papers and writing by Suvrat Jain - exploring computer vision, AI, and the human side of technology.">
+    <title>Publications & Writing | Suvrat Jain</title>
+
+    <!-- Favicon and App Icons -->
+    <link rel="apple-touch-icon" sizes="180x180" href="../assets/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../assets/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../assets/favicon/favicon-16x16.png">
+    <link rel="icon" type="image/x-icon" href="../assets/favicon/favicon.ico">
+    <link rel="manifest" href="../assets/favicon/site.webmanifest">
+    <meta name="theme-color" content="#ffffff">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-config" content="../assets/favicon/browserconfig.xml">
+    <!-- Android Chrome -->
+    <link rel="icon" type="image/png" sizes="192x192" href="../assets/favicon/android-chrome-192x192.png">
+    <link rel="icon" type="image/png" sizes="512x512" href="../assets/favicon/android-chrome-512x512.png">
+
+    <!-- Preload critical assets -->
+    <link rel="preload" href="../css/styles.css" as="style">
+    <link rel="preload" href="../js/script.js" as="script">
+
+    <!-- Optimized font loading -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=SF+Pro+Display:wght@400;500;600;700&display=swap" media="print"
+        onload="this.media='all'">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=SF+Pro+Text:wght@400;500&display=swap"
+        media="print" onload="this.media='all'">
+
+    <!-- Font Awesome CDN for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- Critical CSS -->
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/resume-modal.css">
+
+    <!-- Component Loader -->
+    <script src="../js/component-loader.js"></script>
+
+
+    <!-- Main JavaScript -->
+    <script src="../js/script.js" defer></script>
+    <script src="../js/resume-modal.js" defer></script>
+</head>
+
+<body>
+    <div class="container">
+        <!-- Navigation will be loaded here -->
+        <div id="navigation-container"></div>
+
+        <section class="publication-section">
+            <h2 class="section-title">Published Work</h2>
+            <p class="section-tagline">Research that found its place in print.</p>
+            <div class="site-cards">
+                <div class="site-card">
+                    <div class="card-content">
+                        <div class="card-header">
+                            <h3>
+                                Image-Based Machine Learning in Automotive Used Parts Identification for
+                                Remanufacturing
+                            </h3>
+                            <p class="company">Islam, A., Jain, S., Nenadic, N.G., Thurston, M.G., Greenberg, J., Moss,
+                                B.</p>
+                            <p class="date">Published: 26 January 2024</p>
+                        </div>
+                        <div class="card-body">
+                            <p class="publication-doi">DOI: <a
+                                    href="https://onlinelibrary.wiley.com/doi/10.1002/9781394214297.ch39"
+                                    target="_blank">10.1002/9781394214297.ch39</a>
+                            </p>
+                            <p>
+                                Co-authored a research chapter presenting a computer vision and machine learning
+                                framework for automated identification of used automotive parts in remanufacturing. My
+                                work focused on developing YOLO-based detection, Inception-based classification, and
+                                multi-camera decision fusion methods to achieve over 95% identification accuracy,
+                                reducing manual sorting and improving remanufacturing efficiency for sustainable
+                                production.
+                            </p>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="site-card">
+                    <div class="card-content">
+                        <div class="card-header">
+                            <h3>
+                                Contaminant Investigation and Pre‐Processing Opportunities for Textile‐To‐Textile
+                                Recycling
+                            </h3>
+                            <p class="company">R. Parsons, S. Jain, A. Islam, M. Walluk, and M. Thurston</p>
+                            <p class="date">Published: August 2025</p>
+                        </div>
+                        <div class="card-body">
+                            <p class="publication-doi">DOI: <a href="https://doi.org/10.1002/amp2.70034"
+                                    target="_blank">10.1002/amp2.70034</a>
+                            </p>
+                            <p>
+                                Co-authored a peer-reviewed study that applies machine learning and computer vision to
+                                automate contaminant detection and material classification in post-consumer garments. My
+                                contributions focused on developing deep learning models for garment classification,
+                                trim detection, and segmentation of recyclable materials—advancing scalable, AI-driven
+                                textile recycling workflows for a circular economy.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="writing-section">
+            <h2 class="section-title">Writing</h2>
+            <p class="section-tagline">Blog posts, experiments, and lessons worth sharing.</p>
+            <div class="site-cards">
+                <div class="site-card">
+                    <div class="card-content">
+                        <div class="card-header">
+                            <h3>
+                                How to Build Real-Time Eye Tracking in the Browser
+                            </h3>
+                        </div>
+                        <div class="card-body">
+                            <p class="publication-doi"><a
+                                    href="https://blog.roboflow.com/build-eye-tracking-in-browser/"
+                                    target="_blank">Roboflow Blog</a>
+                            </p>
+                            <p>
+                                Authored a deep-dive on <a href="https://simplysuvi.com/hue-vision/" target="_blank">Hue
+                                    Vision</a> - an open-source experiment in browser-based eye
+                                tracking. The article shares how modern ML tools like MediaPipe FaceMesh and
+                                TensorFlow.js can
+                                estimate gaze in real time, entirely on-device.
+                                It’s written for designers, developers, and researchers exploring new ways humans and
+                                computers see each other.
+                            </p>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="site-card">
+                    <div class="card-content">
+                        <div class="card-header">
+                            <h3>
+                                Google Maps vs Apple Maps: Why Google Maps Reigns Supreme
+                            </h3>
+                        </div>
+                        <div class="card-body">
+                            <p class="publication-doi"><a
+                                    href="https://medium.com/@simplysuvi/google-maps-vs-apple-maps-why-google-maps-reigns-supreme-ba9971d328ac"
+                                    target="_blank">Medium</a>
+                            </p>
+                            <p>
+                                Authored a comparative essay examining why Google Maps continues to outperform Apple
+                                Maps in data coverage, imagery detail, and algorithmic sophistication.
+                                The article explores how large-scale data collection and machine learning shape
+                                real-time navigation and local discovery experiences.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+    <!-- Footer will be loaded here -->
+    <div id="footer-container"></div>
+
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-RF3LBERGVH"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'G-RF3LBERGVH');
+    </script>
+</body>
+
+</html>

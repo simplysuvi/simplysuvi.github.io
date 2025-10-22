@@ -1844,7 +1844,18 @@ body.dark-mode .skills-name {
 
 .publication-section {
     padding-bottom: 7ch;
-    padding-top: 0;
+}
+
+.writing-section {
+    padding-top: 1em;
+    padding-bottom: 7ch;
+}
+
+.writing-section a {
+    color: var(--website-teal);
+    text-decoration: none;
+    border-bottom: 1px solid transparent;
+    transition: border-color 0.3s ease, color 0.3s ease;
 }
 
 
