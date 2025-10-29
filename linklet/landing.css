@@ -1,0 +1,216 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Helvetica Neue', sans-serif;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Helvetica Neue', sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.6;
+}
+
+/* Light theme */
+:root {
+    --bg: #fdfbf7;
+    --bg-secondary: #ffffff;
+    --card: #fffdfb;
+    --text: #1e2a32;
+    --text-secondary: #6b6f73;
+    --heading: #1e2a32;
+    --border: #d8d4cc;
+    --border-light: #f5f2eb;
+    --shadow: rgba(0, 0, 0, 0.05);
+    --link: #2f5d91;
+    --link-hover: #3a6aa3;
+    --accent: #f4a025;
+}
+
+/* Dark theme */
+@media (prefers-color-scheme: dark) {
+    :root {
+        --bg: #121417;
+        --bg-secondary: #1e2226;
+        --card: #1c2024;
+        --text: #f5f3ef;
+        --text-secondary: #b0b4b9;
+        --heading: #ffffff;
+        --border: #2d3136;
+        --border-light: #222629;
+        --shadow: rgba(0, 0, 0, 0.4);
+        --link: #5a8ec6;
+        --link-hover: #70a1d8;
+    }
+}
+
+/* Header */
+.header {
+    background: var(--bg);
+    border-bottom: 1px solid var(--border-light);
+    padding: 20px 0;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    transition: all 0.3s ease;
+}
+
+.header.scrolled {
+    background: rgba(253, 251, 247, 0.8);
+    backdrop-filter: blur(10px);
+}
+
+@media (prefers-color-scheme: dark) {
+    .header.scrolled {
+        background: rgba(18, 20, 23, 0.8);
+    }
+}
+
+.header-content {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 32px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.logo {
+    width: 40px;
+    height: 40px;
+}
+
+.brand-name {
+    font-size: 24px;
+    font-weight: 600;
+    color: var(--heading);
+}
+
+/* Main content */
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 40px 32px;
+}
+
+/* Hero Section */
+.hero-section {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: center;
+    text-align: left;
+    padding: 40px 0;
+}
+
+.hero-title {
+    font-size: 42px;
+    font-weight: 700;
+    color: var(--heading);
+    line-height: 1.2;
+    margin-bottom: 16px;
+}
+
+.hero-subtitle {
+    font-size: 18px;
+    color: var(--text-secondary);
+    margin-bottom: 24px;
+}
+
+.hero-image video {
+    max-width: 100%;
+    border-radius: 16px;
+    box-shadow: 0 8px 24px var(--shadow);
+}
+
+/* How It Works Section */
+.how-it-works-section {
+    padding: 60px 0;
+    text-align: center;
+}
+
+.section-title {
+    font-size: 32px;
+    font-weight: 600;
+    color: var(--heading);
+    margin-bottom: 40px;
+}
+
+.steps {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+}
+
+.step-icon {
+    font-size: 28px;
+    color: var(--accent);
+    margin-bottom: 16px;
+    background: var(--border-light);
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.step-title {
+    font-size: 20px;
+    font-weight: 600;
+    color: var(--heading);
+    margin-bottom: 8px;
+}
+
+.step-description {
+    font-size: 16px;
+    color: var(--text-secondary);
+}
+
+/* CTA Section */
+.cta-section {
+    text-align: center;
+    padding: 60px 0;
+    background: var(--bg-secondary);
+    border-radius: 20px;
+    margin: 40px 0;
+}
+
+.cta-subtitle {
+    font-size: 18px;
+    color: var(--text-secondary);
+    margin-bottom: 24px;
+}
+
+/* Button */
+.btn {
+    font-size: 16px;
+    font-weight: 500;
+    padding: 12px 24px;
+    border-radius: 12px;
+    cursor: pointer;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    transition: all 0.2s ease;
+}
+
+.btn-primary {
+    background: var(--link);
+    color: white;
+}
+
+.btn-primary:hover {
+    background: var(--link-hover);
+    transform: translateY(-2px);
+}
+
+/* Footer */
+.footer {
+    text-align: center;
+    padding: 40px 0;
+    border-top: 1px solid var(--border-light);
+    color: var(--text-secondary);
+}
