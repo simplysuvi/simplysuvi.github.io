@@ -1154,6 +1154,11 @@ function initBooksCarousel() {
             image: "https://m.media-amazon.com/images/I/41n1edvVlLL._SY445_SX342_.jpg",
         },
         {
+            title: "Elon Musk",
+            author: "Walter Isaacson",
+            image: "https://m.media-amazon.com/images/S/compressed.photo.goodreads.com/books/1692288251i/122765395.jpg",
+        },
+        {
             title: "I Came Upon a Lighthouse",
             author: "Shantanu Naidu",
             image: "https://is5-ssl.mzstatic.com/image/thumb/Publication114/v4/4f/2b/f8/4f2bf8bc-d40e-a2ec-d313-4827c96bd215/9789390327539.jpg/100000x100000-999.jpg",
