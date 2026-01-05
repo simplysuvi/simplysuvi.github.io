@@ -1149,6 +1149,11 @@ function initBooksCarousel() {
             image: "https://is5-ssl.mzstatic.com/image/thumb/Publication128/v4/d1/01/8f/d1018fec-c74f-5df1-e3ff-1f6155cdc7a9/9780802165800.jpg/100000x100000-999.jpg",
         },
         {
+            title: "Creative Selection: Inside Apple's Design Process During the Golden Age of Steve Jobs",
+            author: "Ken Kocienda",
+            image: "https://m.media-amazon.com/images/S/compressed.photo.goodreads.com/books/1531233879i/37638098.jpg",
+        },
+        {
             title: "Steve Jobs",
             author: "Walter Isaacson",
             image: "https://m.media-amazon.com/images/I/41n1edvVlLL._SY445_SX342_.jpg",
