@@ -1,5 +1,35 @@
 [
   {
+    "id": "hourvest",
+    "title": "Hourvest",
+    "headline": "Time is the real price. See what it costs.",
+    "description": "A Chrome extension that helps you understand where your time goes and what it’s worth. Hourvest tracks your browsing automatically and converts prices into time, so costs feel real, not abstract.",
+    "tech": [
+      "JavaScript",
+      "Chrome Extensions API",
+      "HTML5",
+      "CSS3"
+    ],
+    "features": [
+      "Track time spent across websites automatically",
+      "Translate prices into equivalent time cost",
+      "Visualize where your hours actually go",
+      "Identify browsing patterns over time",
+      "Mode configuration for Personal and Work mode based on work hours, annual/hourly pay",
+      "All data stays local for complete privacy"
+    ],
+    "links": {
+      "demo": "https://chromewebstore.google.com/detail/hourvest/ejffgdhjfacgjoilljjimdnbjdfofdjb"
+    },
+    "backgroundColor": "#D8EDD2",
+    "textColor": "#1e2a32",
+    "darkBackgroundColor": "#303B2E",
+    "darkTextColor": "#f5f3ef",
+    "accentColor": "#2f5d91",
+    "cardImage": "../data/project-card/hourvest.png",
+    "icon": "../../data/project-icons/hourvest-icon.png"
+  },
+  {
     "id": "linklet",
     "title": "Linklet",
     "headline": "Save LinkedIn posts. Find them fast.",

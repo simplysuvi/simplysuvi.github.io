@@ -814,7 +814,6 @@ body.dark-mode .footer-copyright {
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: rgba(0, 122, 255, 0.05);
     border-radius: 16px;
     padding: 15px;
 }
