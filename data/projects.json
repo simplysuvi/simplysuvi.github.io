@@ -1,5 +1,35 @@
 [
   {
+    "id": "headjust",
+    "title": "Headjust for macOS (Beta)",
+    "headline": "See your head shift. Adjust as you go.",
+    "description": "A macOS app that uses motion sensors in AirPods (and compatible Beats headphones) to visualize head movement while you work. Start and stop sessions during work, review insights and trends to notice patterns and adjust your sitting habits over time.",
+    "tech": [
+      "SwiftUI",
+      "Apple Core Motion",
+      "SwiftData",
+      "macOS"
+    ],
+    "features": [
+      "Live head-movement visualization in a notch-style UI",
+      "Start and stop sessions anytime during work",
+      "Personal baseline calibration for consistent tracking",
+      "Session history with score, duration, and time away from calibrated upright posture",
+      "Trends across days to spot movement patterns over time",
+      "Built to be subtle and unobtrusive on macOS"
+    ],
+    "links": {
+      "demo": "https://headjust.app/"
+    },
+    "backgroundColor": "#C3E1B5",
+    "textColor": "#1E2A32",
+    "darkBackgroundColor": "#3a4d3a",
+    "darkTextColor": "#F5F3EF",
+    "accentColor": "#6FB256",
+    "cardImage": "../data/project-card/headjust.png",
+    "icon": "../../data/project-icons/headjust-icon.png"
+  },
+  {
     "id": "hourvest",
     "title": "Hourvest",
     "headline": "Time is the real price. See what it costs.",
