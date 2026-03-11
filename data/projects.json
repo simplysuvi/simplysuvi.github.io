@@ -1,7 +1,7 @@
 [
   {
     "id": "headjust",
-    "title": "Headjust for macOS (Beta)",
+    "title": "Headjust for macOS",
     "headline": "See your head shift. Adjust as you go.",
     "description": "A macOS app that uses motion sensors in AirPods (and compatible Beats headphones) to visualize head movement while you work. Start and stop sessions during work, review insights and trends to notice patterns and adjust your sitting habits over time.",
     "tech": [
