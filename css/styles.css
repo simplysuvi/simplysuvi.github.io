@@ -755,6 +755,9 @@ body.dark-mode .footer-copyright {
     /* Slightly less transparent */
     border-radius: 20px;
     overflow: hidden;
+    position: relative;
+    display: flex;
+    flex-direction: column;
     box-shadow: 0 25px 50px var(--website-overlay-medium), 0 15px 25px var(--website-separator);
     transform: scale(0.9);
     opacity: 0;
@@ -770,7 +773,7 @@ body.dark-mode .footer-copyright {
     position: relative;
     padding: 40px;
     overflow-y: auto;
-    /* max-height: calc(90vh - 80px); */
+    min-height: 0;
 }
 
 .project-modal-close {
@@ -1022,7 +1025,6 @@ body.dark-mode .project-modal-setup h4 {
 @media (max-width: 768px) {
     .project-modal-content {
         padding: 30px 20px;
-        max-height: calc(90vh - 60px);
     }
 
     .project-modal-title {

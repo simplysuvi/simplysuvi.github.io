@@ -601,12 +601,12 @@ function initProjectCards() {
         modalContainer.className = 'project-modal-container';
         modalContainer.innerHTML = `
             <div class="project-modal">
+                <button class="project-modal-close">
+                    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z" fill="currentColor"/>
+                    </svg>
+                </button>
                 <div class="project-modal-content">
-                    <button class="project-modal-close">
-                        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z" fill="currentColor"/>
-                        </svg>
-                    </button>
                     <div class="project-modal-body"></div>
                 </div>
             </div>
@@ -1146,7 +1146,7 @@ function initBooksCarousel() {
         {
             title: "Convenience Store Woman",
             author: "Sayaka Murata",
-            image: "https://is5-ssl.mzstatic.com/image/thumb/Publication128/v4/d1/01/8f/d1018fec-c74f-5df1-e3ff-1f6155cdc7a9/9780802165800.jpg/100000x100000-999.jpg",
+            image: "https://is5-ssl.mzstatic.com/image/thumb/Publication128/v4/d1/01/8f/d1018fec-c74f-5df1-e3ff-1f6155cdc7a9/9780802165800.jpg/600x600bb.jpg",
         },
         {
             title: "Creative Selection: Inside Apple's Design Process During the Golden Age of Steve Jobs",
@@ -1166,17 +1166,17 @@ function initBooksCarousel() {
         {
             title: "I Came Upon a Lighthouse",
             author: "Shantanu Naidu",
-            image: "https://is5-ssl.mzstatic.com/image/thumb/Publication114/v4/4f/2b/f8/4f2bf8bc-d40e-a2ec-d313-4827c96bd215/9789390327539.jpg/100000x100000-999.jpg",
+            image: "https://is5-ssl.mzstatic.com/image/thumb/Publication114/v4/4f/2b/f8/4f2bf8bc-d40e-a2ec-d313-4827c96bd215/9789390327539.jpg/600x600bb.jpg",
         },
         {
             title: "Days at the Morisaki Bookshop",
             author: "Satoshi Yagisawa",
-            image: "https://is5-ssl.mzstatic.com/image/thumb/Publication112/v4/46/fb/28/46fb28d7-2103-19ad-9b2c-3b9743b366e0/9780063278684.jpg/100000x100000-999.jpg",
+            image: "https://is5-ssl.mzstatic.com/image/thumb/Publication112/v4/46/fb/28/46fb28d7-2103-19ad-9b2c-3b9743b366e0/9780063278684.jpg/600x600bb.jpg",
         },
         {
             title: "Mr. Penumbra's 24-Hour Bookstore",
             author: "Robin Sloan",
-            image: "https://is5-ssl.mzstatic.com/image/thumb/Publication122/v4/91/a6/d1/91a6d168-ded9-d108-a77a-41d93c5f80d5/9780374708832.jpg/100000x100000-999.jpg",
+            image: "https://is5-ssl.mzstatic.com/image/thumb/Publication122/v4/91/a6/d1/91a6d168-ded9-d108-a77a-41d93c5f80d5/9780374708832.jpg/600x600bb.jpg",
         },
         {
             title: "Friends, Lovers, and the Big Terrible Thing",
@@ -1187,6 +1187,11 @@ function initBooksCarousel() {
             title: "Shoe Dog: A Memoir by the Creator of Nike",
             author: "Phil Knight",
             image: "https://is1-ssl.mzstatic.com/image/thumb/Publication115/v4/46/d1/4c/46d14cc4-205b-ed79-5630-9a851d231f5e/9781501135934.jpg/600x600bb.jpg",
+        },
+        {
+            title: "The Vegetarian",
+            author: "Han Kang",
+            image: "https://is1-ssl.mzstatic.com/image/thumb/Publication221/v4/13/7e/17/137e1746-603a-6abb-83c1-b89df6dc7ac0/9780553448191.d.jpg/600x600bb.jpg",
         }
     ];
 
